@@ -1,0 +1,63 @@
+# Konfigurasi proyek PIHPS. Semua parameter analisis diletakkan di sini, bukan di kode.
+# Detail endpoint & temuan akses data: docs/data_access.md
+
+sumber:
+  base_url: "https://www.bi.go.id/hargapangan/WebSite/TabelHarga/"
+  endpoint_harga: "GetGridDataKomoditas"
+  user_agent: "PIHPS-portfolio-research/0.1 (personal data-analysis portfolio project)"
+  jeda_detik: 2          # jeda minimum antar request
+  timeout_detik: 120
+  max_retry: 4           # retry dengan backoff eksponensial
+  potongan: "bulan"      # rentang 1 tahun untuk semua kota timeout (>180 detik)
+  tipe_laporan: 1        # 1 = harian; agregasi mingguan dilakukan sendiri
+
+periode:
+  # Data tersedia sejak 2018. Keputusan user (2026-10-25): mulai 2023-07-01 sesuai brief.
+  # Konsekuensi: hanya 3 musim Idul Fitri (2024, 2025, 2026) untuk pola musiman dan uji peringatan dini.
+  tanggal_mulai: "2023-07-01"
+  tanggal_selesai: "auto_h_minus_2"   # tanggal pengambilan dikurangi 2 hari kalender
+
+jenis_pasar:
+  1: "Pasar Tradisional"
+  2: "Pasar Modern"
+  3: "Pedagang Besar"
+  4: "Produsen"
+
+komoditas_fokus:   # id dari GetRefCommodityAndCategory
+  com_14: "Cabai Merah Keriting"
+  com_16: "Cabai Rawit Merah"
+  com_11: "Bawang Merah Ukuran Sedang"
+  com_12: "Bawang Putih Ukuran Sedang"
+  com_7:  "Daging Ayam Ras Segar"
+  com_10: "Telur Ayam Ras Segar"
+
+komoditas_opsional: {}   # mis. com_3 (Beras Medium I), com_17 (Minyak Goreng Curah)
+
+wilayah:
+  # Provinsi yang diunduh (kosong = semua). Pulau Jawa: Banten, Jabar, DKI, Jateng, DIY, Jatim.
+  # Seluruh kota Jawa diunduh agar analisis kota penentu arah tidak terbatas pada 10 kota di bawah.
+  provinsi_id: [11, 12, 13, 14, 15, 16]
+
+  # PERLU_VERIFIKASI: pemilihan kota sumber berdasarkan pengetahuan umum tentang sentra produksi,
+  # belum dari data. Ketersediaan data sudah dicek (Sep 2026), lihat docs/data_access.md.
+  kota_tujuan:
+    34: "Kota Jakarta Pusat"
+    27: "Kota Bandung"
+    35: "Kota Semarang"
+    42: "Kota Surabaya"
+
+  kota_sumber:
+    29: { nama: "Kota Tasikmalaya", komoditas: [com_14] }          # dekat Garut
+    37: { nama: "Kota Tegal",       komoditas: [com_11] }          # dekat Brebes
+    44: { nama: "Kota Kediri",      komoditas: [com_16, com_10, com_7] }
+    45: { nama: "Kab. Jember",      komoditas: [com_16] }
+    46: { nama: "Kab. Banyuwangi",  komoditas: [com_16] }
+    48: { nama: "Kota Probolinggo", komoditas: [com_11] }
+  # Bawang putih: sebagian besar impor, tidak dianalisis rutenya; hanya gejolak harga.
+
+paths:
+  raw: "data/raw"
+  interim: "data/interim"
+  processed: "data/processed"
+  reference: "data/reference"
+  log_unduhan: "data/raw/_log.csv"

@@ -1,0 +1,48 @@
+# ---------- Rahasia & kredensial (jangan pernah di-commit) ----------
+.env
+.env.*
+*.env
+secrets/
+credentials*.json
+*credentials*
+*secret*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.kdbx
+
+# ---------- Python ----------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------- Data ----------
+# Data mentah & antara bisa dibuat ulang dengan src/acquire.py dan src/clean.py
+data/raw/
+data/interim/
+# Database lokal
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.db
+
+# ---------- Log & file sementara ----------
+logs/
+*.log
+*.part
+*.tmp
+*.bak
+~$*
+
+# ---------- Editor & OS ----------
+.vscode/
+.idea/
+*.code-workspace
+Thumbs.db
+Desktop.ini
+.DS_Store
