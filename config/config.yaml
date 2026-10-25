@@ -55,6 +55,23 @@ wilayah:
     48: { nama: "Kota Probolinggo", komoditas: [com_11] }
   # Bawang putih: sebagian besar impor, tidak dianalisis rutenya; hanya gejolak harga.
 
+cleaning:   # ambang dipakai di notebooks/01_eda.ipynb dan src/clean.py; dasar penetapannya di docs/data_profile.md
+  libur_ambang_tidak_berubah: 0.90   # hari dianggap "libur diisi harga sebelumnya" jika >90% seri tradisional tidak berubah
+  gap_ffill_maks_hari: 5             # celah <= 5 hari kerja diisi forward-fill (is_imputed); lebih panjang tetap NaN
+  usang_run_hari: 60                 # harga tidak berubah >= 60 hari kerja berturut-turut -> is_usang
+  minggu_min_hari_nyata: 3           # minggu dengan < 3 hari pencacahan nyata -> minggu_tipis
+  duplikat_kota_dibuang: [787]       # "Kota Surakarta" pasar modern; duplikat dari id 36 "Kota Surakarta (Solo)"
+  outlier:
+    jendela_median_hari: 21          # median bergulir (terpusat)
+    k_mad: 5                         # aturan brief: |x - median| > 5 x MAD
+    # Aturan A "lonjakan tajam" (HANYA PENANDA, nilai tetap dipakai): deviasi > max(k_mad x MAD, lonjakan_deviasi_min),
+    # sementara hari sebelum & sesudahnya normal. Lantai 25% dipakai karena MAD ~ 0 pada seri yang datar.
+    lonjakan_deviasi_min: 0.25
+    # Aturan B & C "salah input" (nilai dikosongkan pada versi bersih):
+    rasio_ekstrem: 3                 # B: x >= 3 x median bergulir atau x <= median / 3
+    rasio_lintas_kota: 5             # C: x >= 5 x atau <= 1/5 median kota lain (komoditas & jenis pasar & hari sama).
+                                     #    Ambang 3 terlalu ketat: menandai harga produsen cabai yang memang rendah saat panen.
+
 paths:
   raw: "data/raw"
   interim: "data/interim"
