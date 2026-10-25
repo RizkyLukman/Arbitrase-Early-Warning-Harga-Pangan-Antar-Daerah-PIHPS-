@@ -1,0 +1,7 @@
+kualitas,kota,pasangan_diuji,porsi_seri_stasioner_adf,autokorelasi_lag1_median,korelasi_lag0_median,pasangan_mendahului_semu,pasangan_mendahului_setelah_prewhitening,kota_penentu_arah,kota_pengikut,jeda_dominan_minggu
+Cabai Rawit Merah,35,1190,1.0,0.2905313202743191,0.7805712599372789,607,247,3,9,1
+Cabai Merah Keriting,32,992,1.0,0.08157287016147985,0.6848976643482995,381,214,9,8,1
+Bawang Merah Ukuran Sedang,35,1190,1.0,0.3010286942597761,0.5726649080124322,628,507,17,18,1
+Bawang Putih Ukuran Sedang,35,1190,0.9714285714285714,0.08475686457658045,0.26161912973018386,312,266,20,12,1
+Daging Ayam Ras Segar,35,1190,1.0,0.03370492174492081,0.6174934219713284,330,289,10,17,1
+Telur Ayam Ras Segar,35,1190,1.0,0.17031404690317808,0.665489474859169,570,221,6,14,1

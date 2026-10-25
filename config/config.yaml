@@ -98,6 +98,46 @@ features:   # Tahap 3 (src/features.py). Dasar: notebooks/02_cleaning.ipynb §7 
     - {jenis_pasar_id: 2, komoditas_id: com_14, kota_id: 135, alasan: "harga ~1/3 kota lain berbulan-bulan (dugaan per kemasan)"}
     - {jenis_pasar_id: 2, komoditas_id: com_16, kota_id: 135, alasan: "harga ~1/3 kota lain berbulan-bulan (dugaan per kemasan)"}
 
+analisis:   # Tahap 4 (src/analysis/*.py). Hasil tabel -> reports/tables/, grafik -> reports/figures/
+  q1_gejolak:
+    jenis_pasar_id: 1               # gejolak hanya dari pasar tradisional (pasar lain jarang diperbarui; audit §7.2)
+    pembanding_jenis_pasar_id: 2    # pasar modern, sebagai pembanding berbatasan (diberi catatan)
+    min_minggu: 100                 # seri dengan < 100 log-return mingguan tidak dirangking
+    top_n_kota: 5
+  q2_rute:
+    harga_sumber_jenis_pasar_id: 3  # pedagang besar di kota sumber (harga beli distributor yang realistis; brief Q2)
+    harga_tujuan_jenis_pasar_id: 1  # pasar tradisional di kota tujuan (analisis UTAMA, sesuai brief)
+    # Uji ketahanan: harga eceran memuat margin pengecer; distributor biasanya menjual ke pedagang di kota tujuan.
+    # Ulangi dengan harga PEDAGANG BESAR di kota tujuan sebagai harga jual (lebih konservatif).
+    uji_ketahanan_tujuan_jenis_pasar_id: 3
+    kecualikan_minggu_sumber_usang: true   # harga sumber tidak berubah >= 60 hari kerja -> bukan harga beli aktual
+    jendela_terakhir_minggu: 10     # "Minggu untung: x dari 10" (10 minggu terakhir)
+    # Rute dinyatakan LAYAK jika pada skenario konservatif (pengali biaya_logistik.sensitivitas.skenario_konservatif):
+    layak_min_porsi_minggu_untung: 0.6   # untung pada >= 60% minggu yang punya data
+    layak_median_untung_positif: true    # dan median untung per kg > 0
+  q3_leadlag:
+    jenis_pasar_id: 1               # pasar tradisional (satu-satunya yang dicatat harian; audit §7.2)
+    lag_minggu: [1, 2, 3, 4]        # jeda yang diuji (lag 0 = bergerak bersamaan, dilaporkan sebagai pembanding)
+    min_minggu_bersama: 100         # pasangan dengan < 100 minggu data bersama tidak diuji
+    alpha_bh: 0.05                  # tingkat kesalahan (false discovery rate) setelah koreksi Benjamini-Hochberg
+    korelasi_kuat: 0.30             # dashboard: hubungan "kuat" jika korelasi >= 0,30
+    korelasi_sedang: 0.15           # "sedang" jika 0,15 - 0,30; di bawahnya tidak ditampilkan
+    # Kota "penentu arah" = kejutan harganya mendahului rata-rata SEMUA kota lain ("pasar"): lolos BH, korelasi >= sedang,
+    # dan lebih kuat daripada arah sebaliknya (pasar mendahului kota itu). Kebalikannya = kota "pengikut".
+    # (Versi per pasangan kota menghasilkan 12-22 "penentu arah" per komoditas -> tidak berguna untuk keputusan.)
+    top_n_per_kota_tujuan: 3        # kota yang perlu dipantau untuk setiap kota tujuan (dari uji per pasangan)
+    # Prewhitening: buang momentum tiap kota (regresi log-return pada lag-nya sendiri 1..p) sebelum korelasi silang.
+    # Tanpa ini, momentum + pergerakan bersamaan membuat 26-53% pasangan kota tampak "saling mendahului" (semu).
+    prewhitening_ar_lag: 4
+    adf_alpha: 0.05                 # uji stasioneritas (ADF) sebelum Granger
+    granger_maxlag: 4               # Granger hanya pendukung; dijalankan untuk pasangan yang lolos BH
+  q4_musiman:
+    jenis_pasar_id: 1
+    baseline_minggu: [-12, -9]      # "harga normal" = rata-rata minggu -12 s/d -9 sebelum Idulfitri (brief)
+    jendela_minggu: [-8, 4]
+    ambang_naik: 0.05               # "naik signifikan" = >= 5% di atas harga normal (median antar kota) ...
+    min_tahun_naik: 2               # ... pada >= 2 dari 3 tahun, dan bertahan sampai minggu -1
+
 rantai_pasok:   # Q5: tambahan harga produsen -> pedagang besar -> pasar tradisional (src/analysis/margin.py)
   # Analisis UTAMA (sesuai brief): hanya kota yang punya ketiga tingkat dengan NAMA SAMA (mis. Kota Tegal, Kab. Jember).
   # Analisis TAMBAHAN (disetujui user 2026-10-26): harga produsen diambil dari kabupaten sentra di sekitar kota.

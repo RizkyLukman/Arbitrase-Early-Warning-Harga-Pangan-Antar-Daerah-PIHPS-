@@ -1,0 +1,208 @@
+kota,peran,jeda,korelasi,q,selisih_lag1,kualitas,provinsi,kekuatan,granger_mendukung
+Kab. Banyumas,pengikut,1.0,0.23866540104817674,0.03351181219969458,-0.21009990832260908,Cabai Rawit Merah,Jawa Tengah,sedang,
+Kab. Banyuwangi,netral,,,,-0.11251556086599594,Cabai Rawit Merah,Jawa Timur,,
+Kab. Boyolali,netral,,,,-0.05396533631036021,Cabai Rawit Merah,Jawa Tengah,,
+Kab. Cilacap,netral,,,,0.2553352963829397,Cabai Rawit Merah,Jawa Tengah,,
+Kab. Cirebon,pengikut,1.0,0.3549841535343477,9.312575909380177e-05,-0.4533713703515997,Cabai Rawit Merah,Jawa Barat,kuat,
+Kab. Jember,netral,,,,0.1266011100836468,Cabai Rawit Merah,Jawa Timur,,
+Kab. Karanganyar,netral,,,,0.17603947803732473,Cabai Rawit Merah,Jawa Tengah,,
+Kab. Klaten,netral,,,,-0.014508531569210989,Cabai Rawit Merah,Jawa Tengah,,
+Kab. Kudus,pengikut,1.0,0.3713194962456609,3.716476469866043e-05,-0.344367350956765,Cabai Rawit Merah,Jawa Tengah,kuat,
+Kab. Sragen,netral,,,,0.025117514267902166,Cabai Rawit Merah,Jawa Tengah,,
+Kab. Sukoharjo,netral,,,,0.19965028256050846,Cabai Rawit Merah,Jawa Tengah,,
+Kab. Sumenep,netral,,,,0.20936065418264263,Cabai Rawit Merah,Jawa Timur,,
+Kab. Tasikmalaya,pengikut,1.0,0.40306466288687476,4.472859525842554e-06,-0.36882444516179147,Cabai Rawit Merah,Jawa Barat,kuat,
+Kab. Wonogiri,netral,,,,-0.004508061555802911,Cabai Rawit Merah,Jawa Tengah,,
+Kota Bandung,pengikut,1.0,0.44422598970750776,3.990939327366402e-07,-0.40968462670901895,Cabai Rawit Merah,Jawa Barat,kuat,
+Kota Bekasi,netral,,,,-0.1329166347908592,Cabai Rawit Merah,Jawa Barat,,
+Kota Blitar,netral,,,,0.1812794273280941,Cabai Rawit Merah,Jawa Timur,,
+Kota Bogor,netral,,,,-0.1163791652251002,Cabai Rawit Merah,Jawa Barat,,
+Kota Cilegon,netral,,,,0.020149748954417873,Cabai Rawit Merah,Banten,,
+Kota Cirebon,pengikut,1.0,0.3158606424989552,0.0009342494110769781,-0.362754968514777,Cabai Rawit Merah,Jawa Barat,kuat,
+Kota Depok,pengikut,1.0,0.2830716222965057,0.004390052262752765,-0.29380915399114144,Cabai Rawit Merah,Jawa Barat,sedang,
+Kota Jakarta Pusat,netral,,,,-0.14515193572236107,Cabai Rawit Merah,DKI Jakarta,,
+Kota Kediri,penentu arah,1.0,0.2572068904555202,0.04284806887574134,0.3305565622926152,Cabai Rawit Merah,Jawa Timur,sedang,True
+Kota Madiun,netral,,,,0.15332420616964476,Cabai Rawit Merah,Jawa Timur,,
+Kota Malang,netral,,,,0.16924531189560887,Cabai Rawit Merah,Jawa Timur,,
+Kota Probolinggo,netral,,,,0.22425346447379776,Cabai Rawit Merah,Jawa Timur,,
+Kota Semarang,netral,,,,0.13967743886505551,Cabai Rawit Merah,Jawa Tengah,,
+Kota Serang,netral,,,,0.037504564414682334,Cabai Rawit Merah,Banten,,
+Kota Sukabumi,pengikut,1.0,0.4108704889883812,3.570003188514074e-06,-0.34971749254731227,Cabai Rawit Merah,Jawa Barat,kuat,
+Kota Surabaya,penentu arah,1.0,0.2757130752008818,0.025735460784325287,0.2761618150275337,Cabai Rawit Merah,Jawa Timur,sedang,True
+Kota Surakarta (Solo),penentu arah,1.0,0.2838975052823286,0.025735460784325287,0.32504632271924827,Cabai Rawit Merah,Jawa Tengah,sedang,True
+Kota Tangerang,netral,,,,0.006934444180191762,Cabai Rawit Merah,Banten,,
+Kota Tasikmalaya,pengikut,1.0,0.29996882710301487,0.0020028579841799114,-0.24872904630891435,Cabai Rawit Merah,Jawa Barat,sedang,
+Kota Tegal,netral,,,,-0.07409051739983678,Cabai Rawit Merah,Jawa Tengah,,
+Kota Yogyakarta,netral,,,,-0.022470944872704804,Cabai Rawit Merah,DI Yogyakarta,,
+Kab. Banyumas,pengikut,1.0,0.243932394483086,0.02722673301088619,-0.14025304217380802,Cabai Merah Keriting,Jawa Tengah,sedang,
+Kab. Boyolali,netral,,,,-0.10181271841302668,Cabai Merah Keriting,Jawa Tengah,,
+Kab. Cilacap,penentu arah,1.0,0.289372042189441,0.015125044786358868,0.29737158468318114,Cabai Merah Keriting,Jawa Tengah,sedang,True
+Kab. Cirebon,netral,,,,-0.12747560538624622,Cabai Merah Keriting,Jawa Barat,,
+Kab. Karanganyar,penentu arah,1.0,0.2676388640388782,0.015125044786358868,0.2575080477400046,Cabai Merah Keriting,Jawa Tengah,sedang,True
+Kab. Klaten,penentu arah,1.0,0.25476241400610705,0.018855662751404895,0.20334592116850161,Cabai Merah Keriting,Jawa Tengah,sedang,True
+Kab. Kudus,netral,,,,0.02115376912524039,Cabai Merah Keriting,Jawa Tengah,,
+Kab. Sragen,penentu arah,1.0,0.26628572819945473,0.015125044786358868,0.12879381415548746,Cabai Merah Keriting,Jawa Tengah,sedang,True
+Kab. Sukoharjo,netral,,,,0.16578933506136784,Cabai Merah Keriting,Jawa Tengah,,
+Kab. Sumenep,netral,,,,-0.13516492136702246,Cabai Merah Keriting,Jawa Timur,,
+Kab. Tasikmalaya,pengikut,1.0,0.3704363097011278,4.826848885732075e-05,-0.4000799231468213,Cabai Merah Keriting,Jawa Barat,kuat,
+Kab. Wonogiri,penentu arah,1.0,0.24070474736851857,0.027981802462571186,0.15353173695263297,Cabai Merah Keriting,Jawa Tengah,sedang,True
+Kota Bandung,pengikut,1.0,0.35122883728858534,0.00013715954057581329,-0.36529086962296187,Cabai Merah Keriting,Jawa Barat,kuat,
+Kota Bekasi,netral,,,,-0.09062882208734417,Cabai Merah Keriting,Jawa Barat,,
+Kota Blitar,pengikut,1.0,0.24846172990746018,0.02530139506808741,-0.15197046733603126,Cabai Merah Keriting,Jawa Timur,sedang,
+Kota Bogor,netral,,,,-0.04431864924787017,Cabai Merah Keriting,Jawa Barat,,
+Kota Cilegon,netral,,,,0.0228425710277651,Cabai Merah Keriting,Banten,,
+Kota Cirebon,netral,,,,-0.039878278940964934,Cabai Merah Keriting,Jawa Barat,,
+Kota Depok,netral,,,,-0.1521324418173372,Cabai Merah Keriting,Jawa Barat,,
+Kota Jakarta Pusat,pengikut,1.0,0.2621931076677786,0.01540500316414385,-0.23670070977659535,Cabai Merah Keriting,DKI Jakarta,sedang,
+Kota Kediri,netral,,,,0.05605234806794018,Cabai Merah Keriting,Jawa Timur,,
+Kota Madiun,netral,,,,0.15632901497032747,Cabai Merah Keriting,Jawa Timur,,
+Kota Malang,pengikut,1.0,0.386815224181501,2.168263678781359e-05,-0.3969894873204939,Cabai Merah Keriting,Jawa Timur,kuat,
+Kota Semarang,penentu arah,1.0,0.27941917098758356,0.015125044786358868,0.2664781938180402,Cabai Merah Keriting,Jawa Tengah,sedang,True
+Kota Serang,penentu arah,1.0,0.24229630724491968,0.027981802462571186,0.13652101793278162,Cabai Merah Keriting,Banten,sedang,False
+Kota Sukabumi,pengikut,1.0,0.3210735258288659,0.0007501130075893299,-0.2959579956031218,Cabai Merah Keriting,Jawa Barat,kuat,
+Kota Surabaya,netral,,,,0.046247801349647844,Cabai Merah Keriting,Jawa Timur,,
+Kota Surakarta (Solo),penentu arah,1.0,0.2677338435666941,0.015125044786358868,0.2897813117111578,Cabai Merah Keriting,Jawa Tengah,sedang,True
+Kota Tangerang,penentu arah,1.0,0.2549997976087762,0.018855662751404895,0.19716624604993177,Cabai Merah Keriting,Banten,sedang,True
+Kota Tasikmalaya,pengikut,1.0,0.4164559267262955,4.1150894491195985e-06,-0.46567296155634363,Cabai Merah Keriting,Jawa Barat,kuat,
+Kota Tegal,netral,,,,0.17030886568172265,Cabai Merah Keriting,Jawa Tengah,,
+Kota Yogyakarta,netral,,,,0.07593488995406507,Cabai Merah Keriting,DI Yogyakarta,,
+Kab. Banyumas,pengikut,1.0,0.38843649196865115,4.6603369010657035e-06,-0.1313642801411009,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,
+Kab. Banyuwangi,pengikut,1.0,0.5479053562849843,5.24393689830323e-12,-0.5119144363686584,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,
+Kab. Boyolali,pengikut,1.0,0.5007880539504155,6.93932560127207e-10,-0.3285995217934987,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,
+Kab. Cilacap,penentu arah,1.0,0.46994849813574807,1.1515700043398084e-08,0.3446551028629403,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,True
+Kab. Cirebon,penentu arah,1.0,0.3700768132384355,1.4773571610020056e-05,0.18102070774105167,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,False
+Kab. Jember,pengikut,1.0,0.4962460308765346,7.580269585196131e-10,-0.4168688999527966,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,
+Kab. Karanganyar,penentu arah,1.0,0.3960019949132726,2.602625935125888e-06,0.20807717615594096,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,False
+Kab. Klaten,pengikut,1.0,0.4109787884397507,1.0109961359660847e-06,-0.25031985220905567,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,
+Kab. Kudus,pengikut,1.0,0.4675604786602775,1.0933605653647722e-08,-0.3422440165685295,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,
+Kab. Sragen,pengikut,1.0,0.36717550548499855,1.964921105196081e-05,-0.11213685293085984,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,
+Kab. Sukoharjo,penentu arah,1.0,0.400204913139896,2.105041977561958e-06,0.20859634348595887,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,False
+Kab. Sumenep,penentu arah,1.0,0.31386992405605063,0.0003709281053324625,0.06727114967271944,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,False
+Kab. Tasikmalaya,pengikut,1.0,0.4164188698008629,7.524674839149596e-07,-0.18635273365830599,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,
+Kab. Wonogiri,pengikut,1.0,0.3009602823048318,0.0006979395129697799,-0.0006764208235605085,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,
+Kota Bandung,pengikut,1.0,0.33849135197903946,0.00010654886368790224,-0.03265122330830389,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,
+Kota Bekasi,penentu arah,1.0,0.37137604676279257,1.4773571610020056e-05,0.13024819635173213,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,False
+Kota Blitar,pengikut,1.0,0.36040786511520645,2.6745403073596224e-05,-0.12448161639616726,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,
+Kota Bogor,penentu arah,1.0,0.40807829143731,1.2806198071163752e-06,0.23554855439483108,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,True
+Kota Cilegon,penentu arah,1.0,0.4294411792491344,2.979168373128293e-07,0.27693496707194304,Bawang Merah Ukuran Sedang,Banten,kuat,True
+Kota Cirebon,penentu arah,1.0,0.32516329831098356,0.00019987015116393068,0.11439794616966961,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,True
+Kota Depok,pengikut,1.0,0.31538202382736413,0.0003203806745336572,-0.07181984963277652,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,
+Kota Jakarta Pusat,pengikut,1.0,0.29562214623515287,0.0008926643886166343,-0.020342671093765308,Bawang Merah Ukuran Sedang,DKI Jakarta,sedang,
+Kota Kediri,penentu arah,1.0,0.4211396942193709,5.061279051580431e-07,0.16359938832473736,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,False
+Kota Madiun,pengikut,1.0,0.4577126540648293,2.2695764401139628e-08,-0.24473161979104105,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,
+Kota Malang,pengikut,1.0,0.4056234512553456,1.366362128717496e-06,-0.16257889185482097,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,
+Kota Probolinggo,pengikut,1.0,0.36606301320645307,1.964921105196081e-05,-0.1033331357184823,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,
+Kota Semarang,penentu arah,1.0,0.3473991876658665,5.5332005349988686e-05,0.0944539703535694,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,False
+Kota Serang,penentu arah,1.0,0.4518448947394347,4.936321745419749e-08,0.3218205605954333,Bawang Merah Ukuran Sedang,Banten,kuat,True
+Kota Sukabumi,penentu arah,1.0,0.3376422118228595,9.751187948243346e-05,0.022114444880836526,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,False
+Kota Surabaya,penentu arah,1.0,0.36181456455127736,2.2391582937371462e-05,0.027172730742817175,Bawang Merah Ukuran Sedang,Jawa Timur,kuat,False
+Kota Surakarta (Solo),penentu arah,1.0,0.5083212346576081,6.020236457882374e-10,0.29249933939633294,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,True
+Kota Tangerang,penentu arah,1.0,0.47499824142539643,1.0428058831899967e-08,0.3391462744080034,Bawang Merah Ukuran Sedang,Banten,kuat,True
+Kota Tasikmalaya,pengikut,1.0,0.3239743311675685,0.00021495562561208055,-0.03825553517916297,Bawang Merah Ukuran Sedang,Jawa Barat,kuat,
+Kota Tegal,penentu arah,1.0,0.3677376669860207,1.5998613986079794e-05,0.14445044814747204,Bawang Merah Ukuran Sedang,Jawa Tengah,kuat,False
+Kota Yogyakarta,pengikut,1.0,0.32423229176684554,0.00021495562561208055,-0.07230577711489655,Bawang Merah Ukuran Sedang,DI Yogyakarta,kuat,
+Kab. Banyumas,pengikut,3.0,0.30399221159002615,0.0015472694347831596,-0.04154517596739277,Bawang Putih Ukuran Sedang,Jawa Tengah,kuat,
+Kab. Banyuwangi,pengikut,1.0,0.2190892689142036,0.03855163693963286,-0.009629200053279163,Bawang Putih Ukuran Sedang,Jawa Timur,sedang,
+Kab. Boyolali,penentu arah,1.0,0.22650276128702151,0.026852061225197784,0.07539814197725503,Bawang Putih Ukuran Sedang,Jawa Tengah,sedang,False
+Kab. Cilacap,penentu arah,2.0,0.27052944921908184,0.005811332836998579,-0.01329636161221226,Bawang Putih Ukuran Sedang,Jawa Tengah,sedang,True
+Kab. Cirebon,penentu arah,1.0,0.22176971839607956,0.028132541816079295,0.00912284888064313,Bawang Putih Ukuran Sedang,Jawa Barat,sedang,False
+Kab. Jember,penentu arah,1.0,0.40494862896621675,3.846734440353526e-06,0.313413597876464,Bawang Putih Ukuran Sedang,Jawa Timur,kuat,True
+Kab. Karanganyar,penentu arah,1.0,0.3166134906769445,0.0005955836500922974,0.27175754158604787,Bawang Putih Ukuran Sedang,Jawa Tengah,kuat,True
+Kab. Klaten,pengikut,1.0,0.24336566523703873,0.01880127641833709,-0.037797821820435645,Bawang Putih Ukuran Sedang,Jawa Tengah,sedang,
+Kab. Kudus,penentu arah,2.0,0.39893542118106035,5.089771922865597e-06,0.10048884530045354,Bawang Putih Ukuran Sedang,Jawa Tengah,kuat,True
+Kab. Sragen,pengikut,2.0,0.259010514597831,0.010200715915323344,0.005880070830824258,Bawang Putih Ukuran Sedang,Jawa Tengah,sedang,
+Kab. Sukoharjo,penentu arah,1.0,0.22299583467371312,0.028132541816079295,0.1049634376795514,Bawang Putih Ukuran Sedang,Jawa Tengah,sedang,False
+Kab. Sumenep,penentu arah,1.0,0.29741355601813946,0.0014698247408188169,0.1831716292688094,Bawang Putih Ukuran Sedang,Jawa Timur,sedang,True
+Kab. Tasikmalaya,pengikut,1.0,0.49972902296054533,1.55823781741639e-09,-0.3816064603193724,Bawang Putih Ukuran Sedang,Jawa Barat,kuat,
+Kab. Wonogiri,penentu arah,1.0,0.3594903354300279,4.885185032238178e-05,0.15807874032397046,Bawang Putih Ukuran Sedang,Jawa Tengah,kuat,True
+Kota Bandung,netral,,,,-0.10869366038438284,Bawang Putih Ukuran Sedang,Jawa Barat,,
+Kota Bekasi,netral,,,,-0.0453159394810885,Bawang Putih Ukuran Sedang,Jawa Barat,,
+Kota Blitar,penentu arah,2.0,0.23307450756933062,0.02207038404163698,-0.06900488440754049,Bawang Putih Ukuran Sedang,Jawa Timur,sedang,True
+Kota Bogor,penentu arah,1.0,0.2603365086923279,0.007646166262566935,0.05249975859321135,Bawang Putih Ukuran Sedang,Jawa Barat,sedang,False
+Kota Cilegon,pengikut,1.0,0.3955195505841821,8.106923399505693e-06,-0.42489495487235474,Bawang Putih Ukuran Sedang,Banten,kuat,
+Kota Cirebon,pengikut,1.0,0.2629104629796118,0.008874887639988204,-0.1509355030170968,Bawang Putih Ukuran Sedang,Jawa Barat,sedang,
+Kota Depok,penentu arah,3.0,0.22345613059601696,0.028132541816079295,-0.2005754277534548,Bawang Putih Ukuran Sedang,Jawa Barat,sedang,False
+Kota Jakarta Pusat,pengikut,1.0,0.22102723855412318,0.0377006241121721,-0.08914099164009193,Bawang Putih Ukuran Sedang,DKI Jakarta,sedang,
+Kota Kediri,penentu arah,1.0,0.31947449978488285,0.0005646583110405841,0.1660306637064987,Bawang Putih Ukuran Sedang,Jawa Timur,kuat,True
+Kota Madiun,pengikut,1.0,0.3495706979692477,0.00013410017471390863,-0.09379071815797019,Bawang Putih Ukuran Sedang,Jawa Timur,kuat,
+Kota Malang,netral,,,,-0.01278386581989674,Bawang Putih Ukuran Sedang,Jawa Timur,,
+Kota Probolinggo,penentu arah,1.0,0.371462677121511,2.942751244055932e-05,0.3311539518528343,Bawang Putih Ukuran Sedang,Jawa Timur,kuat,True
+Kota Semarang,penentu arah,1.0,0.2561044002408125,0.008092549937536664,0.10220984289608051,Bawang Putih Ukuran Sedang,Jawa Tengah,sedang,False
+Kota Serang,penentu arah,3.0,0.218465168429948,0.03130888235168266,-0.23559638617472517,Bawang Putih Ukuran Sedang,Banten,sedang,True
+Kota Sukabumi,penentu arah,1.0,0.2676302932707271,0.00595263914521928,0.09910200478885708,Bawang Putih Ukuran Sedang,Jawa Barat,sedang,True
+Kota Surabaya,penentu arah,1.0,0.3610629405022353,4.885185032238178e-05,0.05732302697870206,Bawang Putih Ukuran Sedang,Jawa Timur,kuat,True
+Kota Surakarta (Solo),penentu arah,1.0,0.44182403723142927,2.482236774571573e-07,0.2883917122190034,Bawang Putih Ukuran Sedang,Jawa Tengah,kuat,True
+Kota Tangerang,pengikut,1.0,0.401648785685068,7.509854837356692e-06,-0.39551022579438105,Bawang Putih Ukuran Sedang,Banten,kuat,
+Kota Tasikmalaya,pengikut,1.0,0.21225833787383075,0.04152490497120354,-0.05330434036520343,Bawang Putih Ukuran Sedang,Jawa Barat,sedang,
+Kota Tegal,penentu arah,1.0,0.4514739518758638,2.0441729711392076e-07,0.2782253880726729,Bawang Putih Ukuran Sedang,Jawa Tengah,kuat,True
+Kota Yogyakarta,pengikut,3.0,0.3603068836955217,9.339359999551587e-05,-0.11441195865182542,Bawang Putih Ukuran Sedang,DI Yogyakarta,kuat,
+Kab. Banyumas,netral,,,,0.01863303974097147,Daging Ayam Ras Segar,Jawa Tengah,,
+Kab. Banyuwangi,netral,,,,0.030547829331964926,Daging Ayam Ras Segar,Jawa Timur,,
+Kab. Boyolali,pengikut,1.0,0.23416837530051846,0.022964845114240035,-0.10907574541039858,Daging Ayam Ras Segar,Jawa Tengah,sedang,
+Kab. Cilacap,netral,,,,0.0696112375294663,Daging Ayam Ras Segar,Jawa Tengah,,
+Kab. Cirebon,penentu arah,1.0,0.313991603193107,0.0015651795435006907,0.2072129762846046,Daging Ayam Ras Segar,Jawa Barat,kuat,True
+Kab. Jember,penentu arah,1.0,0.28170667180443437,0.005390153006520448,0.19614944039144094,Daging Ayam Ras Segar,Jawa Timur,sedang,False
+Kab. Karanganyar,netral,,,,0.07193638505815331,Daging Ayam Ras Segar,Jawa Tengah,,
+Kab. Klaten,pengikut,1.0,0.323592333917323,0.0007040826785483198,-0.23931847031449793,Daging Ayam Ras Segar,Jawa Tengah,kuat,
+Kab. Kudus,pengikut,1.0,0.42245884464820715,2.715255437562147e-06,-0.44574012260465246,Daging Ayam Ras Segar,Jawa Tengah,kuat,
+Kab. Sragen,pengikut,1.0,0.22457809517129965,0.030728473187933134,-0.012332533327731099,Daging Ayam Ras Segar,Jawa Tengah,sedang,
+Kab. Sukoharjo,pengikut,1.0,0.2145495868843486,0.04388462761727908,-0.0326923274612341,Daging Ayam Ras Segar,Jawa Tengah,sedang,
+Kab. Sumenep,pengikut,1.0,0.3981598775620375,9.89227411250379e-06,-0.3550623451327121,Daging Ayam Ras Segar,Jawa Timur,kuat,
+Kab. Tasikmalaya,penentu arah,1.0,0.31771572747145344,0.0015651795435006907,0.21501035813582153,Daging Ayam Ras Segar,Jawa Barat,kuat,True
+Kab. Wonogiri,pengikut,1.0,0.24883168156508445,0.015111822862900923,-0.09083053952572898,Daging Ayam Ras Segar,Jawa Tengah,sedang,
+Kota Bandung,pengikut,1.0,0.24745135780379468,0.015111822862900923,-0.11016277541091135,Daging Ayam Ras Segar,Jawa Barat,sedang,
+Kota Bekasi,pengikut,1.0,0.24855856225330739,0.015111822862900923,-0.18443003874148045,Daging Ayam Ras Segar,Jawa Barat,sedang,
+Kota Blitar,pengikut,1.0,0.2562691101916367,0.014934968540116467,-0.013815448307719136,Daging Ayam Ras Segar,Jawa Timur,sedang,
+Kota Bogor,pengikut,1.0,0.35224932042490037,0.00018676079834560542,-0.23080613133520222,Daging Ayam Ras Segar,Jawa Barat,kuat,
+Kota Cilegon,netral,,,,0.0045028910387336085,Daging Ayam Ras Segar,Banten,,
+Kota Cirebon,penentu arah,1.0,0.2948767936541594,0.0037203277283131627,0.18063188091908502,Daging Ayam Ras Segar,Jawa Barat,sedang,True
+Kota Depok,pengikut,1.0,0.3176720575668225,0.0008387402501172687,-0.2340522828832755,Daging Ayam Ras Segar,Jawa Barat,kuat,
+Kota Jakarta Pusat,pengikut,1.0,0.2841188387349108,0.004154043247684735,-0.11910498378751805,Daging Ayam Ras Segar,DKI Jakarta,sedang,
+Kota Kediri,penentu arah,1.0,0.34196277658402097,0.001106763774476075,0.3081233537410415,Daging Ayam Ras Segar,Jawa Timur,kuat,True
+Kota Madiun,pengikut,1.0,0.3376244021900688,0.00036608692522487675,-0.16692819993548755,Daging Ayam Ras Segar,Jawa Timur,kuat,
+Kota Malang,penentu arah,1.0,0.27145577640379764,0.00798780633762919,0.1304143469085825,Daging Ayam Ras Segar,Jawa Timur,sedang,True
+Kota Probolinggo,penentu arah,1.0,0.32346310293148556,0.0015651795435006907,0.23283472382298118,Daging Ayam Ras Segar,Jawa Timur,kuat,True
+Kota Semarang,penentu arah,1.0,0.2532241389365511,0.01644526999372743,0.04918817243581458,Daging Ayam Ras Segar,Jawa Tengah,sedang,False
+Kota Serang,netral,,,,0.02217792214205197,Daging Ayam Ras Segar,Banten,,
+Kota Sukabumi,pengikut,1.0,0.23950072802320244,0.019375299921720664,-0.08744316017005144,Daging Ayam Ras Segar,Jawa Barat,sedang,
+Kota Surabaya,netral,,,,-2.1604976860933878e-05,Daging Ayam Ras Segar,Jawa Timur,,
+Kota Surakarta (Solo),penentu arah,1.0,0.2519900404273673,0.01644526999372743,0.1090247251726561,Daging Ayam Ras Segar,Jawa Tengah,sedang,True
+Kota Tangerang,pengikut,1.0,0.24654169627529643,0.015111822862900923,-0.141771811483837,Daging Ayam Ras Segar,Banten,sedang,
+Kota Tasikmalaya,penentu arah,1.0,0.28272102595717696,0.005390153006520448,0.09714195795951239,Daging Ayam Ras Segar,Jawa Barat,sedang,False
+Kota Tegal,netral,,,,-0.00978193942083666,Daging Ayam Ras Segar,Jawa Tengah,,
+Kota Yogyakarta,pengikut,1.0,0.23130357481765956,0.024464574099909205,-0.028700898408733105,Daging Ayam Ras Segar,DI Yogyakarta,sedang,
+Kab. Banyumas,netral,,,,0.06983418386644152,Telur Ayam Ras Segar,Jawa Tengah,,
+Kab. Banyuwangi,pengikut,1.0,0.2782493850604377,0.006778367318114397,-0.20044799713782874,Telur Ayam Ras Segar,Jawa Timur,sedang,
+Kab. Boyolali,netral,,,,0.012528671206966685,Telur Ayam Ras Segar,Jawa Tengah,,
+Kab. Cilacap,netral,,,,0.13525132889105618,Telur Ayam Ras Segar,Jawa Tengah,,
+Kab. Cirebon,netral,,,,0.05216321648478739,Telur Ayam Ras Segar,Jawa Barat,,
+Kab. Jember,netral,,,,0.09052860559179116,Telur Ayam Ras Segar,Jawa Timur,,
+Kab. Karanganyar,netral,,,,0.04480242230522585,Telur Ayam Ras Segar,Jawa Tengah,,
+Kab. Klaten,pengikut,1.0,0.27914861866309243,0.006778367318114397,-0.13225362827135553,Telur Ayam Ras Segar,Jawa Tengah,sedang,
+Kab. Kudus,pengikut,1.0,0.46353482755472414,6.481711189665602e-08,-0.32860856597442134,Telur Ayam Ras Segar,Jawa Tengah,kuat,
+Kab. Sragen,pengikut,1.0,0.2651638414456824,0.007947272760313543,-0.1486777699436948,Telur Ayam Ras Segar,Jawa Tengah,sedang,
+Kab. Sukoharjo,netral,,,,0.01094426276004462,Telur Ayam Ras Segar,Jawa Tengah,,
+Kab. Sumenep,pengikut,1.0,0.31765715218068813,0.0023468494727420797,-0.20436287661927072,Telur Ayam Ras Segar,Jawa Timur,kuat,
+Kab. Tasikmalaya,penentu arah,1.0,0.2662163357713513,0.016599837641647575,0.04186419728247395,Telur Ayam Ras Segar,Jawa Barat,sedang,False
+Kab. Wonogiri,pengikut,1.0,0.27429000379574076,0.006778367318114397,-0.10450508415331311,Telur Ayam Ras Segar,Jawa Tengah,sedang,
+Kota Bandung,netral,,,,0.024525253006577902,Telur Ayam Ras Segar,Jawa Barat,,
+Kota Bekasi,pengikut,1.0,0.31199312385315453,0.0023468494727420797,-0.15033076749093102,Telur Ayam Ras Segar,Jawa Barat,kuat,
+Kota Blitar,pengikut,1.0,0.2856124205651331,0.006778367318114397,-0.09726991179606659,Telur Ayam Ras Segar,Jawa Timur,sedang,
+Kota Bogor,pengikut,1.0,0.25581854263946563,0.011443489436015728,-0.1551660438241595,Telur Ayam Ras Segar,Jawa Barat,sedang,
+Kota Cilegon,pengikut,1.0,0.2720937722598619,0.006778367318114397,-0.14134324336808277,Telur Ayam Ras Segar,Banten,sedang,
+Kota Cirebon,penentu arah,1.0,0.28944952440788013,0.012499994546686646,0.24000093222391009,Telur Ayam Ras Segar,Jawa Barat,sedang,True
+Kota Depok,netral,,,,-0.04880372854124998,Telur Ayam Ras Segar,Jawa Barat,,
+Kota Jakarta Pusat,pengikut,1.0,0.2311881898504432,0.02985466965821351,-0.09987762153097254,Telur Ayam Ras Segar,DKI Jakarta,sedang,
+Kota Kediri,netral,,,,0.16113320798192415,Telur Ayam Ras Segar,Jawa Timur,,
+Kota Madiun,pengikut,1.0,0.2702833918317085,0.006778367318114397,-0.07682500431660444,Telur Ayam Ras Segar,Jawa Timur,sedang,
+Kota Malang,penentu arah,1.0,0.27551434344501624,0.01299935065605173,0.20175401712498503,Telur Ayam Ras Segar,Jawa Timur,sedang,True
+Kota Probolinggo,penentu arah,1.0,0.2782079887369106,0.01299935065605173,0.23908877990468574,Telur Ayam Ras Segar,Jawa Timur,sedang,True
+Kota Semarang,penentu arah,1.0,0.3099147375661705,0.007947716381056489,0.28973933108370786,Telur Ayam Ras Segar,Jawa Tengah,kuat,True
+Kota Serang,pengikut,1.0,0.27627949395774853,0.006778367318114397,-0.13152087086905084,Telur Ayam Ras Segar,Banten,sedang,
+Kota Sukabumi,netral,,,,0.0007053678620791981,Telur Ayam Ras Segar,Jawa Barat,,
+Kota Surabaya,netral,,,,-0.004222897080573856,Telur Ayam Ras Segar,Jawa Timur,,
+Kota Surakarta (Solo),netral,,,,0.10684136141864488,Telur Ayam Ras Segar,Jawa Tengah,,
+Kota Tangerang,pengikut,1.0,0.2494585012617019,0.014230703196004217,-0.10313805085342392,Telur Ayam Ras Segar,Banten,sedang,
+Kota Tasikmalaya,netral,,,,0.11941055229849788,Telur Ayam Ras Segar,Jawa Barat,,
+Kota Tegal,penentu arah,1.0,0.2410630003862025,0.04517822471461925,0.14709748559816135,Telur Ayam Ras Segar,Jawa Tengah,sedang,False
+Kota Yogyakarta,netral,,,,0.08919955584819497,Telur Ayam Ras Segar,DI Yogyakarta,,
