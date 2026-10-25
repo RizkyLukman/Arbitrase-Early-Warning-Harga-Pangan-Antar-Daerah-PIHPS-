@@ -46,24 +46,32 @@ Produsen 48 kab/kota (bawang putih: 0).
   pencacahan nyata ditandai `minggu_tipis`. Daftar tanggal dideteksi dari data, lalu dicocokkan dengan
   `data/reference/hari_besar.csv` setelah file itu diverifikasi dari SKB.
 
-### 2.2 Data kosong (baris kota)
+### 2.2 Data kosong (baris kota, grid lengkap)
+
+**Jebakan (ditemukan saat audit pasca-cleaning, 2026-10-26):** PIHPS tidak menyertakan baris sebuah kota di bulan
+ketika kota itu sama sekali tidak punya data. Bulan yang hilang tidak tertulis `-`, tetapi **barisnya tidak ada**.
+6 seri terdampak (+2.834 baris setelah dilengkapi): cabai merah keriting tradisional Kab. Jember (hilang Des 2023–Mar 2026),
+pasar modern Kab. Banyuwangi (cabai rawit, bawang merah, bawang putih), pasar modern Kab. Cilacap (bawang merah,
+Sep–Okt 2023), dan produsen daging ayam Kota Blitar (baru mulai Jan 2026). Angka di bawah sudah memakai grid lengkap.
 
 | Komoditas | Tradisional | Modern | Pedagang Besar | Produsen |
 |---|---|---|---|---|
 | Telur ayam | 0,94% | 2,89% | 0,27% | 0,93% |
-| Bawang merah | 0,94% | 4,11% | 0,29% | 1,71% |
-| Bawang putih | 0,94% | 3,82% | 0,29% | – |
-| Cabai merah keriting | 1,01% | 3,19% | 0,32% | 1,37% |
-| Cabai rawit merah | 0,94% | 3,32% | 0,29% | 0,97% |
-| Daging ayam | 0,94% | 3,03% | 0,29% | 1,08% |
+| Bawang merah | 0,94% | 6,10% | 0,29% | 1,71% |
+| Bawang putih | 0,94% | 5,61% | 0,29% | – |
+| Cabai merah keriting | 3,11% | 3,19% | 0,32% | 1,37% |
+| Cabai rawit merah | 0,94% | 6,84% | 0,29% | 0,97% |
+| Daging ayam | 0,94% | 3,03% | 0,29% | 3,22% |
 
-- 4.165 celah: 3.306 sepanjang 1 hari, 389 sepanjang 2 hari, 239 sepanjang 4 hari. **185 celah > 5 hari kerja**, terpanjang 39.
+- 4.165 celah: 3.306 sepanjang 1 hari, 389 sepanjang 2 hari, 239 sepanjang 4 hari. **185 celah > 5 hari kerja**;
+  terpanjang 777 hari kerja (pasar modern cabai rawit Banyuwangi).
 - Pola khusus:
   - Pasar modern: dua periode ketika 60–70% seri kosong bersamaan, yaitu 2023-11-29 s/d 12-07 dan 2026-09-30 s/d 10-05
     (kemungkinan gangguan pelaporan).
-  - **Pasar modern Kab. Banyuwangi bawang merah/putih kosong 33–36%** → tidak dipakai.
+  - **Seri bolong berbulan-bulan (baris hilang):** pasar modern Kab. Banyuwangi cabai rawit 90% kosong, bawang merah/putih
+    63–65%; pasar tradisional cabai merah keriting Kab. Jember 73%; produsen daging ayam Kota Blitar 77% (baru mulai 2026);
+    pasar modern Kab. Cilacap bawang merah 13%. → tidak dipakai untuk analisis tren.
   - Produsen: celah 21–23 hari (sebulan penuh) di beberapa kabupaten (Pandeglang, Serang, Sumedang, Garut, Tegal, Malang).
-  - Pasar tradisional cabai merah keriting Kab. Jember: celah 23 hari.
 - Tidak ada seri yang 100% kosong; tidak ada tanggal yang kosong di semua kota sekaligus.
 - **Tindakan (sesuai brief):** celah ≤ 5 hari kerja → forward-fill + `is_imputed`. Celah lebih panjang dibiarkan NaN.
 
@@ -140,6 +148,7 @@ minggu-minggu ini harus dianggap kosong, bukan "harga stabil".
 1. **Parse** JSON → format panjang: `tanggal, jenis_pasar, provinsi, kota_id, kota, komoditas, harga`.
    Baris level 0 disimpan terpisah sebagai harga nasional. Baris level 1 dibuang.
 2. **Standarisasi kota**: `strip()`, petakan nama → id lewat referensi, buang duplikat Surakarta id 787.
+   **Lengkapi grid** setiap seri ke semua tanggal kerja (bulan tanpa baris → kosong).
 3. **Tandai hari libur** (`is_libur_isi`) → NaN untuk perhitungan harian.
 4. **Tandai outlier dua tingkat** (§2.4): salah input (B/C) → NaN pada versi bersih; lonjakan tajam (A) → penanda saja.
 5. **Isi celah ≤ 5 hari kerja** (forward-fill, `is_imputed`); celah lebih panjang tetap NaN.

@@ -1,0 +1,620 @@
+jenis_pasar,kualitas,provinsi,kota,kota_id,hari,data_pertama,data_terakhir,pct_kosong_asli,hari_libur_isi,salah_input,lonjakan_tajam,hari_diisi,pct_kosong_akhir,celah_terpanjang_akhir,run_datar_maks,pct_usang
+Pasar Modern,Bawang Merah Ukuran Sedang,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,39,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,49,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,2.31,72,0,0,72,2.31,7,64,0.6
+Pasar Modern,Bawang Merah Ukuran Sedang,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,1.97,72,0,0,69,2.31,7,34,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,54,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,6.13,72,0,0,105,2.31,7,90,3.6
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,6.47,72,0,0,104,2.31,7,25,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,3.93,72,0,0,80,2.31,7,37,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,34,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,8.79,72,0,0,102,4.51,19,54,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,1.39,72,0,0,64,2.31,7,44,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.81,72,0,0,61,1.5,7,60,0.1
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,13.53,72,0,0,67,12.83,69,119,7.3
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,6.82,72,0,0,107,2.31,7,24,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.12,72,0,0,59,1.5,7,69,2.3
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,34,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2025-05-07,64.74,72,0,0,21,65.09,382,50,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,82,3.8
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,49,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,59,0.0
+Pasar Modern,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,4.97,72,0,0,95,2.31,7,39,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,49,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,35,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,2.31,72,0,0,72,2.31,7,106,15.4
+Pasar Modern,Bawang Putih Ukuran Sedang,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,1.97,72,0,0,69,2.31,7,59,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,59,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,6.13,72,0,0,105,2.31,7,195,22.2
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,6.47,72,0,0,104,2.31,7,129,13.3
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,3.93,72,0,0,80,2.31,7,34,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,104,5.2
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,8.79,72,0,0,102,4.51,19,30,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,1.39,72,0,0,64,2.31,7,69,1.2
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.81,72,0,0,61,1.5,7,30,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,3.93,72,0,0,63,4.28,24,119,10.9
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,6.82,72,0,0,107,2.31,7,19,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.12,72,0,0,59,1.5,7,109,9.4
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,69,1.2
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2025-05-07,62.66,72,0,0,24,62.54,382,50,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,69,2.3
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,74,1.7
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,64,0.6
+Pasar Modern,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,4.97,72,0,0,95,2.31,7,44,0.0
+Pasar Modern,Cabai Merah Keriting,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,20,0.0
+Pasar Modern,Cabai Merah Keriting,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,34,0.0
+Pasar Modern,Cabai Merah Keriting,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,2.31,72,0,0,72,2.31,7,60,0.1
+Pasar Modern,Cabai Merah Keriting,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,1.97,72,0,2,69,2.31,7,20,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,27,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,6.13,72,0,0,105,2.31,7,52,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,6.47,72,0,0,104,2.31,7,19,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,3.93,72,0,0,80,2.31,7,75,1.8
+Pasar Modern,Cabai Merah Keriting,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,19,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,8.79,72,0,0,102,4.51,19,124,8.2
+Pasar Modern,Cabai Merah Keriting,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,1.39,72,0,0,64,2.31,7,25,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,1.39,72,0,1,66,1.5,7,24,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,2.77,72,0,0,61,3.12,14,106,6.6
+Pasar Modern,Cabai Merah Keriting,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,6.82,72,0,0,107,2.31,7,29,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.12,72,0,0,59,1.5,7,44,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,34,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,2.08,72,0,2,68,2.54,9,64,0.6
+Pasar Modern,Cabai Merah Keriting,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,9,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,124,15.0
+Pasar Modern,Cabai Merah Keriting,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,79,4.6
+Pasar Modern,Cabai Merah Keriting,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,48,0.0
+Pasar Modern,Cabai Merah Keriting,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,4.97,72,0,0,95,2.31,7,44,0.0
+Pasar Modern,Cabai Rawit Merah,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,34,0.0
+Pasar Modern,Cabai Rawit Merah,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,34,0.0
+Pasar Modern,Cabai Rawit Merah,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,2.31,72,0,0,72,2.31,7,69,1.2
+Pasar Modern,Cabai Rawit Merah,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,1.97,72,0,0,69,2.31,7,29,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,24,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,6.13,72,0,0,105,2.31,7,47,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,6.47,72,0,0,104,2.31,7,24,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,3.93,72,0,0,80,2.31,7,39,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,19,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,8.79,72,0,0,102,4.51,19,94,4.2
+Pasar Modern,Cabai Rawit Merah,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,1.39,72,0,0,64,2.31,7,44,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.81,72,0,0,61,1.5,7,21,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,5.9,72,0,1,79,4.16,14,64,0.6
+Pasar Modern,Cabai Rawit Merah,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,6.82,72,0,1,107,2.31,7,19,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.12,72,0,0,59,1.5,7,45,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2023-11-01,89.83,72,0,0,3,89.83,777,80,2.4
+Pasar Modern,Cabai Rawit Merah,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.58,72,0,1,64,1.5,7,34,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,38,0.0
+Pasar Modern,Cabai Rawit Merah,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,4.97,72,0,0,95,2.31,7,43,0.0
+Pasar Modern,Daging Ayam Ras Segar,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,32,0.0
+Pasar Modern,Daging Ayam Ras Segar,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,79,2.3
+Pasar Modern,Daging Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,2.31,72,0,0,72,2.31,7,89,5.5
+Pasar Modern,Daging Ayam Ras Segar,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,1.97,72,0,0,69,2.31,7,44,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,64,0.6
+Pasar Modern,Daging Ayam Ras Segar,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,6.13,72,0,0,105,2.31,7,69,1.2
+Pasar Modern,Daging Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,6.47,72,0,0,104,2.31,7,74,1.7
+Pasar Modern,Daging Ayam Ras Segar,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,3.93,72,0,0,80,2.31,7,94,5.3
+Pasar Modern,Daging Ayam Ras Segar,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,54,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,8.79,72,0,0,102,4.51,19,50,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,1.39,72,0,0,64,2.31,7,112,12.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.81,72,0,1,61,1.5,7,50,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,1.62,72,0,0,68,1.5,7,87,7.3
+Pasar Modern,Daging Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,6.82,72,0,0,107,2.31,7,49,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.12,72,0,0,59,1.5,7,44,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,39,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,193,39.9
+Pasar Modern,Daging Ayam Ras Segar,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,34,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,99,6.9
+Pasar Modern,Daging Ayam Ras Segar,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pasar Modern,Daging Ayam Ras Segar,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,272,31.7
+Pasar Modern,Daging Ayam Ras Segar,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,4.97,72,0,0,95,2.31,7,39,0.0
+Pasar Modern,Telur Ayam Ras Segar,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,15,0.0
+Pasar Modern,Telur Ayam Ras Segar,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,4.05,72,0,0,87,2.31,7,39,0.0
+Pasar Modern,Telur Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,2.31,72,0,0,72,2.31,7,24,0.0
+Pasar Modern,Telur Ayam Ras Segar,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,1.97,72,0,0,69,2.31,7,30,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,14,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,6.13,72,0,0,105,2.31,7,14,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,6.47,72,0,0,104,2.31,7,14,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,3.93,72,0,0,80,2.31,7,14,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,6.01,72,0,0,104,2.31,7,14,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,8.79,72,0,0,102,4.51,19,25,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,1.39,72,0,0,64,2.31,7,24,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.81,72,0,0,61,1.5,7,13,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,0.69,72,0,0,60,1.5,7,24,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,6.82,72,0,0,107,2.31,7,14,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.12,72,0,0,59,1.5,7,19,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,10,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,54,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,39,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,34,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pasar Modern,Telur Ayam Ras Segar,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,4.97,72,0,0,95,2.31,7,20,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Banten,Kota Cilegon,25,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,18,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,0.46,72,0,1,59,1.5,7,23,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,55,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,39,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,33,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,2.2,72,0,0,69,1.5,7,32,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,33,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,23,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,21,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,20,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,2.08,72,0,0,68,1.5,7,15,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,23,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-22,0.92,72,0,0,60,1.62,7,17,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,19,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,3.7,72,0,0,59,1.5,7,21,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,25,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,3.58,72,0,1,59,1.5,7,8,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,21,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Klaten,159,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,21,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Kudus,40,865,2023-07-03,2026-10-23,3.24,72,0,1,62,1.5,7,40,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,16,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Sukoharjo,144,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,28,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Wonogiri,165,865,2023-07-03,2026-10-23,0.46,72,1,0,64,1.5,7,26,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,3.35,72,0,0,63,1.5,7,22,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,17,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,22,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,1.62,72,0,0,70,1.5,7,15,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,1.5,72,0,0,69,1.5,7,9,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,14,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,15,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,19,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.58,72,0,0,59,1.5,7,17,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,37,0.0
+Pasar Tradisional,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,18,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Banten,Kota Cilegon,25,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,66,0.9
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,90,5.3
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,63,0.5
+Pasar Tradisional,Bawang Putih Ukuran Sedang,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,108,5.7
+Pasar Tradisional,Bawang Putih Ukuran Sedang,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,44,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,2.2,72,0,0,69,1.5,7,62,0.3
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,44,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,57,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,56,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,23,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,2.08,72,0,0,68,1.5,7,121,10.9
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,54,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-22,0.92,72,0,0,60,1.62,7,48,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,109,5.8
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,3.7,72,0,0,59,1.5,7,50,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,53,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,3.58,72,0,0,59,1.5,7,28,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,41,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Klaten,159,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,32,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Kudus,40,865,2023-07-03,2026-10-23,3.24,72,0,0,62,1.5,7,50,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,21,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Sukoharjo,144,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,37,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Wonogiri,165,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,26,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,3.35,72,0,0,63,1.5,7,28,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,81,2.5
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,1.62,72,0,0,70,1.5,7,27,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,1.5,72,0,0,69,1.5,7,18,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.58,72,0,1,60,1.5,7,52,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,20,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,28,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,28,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.58,72,0,0,59,1.5,7,40,0.0
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,62,0.3
+Pasar Tradisional,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,24,0.0
+Pasar Tradisional,Cabai Merah Keriting,Banten,Kota Cilegon,25,865,2023-07-03,2026-10-23,0.46,72,0,3,59,1.5,7,8,0.0
+Pasar Tradisional,Cabai Merah Keriting,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,0.46,72,0,3,59,1.5,7,9,0.0
+Pasar Tradisional,Cabai Merah Keriting,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.58,72,0,2,60,1.5,7,7,0.0
+Pasar Tradisional,Cabai Merah Keriting,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.35,72,0,1,59,1.5,7,14,0.0
+Pasar Tradisional,Cabai Merah Keriting,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.81,72,0,1,60,1.5,7,13,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,2.2,72,0,1,69,1.5,7,9,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,11,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,22,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.92,72,0,1,60,1.5,7,11,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.81,72,0,2,60,1.5,7,8,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,2.08,72,0,3,68,1.5,7,10,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.81,72,0,1,60,1.5,7,21,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-22,0.92,72,0,0,60,1.62,7,10,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,19,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,3.7,72,0,1,59,1.5,7,16,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,9,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,3.58,72,0,2,59,1.5,7,5,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,11,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Klaten,159,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,7,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Kudus,40,865,2023-07-03,2026-10-23,3.24,72,0,3,62,1.5,7,13,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.35,72,0,2,62,1.5,7,7,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Sukoharjo,144,865,2023-07-03,2026-10-23,0.0,72,0,2,59,1.5,7,11,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kab. Wonogiri,165,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,8,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,3.35,72,0,4,63,1.5,7,11,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,7,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.46,72,0,1,63,1.5,7,21,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,73.18,72,0,0,13,72.95,631,26,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.58,72,0,1,60,1.5,7,11,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,2,59,1.5,7,8,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,1,59,1.5,7,8,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.12,72,0,2,60,1.5,7,7,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.58,72,0,0,59,1.5,7,11,0.0
+Pasar Tradisional,Cabai Merah Keriting,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Banten,Kota Cilegon,25,865,2023-07-03,2026-10-23,0.46,72,0,2,59,1.5,7,8,0.0
+Pasar Tradisional,Cabai Rawit Merah,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,0.46,72,0,2,59,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.58,72,0,1,60,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,9,0.0
+Pasar Tradisional,Cabai Rawit Merah,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.81,72,0,2,60,1.5,7,11,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,2.2,72,0,1,69,1.5,7,10,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,15,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,16,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.92,72,0,2,60,1.5,7,17,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.81,72,0,1,60,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,2.08,72,0,1,68,1.5,7,12,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.81,72,0,2,60,1.5,7,11,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-22,0.92,72,1,0,61,1.62,7,12,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,14,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,3.7,72,1,2,60,1.5,7,14,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.0,72,0,3,59,1.5,7,10,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,3.58,72,0,3,59,1.5,7,5,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.0,72,0,1,59,1.5,7,10,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Klaten,159,865,2023-07-03,2026-10-23,0.35,72,0,2,62,1.5,7,8,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Kudus,40,865,2023-07-03,2026-10-23,3.24,72,0,0,62,1.5,7,11,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.35,72,0,2,62,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Sukoharjo,144,865,2023-07-03,2026-10-23,0.0,72,0,2,59,1.5,7,9,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kab. Wonogiri,165,865,2023-07-03,2026-10-23,0.46,72,1,0,64,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,3.35,72,0,2,63,1.5,7,10,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,3,59,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,9,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,1.62,72,0,2,70,1.5,7,8,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,1.5,72,0,2,69,1.5,7,9,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.58,72,0,2,60,1.5,7,12,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,4,59,1.5,7,6,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,1,59,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.12,72,0,1,60,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.58,72,0,4,59,1.5,7,7,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.35,72,0,2,59,1.5,7,9,0.0
+Pasar Tradisional,Cabai Rawit Merah,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.58,72,0,4,60,1.5,7,7,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Banten,Kota Cilegon,25,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,12,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,12,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,12,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,22,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,7,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,2.2,72,0,0,69,1.5,7,12,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,15,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,19,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,19,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,22,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,2.08,72,0,0,68,1.5,7,10,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,20,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-22,0.92,72,0,0,60,1.62,7,11,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,11,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,3.7,72,0,0,59,1.5,7,9,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,3.58,72,0,0,59,1.5,7,10,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,26,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Klaten,159,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,13,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Kudus,40,865,2023-07-03,2026-10-23,3.24,72,0,0,62,1.5,7,35,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,9,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Sukoharjo,144,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,25,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kab. Wonogiri,165,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,14,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,3.35,72,0,0,63,1.5,7,19,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,25,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,29,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,1.62,72,0,0,70,1.5,7,15,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,1.5,72,0,0,69,1.5,7,13,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,47,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,17,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,41,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.58,72,0,0,59,1.5,7,16,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,16,0.0
+Pasar Tradisional,Daging Ayam Ras Segar,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,15,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Banten,Kota Cilegon,25,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,28,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,32,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,37,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,28,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,16,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,2.2,72,0,0,69,1.5,7,17,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,11,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,18,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.92,72,0,0,60,1.5,7,28,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,22,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kota Cirebon,28,865,2023-07-03,2026-10-23,2.08,72,0,0,68,1.5,7,15,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.81,72,0,0,60,1.5,7,16,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-22,0.92,72,0,0,60,1.62,7,20,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.46,72,0,0,59,1.5,7,21,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,3.7,72,0,0,59,1.5,7,11,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,12,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,3.58,72,0,0,59,1.5,7,13,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,15,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Klaten,159,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,14,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Kudus,40,865,2023-07-03,2026-10-23,3.24,72,0,0,62,1.5,7,18,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,27,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Sukoharjo,144,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,17,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kab. Wonogiri,165,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,18,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,3.35,72,0,0,63,1.5,7,22,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,20,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,11,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,1.62,72,0,0,70,1.5,7,20,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,1.5,72,0,0,69,1.5,7,8,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,57,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,9,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,69,1.2
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.58,72,0,2,59,1.5,7,29,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.35,72,0,0,59,1.5,7,22,0.0
+Pasar Tradisional,Telur Ayam Ras Segar,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.58,72,0,0,60,1.5,7,21,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,66,0.8
+Pedagang Besar,Bawang Merah Ukuran Sedang,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,49,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,59,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,34,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Cirebon,28,865,2023-07-06,2026-10-23,1.27,72,0,0,62,2.08,8,14,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,49,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,39,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,1.39,72,0,0,60,2.2,7,10,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,1.97,72,0,0,64,2.2,7,24,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,1.16,72,0,0,62,1.5,7,40,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,25,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,14,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,49,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Bawang Merah Ukuran Sedang,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,84,9.2
+Pedagang Besar,Bawang Putih Ukuran Sedang,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,84,7.2
+Pedagang Besar,Bawang Putih Ukuran Sedang,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,76,2.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,209,39.5
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,244,26.2
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Cirebon,28,865,2023-07-06,2026-10-23,1.27,72,0,0,62,2.08,8,59,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,159,17.3
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,1.39,72,0,0,60,2.2,7,24,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,1.97,72,0,0,64,2.2,7,39,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,1.16,72,0,0,62,1.5,7,96,8.9
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,49,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,75,1.8
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,29,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Bawang Putih Ukuran Sedang,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,51,0.0
+Pedagang Besar,Cabai Merah Keriting,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Cabai Merah Keriting,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Cabai Merah Keriting,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,39,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Barat,Kota Cirebon,28,865,2023-07-06,2026-10-23,1.27,72,0,0,62,2.08,8,24,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,1.39,72,0,0,60,2.2,7,10,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,1.97,72,0,1,64,2.2,7,13,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,1.16,72,0,1,62,1.5,7,14,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,1.04,72,0,0,68,1.5,7,19,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,9,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Merah Keriting,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pedagang Besar,Cabai Rawit Merah,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Rawit Merah,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Rawit Merah,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,39,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Barat,Kota Cirebon,28,865,2023-07-06,2026-10-23,1.27,72,0,0,62,2.08,8,19,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,1.39,72,0,0,60,2.2,7,9,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,1.97,72,0,1,64,2.2,7,20,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,1.16,72,0,0,62,1.5,7,10,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,9,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,14,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,9,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,9,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Cabai Rawit Merah,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Daging Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,79,2.3
+Pedagang Besar,Daging Ayam Ras Segar,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,34,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,114,6.9
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,59,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Barat,Kota Cirebon,28,865,2023-07-06,2026-10-23,1.27,72,0,0,62,2.08,8,14,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,79,2.3
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,64,0.6
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,1.39,72,0,0,60,2.2,7,14,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,1.97,72,0,0,64,2.2,7,29,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,1.16,72,0,0,62,1.5,7,54,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,39,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,14,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,19,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,49,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,34,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Daging Ayam Ras Segar,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Banten,Kota Tangerang,26,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,59,0.0
+Pedagang Besar,Telur Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Telur Ayam Ras Segar,DKI Jakarta,Kota Jakarta Pusat,34,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Barat,Kota Bandung,27,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Barat,Kota Bekasi,30,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,54,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Barat,Kota Cirebon,28,865,2023-07-06,2026-10-23,1.27,72,0,0,62,2.08,8,19,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Barat,Kota Depok,32,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,34,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,39,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,1.39,72,0,0,60,2.2,7,14,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,1.5,72,0,0,61,2.2,7,14,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,1.16,72,0,0,62,1.5,7,19,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Tengah,Kota Surakarta (Solo),36,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,14,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,39,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kab. Banyuwangi,46,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,24,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.46,72,0,0,63,1.5,7,19,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kota Blitar,135,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,9,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kota Kediri,44,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,24,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,39,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kota Probolinggo,48,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,19,0.0
+Pedagang Besar,Telur Ayam Ras Segar,Jawa Timur,Kota Surabaya,42,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,29,0.0
+Produsen,Bawang Merah Ukuran Sedang,Banten,Kab. Pandeglang,88,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Banten,Kab. Serang,90,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,22,0.0
+Produsen,Bawang Merah Ukuran Sedang,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,0.58,72,0,0,64,1.5,7,44,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Barat,Kab. Garut,95,865,2023-07-03,2026-10-23,3.24,72,23,0,62,6.01,23,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Barat,Kab. Sumedang,109,865,2023-07-03,2026-10-23,5.78,72,0,0,59,6.71,23,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,5.66,72,0,0,63,6.59,23,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Pati,170,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,23,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,23,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,4.39,72,0,0,54,5.78,22,44,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Bojonegoro,118,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,23,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Jombang,115,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Malang,113,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,65,0.7
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Mojokerto,134,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,66,0.8
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Nganjuk,120,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,23,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Probolinggo,137,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,43,0.0
+Produsen,Bawang Merah Ukuran Sedang,Jawa Timur,Kab. Tuban,125,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Cabai Merah Keriting,Banten,Kab. Pandeglang,88,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,65,1.0
+Produsen,Cabai Merah Keriting,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Cabai Merah Keriting,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,0.58,72,0,0,64,1.5,7,42,0.0
+Produsen,Cabai Merah Keriting,Jawa Barat,Kab. Sumedang,109,865,2023-07-03,2026-10-23,5.78,72,0,0,59,6.71,23,81,3.0
+Produsen,Cabai Merah Keriting,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Produsen,Cabai Merah Keriting,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,3.24,72,0,0,63,4.16,23,43,0.0
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kab. Banjarnegara,168,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,62,0.3
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kab. Blora,169,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,62,0.3
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,42,0.0
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,23,0.0
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kab. Magelang,160,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,23,0.0
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,42,0.0
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,23,0.0
+Produsen,Cabai Merah Keriting,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,5.09,72,0,0,54,6.47,22,64,0.6
+Produsen,Cabai Merah Keriting,Jawa Timur,Kab. Blitar,132,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,23,0.0
+Produsen,Cabai Merah Keriting,Jawa Timur,Kab. Bojonegoro,118,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Cabai Merah Keriting,Jawa Timur,Kab. Kediri,128,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,43,0.0
+Produsen,Cabai Merah Keriting,Jawa Timur,Kab. Pamekasan,138,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Produsen,Cabai Merah Keriting,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Cabai Merah Keriting,Jawa Timur,Kab. Tuban,125,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Produsen,Cabai Merah Keriting,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,4.86,72,0,0,53,6.47,23,41,0.0
+Produsen,Cabai Rawit Merah,Banten,Kab. Pandeglang,88,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,65,0.7
+Produsen,Cabai Rawit Merah,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Cabai Rawit Merah,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,0.58,72,0,0,64,1.5,7,43,0.0
+Produsen,Cabai Rawit Merah,Jawa Barat,Kab. Garut,95,865,2023-07-03,2026-10-23,3.24,72,0,0,63,4.16,23,64,0.6
+Produsen,Cabai Rawit Merah,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,23,0.0
+Produsen,Cabai Rawit Merah,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,3.24,72,0,0,63,4.16,23,43,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kab. Banjarnegara,168,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,43,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,42,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,42,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,23,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kab. Magelang,160,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,23,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kab. Rembang,154,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,22,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kab. Sragen,151,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,23,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,23,0.0
+Produsen,Cabai Rawit Merah,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,5.09,72,0,0,54,6.47,22,43,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Bangkalan,114,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Blitar,132,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,41,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Gresik,124,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,43,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Jombang,115,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Kediri,128,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,41,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Lamongan,130,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Malang,113,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,41,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Mojokerto,134,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Pamekasan,138,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,38,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Sampang,123,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kab. Tuban,125,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Produsen,Cabai Rawit Merah,Jawa Timur,Kota Malang,43,865,2023-07-03,2026-10-23,4.86,72,0,0,53,6.47,23,44,0.0
+Produsen,Daging Ayam Ras Segar,Banten,Kab. Pandeglang,88,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,43,0.0
+Produsen,Daging Ayam Ras Segar,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,42,0.0
+Produsen,Daging Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,0.58,72,0,0,64,1.5,7,44,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Barat,Kab. Sumedang,109,865,2023-07-03,2026-10-23,5.78,72,0,0,59,6.71,23,108,9.2
+Produsen,Daging Ayam Ras Segar,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,42,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.58,72,0,0,64,1.5,7,108,6.1
+Produsen,Daging Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,3.24,72,0,0,63,4.16,23,63,0.5
+Produsen,Daging Ayam Ras Segar,Jawa Barat,Kota Tasikmalaya,29,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,65,0.7
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,84,3.5
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,41,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,65,0.7
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kab. Kebumen,145,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,65,1.3
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kab. Kudus,40,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,64,0.6
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kab. Magelang,160,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,86,4.7
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,44,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Tengah,Kota Tegal,37,865,2023-07-03,2026-10-23,5.09,72,0,0,54,6.47,22,64,0.6
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Bangkalan,114,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,86,4.2
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Blitar,132,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,43,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Bojonegoro,118,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,217,32.1
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Gresik,124,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,42,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Jombang,115,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Lamongan,130,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,44,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Malang,113,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,43,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Mojokerto,134,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,65,1.3
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Pamekasan,138,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Sampang,123,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,65,1.3
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Sidoarjo,139,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,65,1.3
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,85,3.5
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Tuban,125,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,189,30.6
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kab. Tulungagung,136,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,64,0.6
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kota Blitar,135,865,2026-01-23,2026-10-23,77.46,72,0,0,18,77.34,669,41,0.0
+Produsen,Daging Ayam Ras Segar,Jawa Timur,Kota Madiun,47,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Banten,Kab. Serang,90,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,22,0.0
+Produsen,Telur Ayam Ras Segar,Banten,Kota Serang,24,865,2023-07-03,2026-10-23,7.86,72,0,0,56,9.13,23,22,0.0
+Produsen,Telur Ayam Ras Segar,DI Yogyakarta,Kota Yogyakarta,41,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Barat,Kab. Cirebon,103,865,2023-07-03,2026-10-23,0.58,72,0,0,64,1.5,7,23,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Barat,Kab. Sumedang,109,865,2023-07-03,2026-10-23,5.78,72,0,0,59,6.71,23,63,0.5
+Produsen,Telur Ayam Ras Segar,Jawa Barat,Kab. Tasikmalaya,106,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,23,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Barat,Kota Bogor,31,865,2023-07-03,2026-10-23,0.58,72,0,0,64,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Barat,Kota Sukabumi,33,865,2023-07-03,2026-10-23,3.24,72,0,0,63,4.16,23,65,2.3
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Banyumas,38,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,42,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Boyolali,166,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Cilacap,39,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,42,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Karanganyar,158,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Magelang,160,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Pati,170,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Rembang,154,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kab. Sukoharjo,144,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kota Magelang,143,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,41,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Tengah,Kota Semarang,35,865,2023-07-03,2026-10-23,0.23,72,0,0,61,1.5,7,39,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Bangkalan,114,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Blitar,132,865,2023-07-03,2026-10-23,0.69,72,0,0,65,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Bojonegoro,118,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Gresik,124,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Jember,45,865,2023-07-03,2026-10-23,0.35,72,0,0,62,1.5,7,23,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Jombang,115,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,65,0.7
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Lamongan,130,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Malang,113,865,2023-07-03,2026-10-23,0.12,72,0,0,60,1.5,7,44,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Mojokerto,134,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,22,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Pamekasan,138,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Sampang,123,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,86,3.1
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Sumenep,49,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,42,0.0
+Produsen,Telur Ayam Ras Segar,Jawa Timur,Kab. Tuban,125,865,2023-07-03,2026-10-23,0.0,72,0,0,59,1.5,7,43,0.0

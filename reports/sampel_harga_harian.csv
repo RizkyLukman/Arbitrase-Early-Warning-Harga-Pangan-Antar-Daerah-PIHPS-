@@ -1,0 +1,53 @@
+﻿keterangan_sampel,tanggal,hari,jenis_pasar,provinsi,kota_id,kota,komoditas,kualitas,satuan,harga,harga_bersih,is_libur_isi,is_outlier_flag,alasan_outlier,is_lonjakan_tajam,is_imputed,run_datar,is_usang
+Minggu biasa (normal),2025-03-17,Senin,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,110850.0,110850.0,False,False,,False,False,0,False
+Minggu biasa (normal),2025-03-18,Selasa,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,112700.0,112700.0,False,False,,False,False,0,False
+Minggu biasa (normal),2025-03-19,Rabu,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,112700.0,112700.0,False,False,,False,False,1,False
+Minggu biasa (normal),2025-03-20,Kamis,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,115850.0,115850.0,False,False,,False,False,0,False
+Minggu biasa (normal),2025-03-21,Jumat,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,115850.0,115850.0,False,False,,False,False,1,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-03-27,Kamis,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,120850.0,False,False,,False,False,0,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-03-28,Jumat,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,,True,False,,False,False,1,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-03-31,Senin,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,,True,False,,False,False,2,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-04-01,Selasa,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,,True,False,,False,False,3,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-04-02,Rabu,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,,True,False,,False,False,4,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-04-03,Kamis,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,,True,False,,False,False,5,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-04-04,Jumat,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,,True,False,,False,False,6,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-04-07,Senin,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,,True,False,,False,False,7,False
+Hari libur Lebaran >5 hari: dikosongkan,2025-04-08,Selasa,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,120850.0,120850.0,False,False,,False,False,8,False
+Hari libur Lebaran <=5 hari: diisi + penanda,2026-03-17,Selasa,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,119400.0,119400.0,False,False,,False,False,0,False
+Hari libur Lebaran <=5 hari: diisi + penanda,2026-03-18,Rabu,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,119400.0,119400.0,True,False,,False,True,1,False
+Hari libur Lebaran <=5 hari: diisi + penanda,2026-03-19,Kamis,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,119400.0,119400.0,True,False,,False,True,2,False
+Hari libur Lebaran <=5 hari: diisi + penanda,2026-03-20,Jumat,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,119400.0,119400.0,True,False,,False,True,3,False
+Hari libur Lebaran <=5 hari: diisi + penanda,2026-03-23,Senin,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,119400.0,119400.0,True,False,,False,True,4,False
+Hari libur Lebaran <=5 hari: diisi + penanda,2026-03-24,Selasa,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,119400.0,119400.0,True,False,,False,True,5,False
+Hari libur Lebaran <=5 hari: diisi + penanda,2026-03-25,Rabu,Pasar Tradisional,DKI Jakarta,34,Kota Jakarta Pusat,Cabai Rawit,Cabai Rawit Merah,kg,88150.0,88150.0,False,False,,False,False,0,False
+Salah ketik sehari: dikosongkan lalu diisi,2025-12-12,Jumat,Pasar Tradisional,Jawa Barat,33,Kota Sukabumi,Cabai Rawit,Cabai Rawit Merah,kg,90000.0,90000.0,False,False,,False,False,1,False
+Salah ketik sehari: dikosongkan lalu diisi,2025-12-15,Senin,Pasar Tradisional,Jawa Barat,33,Kota Sukabumi,Cabai Rawit,Cabai Rawit Merah,kg,264250.0,90000.0,False,True,rasio_ekstrem,False,True,0,False
+Salah ketik sehari: dikosongkan lalu diisi,2025-12-16,Selasa,Pasar Tradisional,Jawa Barat,33,Kota Sukabumi,Cabai Rawit,Cabai Rawit Merah,kg,82500.0,82500.0,False,False,,False,False,0,False
+Salah input bertahan: dikosongkan,2025-03-21,Jumat,Produsen,Jawa Barat,95,Kab. Garut,Bawang Merah,Bawang Merah Ukuran Sedang,kg,15000.0,15000.0,False,False,,False,False,18,False
+Salah input bertahan: dikosongkan,2025-03-24,Senin,Produsen,Jawa Barat,95,Kab. Garut,Bawang Merah,Bawang Merah Ukuran Sedang,kg,15000.0,15000.0,False,False,,False,False,19,False
+Salah input bertahan: dikosongkan,2025-03-25,Selasa,Produsen,Jawa Barat,95,Kab. Garut,Bawang Merah,Bawang Merah Ukuran Sedang,kg,3000.0,,False,True,lintas_kota,False,False,0,False
+Salah input bertahan: dikosongkan,2025-03-26,Rabu,Produsen,Jawa Barat,95,Kab. Garut,Bawang Merah,Bawang Merah Ukuran Sedang,kg,3000.0,,False,True,lintas_kota,False,False,1,False
+Salah input bertahan: dikosongkan,2025-03-27,Kamis,Produsen,Jawa Barat,95,Kab. Garut,Bawang Merah,Bawang Merah Ukuran Sedang,kg,3000.0,,False,True,lintas_kota,False,False,2,False
+Lonjakan tajam: hanya penanda,2025-06-18,Rabu,Pasar Tradisional,Banten,25,Kota Cilegon,Cabai Merah,Cabai Merah Keriting,kg,35000.0,35000.0,False,False,,False,False,1,False
+Lonjakan tajam: hanya penanda,2025-06-19,Kamis,Pasar Tradisional,Banten,25,Kota Cilegon,Cabai Merah,Cabai Merah Keriting,kg,38000.0,38000.0,False,False,,False,False,0,False
+Lonjakan tajam: hanya penanda,2025-06-20,Jumat,Pasar Tradisional,Banten,25,Kota Cilegon,Cabai Merah,Cabai Merah Keriting,kg,74750.0,74750.0,False,False,,True,False,0,False
+Lonjakan tajam: hanya penanda,2025-06-23,Senin,Pasar Tradisional,Banten,25,Kota Cilegon,Cabai Merah,Cabai Merah Keriting,kg,47250.0,47250.0,False,False,,False,False,0,False
+Lonjakan tajam: hanya penanda,2025-06-24,Selasa,Pasar Tradisional,Banten,25,Kota Cilegon,Cabai Merah,Cabai Merah Keriting,kg,35750.0,35750.0,False,False,,False,False,0,False
+Harga usang (lama tidak berubah),2026-06-01,Senin,Pasar Modern,Jawa Timur,43,Kota Malang,Daging Ayam,Daging Ayam Ras Segar,kg,47400.0,47400.0,True,False,,False,True,168,True
+Harga usang (lama tidak berubah),2026-06-02,Selasa,Pasar Modern,Jawa Timur,43,Kota Malang,Daging Ayam,Daging Ayam Ras Segar,kg,47400.0,47400.0,False,False,,False,False,169,True
+Harga usang (lama tidak berubah),2026-06-03,Rabu,Pasar Modern,Jawa Timur,43,Kota Malang,Daging Ayam,Daging Ayam Ras Segar,kg,47400.0,47400.0,False,False,,False,False,170,True
+Harga usang (lama tidak berubah),2026-06-04,Kamis,Pasar Modern,Jawa Timur,43,Kota Malang,Daging Ayam,Daging Ayam Ras Segar,kg,47400.0,47400.0,False,False,,False,False,171,True
+Harga usang (lama tidak berubah),2026-06-05,Jumat,Pasar Modern,Jawa Timur,43,Kota Malang,Daging Ayam,Daging Ayam Ras Segar,kg,47400.0,47400.0,False,False,,False,False,172,True
+Baris yang dilengkapi (bulan hilang),2024-06-03,Senin,Pasar Tradisional,Jawa Timur,45,Kab. Jember,Cabai Merah,Cabai Merah Keriting,kg,,,False,False,,False,False,0,False
+Baris yang dilengkapi (bulan hilang),2024-06-04,Selasa,Pasar Tradisional,Jawa Timur,45,Kab. Jember,Cabai Merah,Cabai Merah Keriting,kg,,,False,False,,False,False,0,False
+Baris yang dilengkapi (bulan hilang),2024-06-05,Rabu,Pasar Tradisional,Jawa Timur,45,Kab. Jember,Cabai Merah,Cabai Merah Keriting,kg,,,False,False,,False,False,0,False
+Pedagang besar: berubah hanya Kamis,2026-10-12,Senin,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,64000.0,64000.0,False,False,,False,False,2,False
+Pedagang besar: berubah hanya Kamis,2026-10-13,Selasa,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,64000.0,64000.0,False,False,,False,False,3,False
+Pedagang besar: berubah hanya Kamis,2026-10-14,Rabu,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,64000.0,64000.0,False,False,,False,False,4,False
+Pedagang besar: berubah hanya Kamis,2026-10-15,Kamis,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,48000.0,48000.0,False,False,,False,False,0,False
+Pedagang besar: berubah hanya Kamis,2026-10-16,Jumat,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,48000.0,48000.0,False,False,,False,False,1,False
+Pedagang besar: berubah hanya Kamis,2026-10-19,Senin,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,48000.0,48000.0,False,False,,False,False,2,False
+Pedagang besar: berubah hanya Kamis,2026-10-20,Selasa,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,48000.0,48000.0,False,False,,False,False,3,False
+Pedagang besar: berubah hanya Kamis,2026-10-21,Rabu,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,48000.0,48000.0,False,False,,False,False,4,False
+Pedagang besar: berubah hanya Kamis,2026-10-22,Kamis,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,55000.0,55000.0,False,False,,False,False,0,False
+Pedagang besar: berubah hanya Kamis,2026-10-23,Jumat,Pedagang Besar,Jawa Timur,44,Kota Kediri,Cabai Rawit,Cabai Rawit Merah,kg,55000.0,55000.0,False,False,,False,False,1,False

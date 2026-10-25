@@ -55,16 +55,23 @@ def records_from_payload(payload: dict, jenis_pasar_id: int, komoditas_id: str) 
 
 
 def load_raw_long(raw_dir: str | Path) -> pd.DataFrame:
-    """Baca semua data/raw/pt*/com_*/*.json -> satu DataFrame panjang."""
+    """Baca semua data/raw/pt*/com_*/*.json -> satu DataFrame panjang.
+
+    Kolom `sumber_file` (nama file, mis. 2026-10-01_2026-10-23.json) dipakai untuk memilih nilai dari unduhan
+    terbaru bila satu tanggal muncul di lebih dari satu file.
+    """
     recs = []
     for f in sorted(Path(raw_dir).glob("pt*/com_*/*.json")):
         jenis_pasar_id = int(f.parent.parent.name[2:])
         payload = json.loads(f.read_text(encoding="utf-8"))
-        recs.extend(records_from_payload(payload, jenis_pasar_id, f.parent.name))
+        for r in records_from_payload(payload, jenis_pasar_id, f.parent.name):
+            r["sumber_file"] = f.name
+            recs.append(r)
     df = pd.DataFrame(recs)
     if df.empty:
         return df
     df["tanggal"] = pd.to_datetime(df["tanggal"])
+    df["sumber_file"] = df["sumber_file"].astype("category")
     return df
 
 
