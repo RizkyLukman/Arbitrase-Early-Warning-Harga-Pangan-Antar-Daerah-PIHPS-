@@ -1,0 +1,63 @@
+kota_id,kota,provinsi,lat,lon,kueri,osm_display_name,osm_type,osm_id,osm_category,osm_addresstype,di_pulau_jawa,sumber,tanggal_ambil
+24,Kota Serang,Banten,-6.11697,106.15181,"Kota Serang, Banten, Indonesia","Serang, Banten, Indonesia",relation,7641588,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+25,Kota Cilegon,Banten,-6.01739,106.05377,"Kota Cilegon, Banten, Indonesia","Cilegon, Banten, Indonesia",relation,7641589,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+26,Kota Tangerang,Banten,-6.17619,106.63822,"Kota Tangerang, Banten, Indonesia","Tangerang, Banten, Indonesia",relation,7641583,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+27,Kota Bandung,Jawa Barat,-6.92185,107.60708,"Kota Bandung, Jawa Barat, Indonesia","Kota Bandung, Jawa Barat, Indonesia",relation,13290062,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+28,Kota Cirebon,Jawa Barat,-6.7137,108.56085,"Kota Cirebon, Jawa Barat, Indonesia","Kota Cirebon, Jawa Barat, Indonesia",relation,16991199,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+29,Kota Tasikmalaya,Jawa Barat,-7.32625,108.22012,"Kota Tasikmalaya, Jawa Barat, Indonesia","Tasikmalaya, Jawa Barat, Indonesia",relation,14925431,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+30,Kota Bekasi,Jawa Barat,-6.23499,106.99454,"Kota Bekasi, Jawa Barat, Indonesia","Bekasi, Jawa Barat, Indonesia",relation,14509733,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+31,Kota Bogor,Jawa Barat,-6.59636,106.79732,"Kota Bogor, Jawa Barat, Indonesia","Bogor, Jawa Barat, Indonesia",relation,14745927,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+32,Kota Depok,Jawa Barat,-6.40719,106.81584,"Kota Depok, Jawa Barat, Indonesia","Depok, Jawa Barat, Indonesia",relation,14525364,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+33,Kota Sukabumi,Jawa Barat,-6.91993,106.92651,"Kota Sukabumi, Jawa Barat, Indonesia","Sukabumi, Jawa Barat, Indonesia",relation,14918119,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+34,Kota Jakarta Pusat,DKI Jakarta,-6.18234,106.84287,"Jakarta Pusat, DKI Jakarta, Indonesia","Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia",relation,7625977,boundary,city_district,True,OpenStreetMap Nominatim,2026-10-26
+35,Kota Semarang,Jawa Tengah,-6.9904,110.42291,"Kota Semarang, Jawa Tengah, Indonesia","Kota Semarang, Jawa Tengah, Indonesia",relation,8409116,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+36,Kota Surakarta (Solo),Jawa Tengah,-7.56925,110.82845,"Kota Surakarta, Jawa Tengah, Indonesia","Surakarta, Kecamatan Pasar Kliwon, Jawa Tengah, Indonesia",relation,9687063,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+37,Kota Tegal,Jawa Tengah,-6.86745,109.13783,"Kota Tegal, Jawa Tengah, Indonesia","Tegal, Jawa Tengah, Indonesia",relation,9686828,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+38,Kab. Banyumas,Jawa Tengah,-7.45507,109.11675,"Kabupaten Banyumas, Jawa Tengah, Indonesia","Banyumas, Jawa Tengah, Indonesia",relation,9686820,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+39,Kab. Cilacap,Jawa Tengah,-7.46167,108.80461,"Kabupaten Cilacap, Jawa Tengah, Indonesia","Cilacap, Jawa Tengah, Indonesia",relation,9686822,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+40,Kab. Kudus,Jawa Tengah,-6.79785,110.86791,"Kabupaten Kudus, Jawa Tengah, Indonesia","Kudus, Jawa Tengah, Indonesia",relation,9687057,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+41,Kota Yogyakarta,DI Yogyakarta,-7.80135,110.36474,"Kota Yogyakarta, DI Yogyakarta, Indonesia","Kota Yogyakarta, Depok, Daerah Istimewa Yogyakarta, Indonesia",relation,5615250,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+42,Kota Surabaya,Jawa Timur,-7.24628,112.73777,"Kota Surabaya, Jawa Timur, Indonesia","Surabaya, Jawa Timur, Indonesia",relation,8225862,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+43,Kota Malang,Jawa Timur,-7.97713,112.63403,"Kota Malang, Jawa Timur, Indonesia","Kota Malang, Klojen, Jawa Timur, Indonesia",relation,9674151,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+44,Kota Kediri,Jawa Timur,-7.81111,112.00461,"Kota Kediri, Jawa Timur, Indonesia","Kota Kediri, Jawa Timur, Indonesia",relation,9676375,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+45,Kab. Jember,Jawa Timur,-8.26332,113.62785,"Kabupaten Jember, Jawa Timur, Indonesia","Jember, Jawa Timur, Indonesia",relation,9674158,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+46,Kab. Banyuwangi,Jawa Timur,-8.33257,114.14158,"Kabupaten Banyuwangi, Jawa Timur, Indonesia","Banyuwangi, Jawa Timur, Indonesia",relation,9674156,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+47,Kota Madiun,Jawa Timur,-7.62908,111.51688,"Kota Madiun, Jawa Timur, Indonesia","Kota Madiun, Jawa Timur, Indonesia",relation,9676370,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+48,Kota Probolinggo,Jawa Timur,-7.74415,113.21584,"Kota Probolinggo, Jawa Timur, Indonesia","Kota Probolinggo, Jawa Timur, Indonesia",relation,9674161,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+49,Kab. Sumenep,Jawa Timur,-6.99918,113.83767,"Kabupaten Sumenep, Jawa Timur, Indonesia","Sumenep, Jawa Timur, Indonesia",relation,9674059,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+88,Kab. Pandeglang,Banten,-6.54738,105.79949,"Kabupaten Pandeglang, Banten, Indonesia","Pandeglang, Banten, Indonesia",relation,7641585,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+90,Kab. Serang,Banten,-6.10573,105.98842,"Kabupaten Serang, Banten, Indonesia","Kab Serang, Banten, Indonesia",relation,7641587,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+95,Kab. Garut,Jawa Barat,-7.21628,107.90149,"Kabupaten Garut, Jawa Barat, Indonesia","Garut, Jawa Barat, Indonesia",relation,14925429,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+103,Kab. Cirebon,Jawa Barat,-6.76119,108.45642,"Kabupaten Cirebon, Jawa Barat, Indonesia","Kabupaten Cirebon, Jawa Barat, Indonesia",relation,16999941,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+106,Kab. Tasikmalaya,Jawa Barat,-7.42717,108.06842,"Kabupaten Tasikmalaya, Jawa Barat, Indonesia","Tasikmalaya, Jawa Barat, Indonesia",relation,14925428,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+109,Kab. Sumedang,Jawa Barat,-6.85972,107.92071,"Kabupaten Sumedang, Jawa Barat, Indonesia","Sumedang, Jawa Barat, Indonesia",relation,14935958,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+113,Kab. Malang,Jawa Timur,-8.1048,112.68799,"Kabupaten Malang, Jawa Timur, Indonesia","Kabupaten Malang, Jawa Timur, Indonesia",relation,9674152,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+114,Kab. Bangkalan,Jawa Timur,-7.04636,112.89618,"Kabupaten Bangkalan, Jawa Timur, Indonesia","Bangkalan, Jawa Timur, Indonesia",relation,9674056,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+115,Kab. Jombang,Jawa Timur,-7.56146,112.2413,"Kabupaten Jombang, Jawa Timur, Indonesia","Jombang, Jawa Timur, Indonesia",relation,13851137,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+118,Kab. Bojonegoro,Jawa Timur,-7.22787,111.81462,"Kabupaten Bojonegoro, Jawa Timur, Indonesia","Bojonegoro, Jawa Timur, Indonesia",relation,9676650,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+120,Kab. Nganjuk,Jawa Timur,-7.61502,111.94651,"Kabupaten Nganjuk, Jawa Timur, Indonesia","Nganjuk, Jawa Timur, Indonesia",relation,9676372,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+123,Kab. Sampang,Jawa Timur,-7.05782,113.25405,"Kabupaten Sampang, Jawa Timur, Indonesia","Sampang, Jawa Timur, Indonesia",relation,9674057,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+124,Kab. Gresik,Jawa Timur,-7.15716,112.65596,"Gresik, Kabupaten Gresik, Jawa Timur, Indonesia","Gresik, Jawa Timur, 61116, Indonesia",node,2552029583,place,town,True,OpenStreetMap Nominatim,2026-10-26
+125,Kab. Tuban,Jawa Timur,-6.95964,111.89323,"Kabupaten Tuban, Jawa Timur, Indonesia","Tuban, Jawa Timur, Indonesia",relation,9676649,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+128,Kab. Kediri,Jawa Timur,-7.80263,112.16863,"Kabupaten Kediri, Jawa Timur, Indonesia","Kabupaten Kediri, Jawa Timur, Indonesia",relation,9676374,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+130,Kab. Lamongan,Jawa Timur,-7.12293,112.32819,"Kabupaten Lamongan, Jawa Timur, Indonesia","Lamongan, Jawa Timur, Indonesia",relation,9676366,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+132,Kab. Blitar,Jawa Timur,-8.1312,112.31156,"Kabupaten Blitar, Jawa Timur, Indonesia","Blitar, Jawa Timur, Indonesia",relation,9676377,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+134,Kab. Mojokerto,Jawa Timur,-7.54134,112.5095,"Kabupaten Mojokerto, Jawa Timur, Indonesia","Mojokerto, Jawa Timur, Indonesia",relation,9676367,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+135,Kota Blitar,Jawa Timur,-8.09824,112.16508,"Kota Blitar, Jawa Timur, Indonesia","Blitar, Jawa Timur, Indonesia",relation,9676376,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+136,Kab. Tulungagung,Jawa Timur,-8.0729,111.89964,"Kabupaten Tulungagung, Jawa Timur, Indonesia","Tulungagung, Jawa Timur, Indonesia",relation,9676369,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+137,Kab. Probolinggo,Jawa Timur,-7.86316,113.30511,"Kabupaten Probolinggo, Jawa Timur, Indonesia","Probolinggo, Jawa Timur, Indonesia",relation,9674162,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+138,Kab. Pamekasan,Jawa Timur,-7.07081,113.50039,"Kabupaten Pamekasan, Jawa Timur, Indonesia","Pamekasan, Jawa Timur, Indonesia",relation,9674058,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+139,Kab. Sidoarjo,Jawa Timur,-7.45398,112.65939,"Kabupaten Sidoarjo, Jawa Timur, Indonesia","Sidoarjo, Jawa Timur, Indonesia",relation,9677345,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+143,Kota Magelang,Jawa Tengah,-7.47707,110.21822,"Kota Magelang, Jawa Tengah, Indonesia","Kota Magelang, Jawa Tengah, Indonesia",relation,9686811,boundary,city,True,OpenStreetMap Nominatim,2026-10-26
+144,Kab. Sukoharjo,Jawa Tengah,-7.6815,110.87003,"Kabupaten Sukoharjo, Jawa Tengah, Indonesia","Sukoharjo, Jawa Tengah, Indonesia",relation,9687061,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+145,Kab. Kebumen,Jawa Tengah,-7.64397,109.60779,"Kabupaten Kebumen, Jawa Tengah, Indonesia","Kebumen, Jawa Tengah, Indonesia",relation,9686815,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+151,Kab. Sragen,Jawa Tengah,-7.39246,110.95302,"Kabupaten Sragen, Jawa Tengah, Indonesia","Sragen, Jawa Tengah, Indonesia",relation,6444214,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+154,Kab. Rembang,Jawa Tengah,-6.76986,111.45567,"Kabupaten Rembang, Jawa Tengah, Indonesia","Rembang, Jawa Tengah, Indonesia",relation,9687055,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+158,Kab. Karanganyar,Jawa Tengah,-7.6197,111.0698,"Kabupaten Karanganyar, Jawa Tengah, Indonesia","Karanganyar, Jawa Tengah, Indonesia",relation,9687053,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+159,Kab. Klaten,Jawa Tengah,-7.67324,110.62848,"Kabupaten Klaten, Jawa Tengah, Indonesia","Klaten, Jawa Tengah, Indonesia",relation,9687060,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+160,Kab. Magelang,Jawa Tengah,-7.51361,110.21451,"Kabupaten Magelang, Jawa Tengah, Indonesia","Magelang, Jawa Tengah, Indonesia",relation,9686814,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+165,Kab. Wonogiri,Jawa Tengah,-7.96205,110.95757,"Kabupaten Wonogiri, Jawa Tengah, Indonesia","Wonogiri, Jawa Tengah, Indonesia",relation,9687059,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+166,Kab. Boyolali,Jawa Tengah,-7.38721,110.70387,"Kabupaten Boyolali, Jawa Tengah, Indonesia","Boyolali, Jawa Tengah, Indonesia",relation,9687052,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+168,Kab. Banjarnegara,Jawa Tengah,-7.35587,109.66007,"Kabupaten Banjarnegara, Jawa Tengah, Indonesia","Banjarnegara, Jawa Tengah, Indonesia",relation,9686816,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+169,Kab. Blora,Jawa Tengah,-7.11061,111.42043,"Kabupaten Blora, Jawa Tengah, Indonesia","Blora, Jawa Tengah, 58211 - 58219, Indonesia",relation,9687050,boundary,county,True,OpenStreetMap Nominatim,2026-10-26
+170,Kab. Pati,Jawa Tengah,-6.75341,111.04,"Kabupaten Pati, Jawa Tengah, Indonesia","Pati, Jawa Tengah, Indonesia",relation,9687058,boundary,city,True,OpenStreetMap Nominatim,2026-10-26

@@ -72,6 +72,51 @@ cleaning:   # ambang dipakai di notebooks/01_eda.ipynb dan src/clean.py; dasar p
     rasio_lintas_kota: 5             # C: x >= 5 x atau <= 1/5 median kota lain (komoditas & jenis pasar & hari sama).
                                      #    Ambang 3 terlalu ketat: menandai harga produsen cabai yang memang rendah saat panen.
 
+features:   # Tahap 3 (src/features.py). Dasar: notebooks/02_cleaning.ipynb §7 (audit), keputusan user 2026-10-26.
+  frekuensi: "W-FRI"                 # minggu berakhir Jumat (pencacahan hanya Senin-Jumat)
+  # Cara mengambil satu harga per minggu dari pengamatan NYATA (harga_bersih yang bukan is_imputed):
+  #   median   = median hari nyata (pasar tradisional dicatat setiap hari)
+  #   terakhir = nilai nyata terakhir dalam minggu (pedagang besar dicatat ~Kamis, modern ~Selasa-Rabu, produsen sesekali;
+  #              median akan didominasi salinan harga minggu lalu)
+  agregasi_mingguan: {1: median, 2: terakhir, 3: terakhir, 4: terakhir}
+  rolling_minggu: [4, 12]            # rata-rata bergerak harga & gejolak (std log-return)
+  yoy_lag_minggu: 52
+  zscore_baseline_minggu: 52         # z-score LEVEL harga vs rata-rata & std 52 minggu SEBELUMNYA (tanpa look-ahead)
+  zscore_min_minggu: 26
+  perubahan_lag_minggu: 4            # pct_4w: perubahan harga vs 4 minggu lalu (definisi lonjakan Q6 di brief)
+  zscore_return_baseline_minggu: 52  # zscore_return: KENAIKAN mingguan vs log-return 52 minggu SEBELUMNYA (aturan alert Q6)
+  zscore_return_min_minggu: 26
+  idul_fitri_jendela: [-12, 4]       # minggu_ke_idul_fitri; minggu 0 = minggu yang memuat tanggal Idulfitri
+  # Seri yang tetap disimpan tetapi DITANDAI agar tidak dipakai untuk analisis tren (audit pasca-cleaning):
+  seri_dikecualikan:
+    - {jenis_pasar_id: 1, komoditas_id: com_14, kota_id: 45,  alasan: "bolong 73% (baris hilang Des 2023-Mar 2026)"}
+    - {jenis_pasar_id: 2, komoditas_id: com_16, kota_id: 46,  alasan: "bolong 90%"}
+    - {jenis_pasar_id: 2, komoditas_id: com_11, kota_id: 46,  alasan: "bolong 65%"}
+    - {jenis_pasar_id: 2, komoditas_id: com_12, kota_id: 46,  alasan: "bolong 63%"}
+    - {jenis_pasar_id: 2, komoditas_id: com_11, kota_id: 39,  alasan: "bolong 13% (2 bulan hilang)"}
+    - {jenis_pasar_id: 4, komoditas_id: com_7,  kota_id: 135, alasan: "baru mulai Jan 2026"}
+    - {jenis_pasar_id: 2, komoditas_id: com_14, kota_id: 135, alasan: "harga ~1/3 kota lain berbulan-bulan (dugaan per kemasan)"}
+    - {jenis_pasar_id: 2, komoditas_id: com_16, kota_id: 135, alasan: "harga ~1/3 kota lain berbulan-bulan (dugaan per kemasan)"}
+
+rantai_pasok:   # Q5: tambahan harga produsen -> pedagang besar -> pasar tradisional (src/analysis/margin.py)
+  # Analisis UTAMA (sesuai brief): hanya kota yang punya ketiga tingkat dengan NAMA SAMA (mis. Kota Tegal, Kab. Jember).
+  # Analisis TAMBAHAN (disetujui user 2026-10-26): harga produsen diambil dari kabupaten sentra di sekitar kota.
+  # PERLU_VERIFIKASI: pasangan dipilih dari kedekatan administratif (kabupaten yang mengelilingi kota) atau pengetahuan
+  # umum tentang sentra, BUKAN dari data rantai pasok. Ketersediaan data dicek 2026-10-26 (tests/test_features.py).
+  # `komoditas` = komoditas yang punya data produsen di kabupaten itu DAN data pedagang besar + tradisional di kota itu.
+  pasangan_kota_kabupaten:
+    - {kota_id: 44,  kota: "Kota Kediri",      produsen_kota_id: 128, produsen: "Kab. Kediri",      komoditas: [com_16, com_14],                 dasar: "kabupaten yang mengelilingi kota", status: PERLU_VERIFIKASI}
+    - {kota_id: 44,  kota: "Kota Kediri",      produsen_kota_id: 120, produsen: "Kab. Nganjuk",     komoditas: [com_11],                         dasar: "sentra bawang merah, bertetangga", status: PERLU_VERIFIKASI}
+    - {kota_id: 48,  kota: "Kota Probolinggo", produsen_kota_id: 137, produsen: "Kab. Probolinggo", komoditas: [com_11],                         dasar: "kabupaten yang mengelilingi kota", status: PERLU_VERIFIKASI}
+    - {kota_id: 29,  kota: "Kota Tasikmalaya", produsen_kota_id: 106, produsen: "Kab. Tasikmalaya", komoditas: [com_16, com_14, com_10, com_7], dasar: "kabupaten yang mengelilingi kota", status: PERLU_VERIFIKASI}
+    - {kota_id: 29,  kota: "Kota Tasikmalaya", produsen_kota_id: 95,  produsen: "Kab. Garut",       komoditas: [com_16, com_11],                 dasar: "sentra hortikultura, bertetangga (data cabai merah keriting produsen Garut tidak ada)", status: PERLU_VERIFIKASI}
+    - {kota_id: 135, kota: "Kota Blitar",      produsen_kota_id: 132, produsen: "Kab. Blitar",      komoditas: [com_16, com_14, com_10, com_7],  dasar: "kabupaten yang mengelilingi kota", status: PERLU_VERIFIKASI}
+    - {kota_id: 43,  kota: "Kota Malang",      produsen_kota_id: 113, produsen: "Kab. Malang",      komoditas: [com_16, com_11, com_10, com_7],  dasar: "kabupaten yang mengelilingi kota", status: PERLU_VERIFIKASI}
+    - {kota_id: 28,  kota: "Kota Cirebon",     produsen_kota_id: 103, produsen: "Kab. Cirebon",     komoditas: [com_16, com_14, com_11, com_10, com_7], dasar: "kabupaten yang mengelilingi kota", status: PERLU_VERIFIKASI}
+  # Tidak dipakai (dicek 2026-10-26): Kota Madiun (produsen Kab. Madiun tanpa data), Kab. Banyuwangi (tanpa data produsen),
+  # Kota Serang (tanpa data pedagang besar), Kota Kediri untuk telur & ayam (Kab. Kediri tanpa data produsen telur/ayam).
+  agregasi: "bulanan"                # harga produsen jarang diperbarui (produsen > pedagang besar di 31% kota-hari) -> bulanan
+
 paths:
   raw: "data/raw"
   interim: "data/interim"

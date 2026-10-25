@@ -1,0 +1,102 @@
+# =====================================================================================================================
+#  ONGKOS ANGKUT — ASUMSI, BUKAN DATA OBSERVASI
+#  Di dashboard: "Ongkos angkut (perkiraan, bukan data)". Semua angka di file ini adalah asumsi analis yang disusun dari
+#  sumber publik (dicantumkan per angka). Ketidakpastian ditangani dengan uji sensitivitas (pengali 0,5x - 2x).
+#  Disusun 2026-10-26. Dipakai oleh src/logistics.py -> data/reference/biaya_rute.csv -> src/analysis/spread.py (Q2).
+# =====================================================================================================================
+status: ASUMSI
+versi: 1
+tanggal_disusun: "2026-10-26"
+
+# Rumus per rute (kota sumber -> kota tujuan) dan komoditas:
+#   biaya_truk_rp   = tarif_truk_per_km x (1 + premi_berpendingin) x jarak_jalan_km
+#   biaya_tol_rp    = tarif_tol_per_km x porsi_jarak_tol x jarak_jalan_km
+#   ongkos_angkut   = (biaya_truk_rp + biaya_tol_rp) / muatan_efektif_kg + bongkar_muat_rp_per_kg     [Rp/kg]
+#   susut           = susut_pct x harga_sumber                                                       [Rp/kg, ikut harga]
+#   biaya_logistik  = (ongkos_angkut + susut) x pengali_sensitivitas
+# Jarak jalan: data/reference/jarak_rute.csv (OSRM / OpenStreetMap), dibuat oleh src/geo_reference.py.
+
+truk:
+  jenis: "CDD box (colt diesel double, 6 roda)"
+  kapasitas_kg: 5000
+  volume_m3: 16.7
+  sumber_kapasitas: "Deliveree, Truck types, capacities, dimensions (diperbarui 6 Sep 2026): CDD box 5.000 kg, ~440x200x190 cm, ~16,7 m3. https://www.deliveree.com/id/en/ekspedisi/truck-types-capacities-dimensions-and-sizes/"
+  tarif_per_km: 6000          # ASUMSI
+  dasar_tarif: >-
+    Batas bawah kisaran tarif pasar CDD Rp 6.000-19.000/km (indikatif 2025-2026), dan di atas tarif platform Deliveree
+    untuk CDD box Rp 4.000-4.200/km (sumber yang sama). Rute dalam studi ini 90-800 km; rute jauh cenderung di ujung bawah
+    kisaran karena biaya tetap tersebar ke jarak yang panjang. Tarif dianggap sudah termasuk sopir & BBM, belum termasuk
+    tol (Deliveree menagih tol sesuai biaya aktual). Perjalanan balik kosong TIDAK dibebankan terpisah.
+  sumber_tarif: "https://www.deliveree.com/id/en/ekspedisi/truck-types-capacities-dimensions-and-sizes/"
+  pembanding: "Skripsi Telkom University (tahun tak jelas): batas biaya internal satu perusahaan CDD Rp 7.200/km."
+
+tol:
+  porsi_jarak_tol: 1.0        # ASUMSI konservatif: seluruh jarak dianggap lewat tol Trans Jawa (truk bisa memilih jalan non-tol)
+  metode_tarif_per_km: "nilai terbesar dari rute referensi di bawah (konservatif)"
+  rute_referensi:
+    jakarta_surabaya_aptrindo:
+      dari: jakarta
+      ke: surabaya
+      tarif_rp: 1382500
+      golongan: "truk (golongan tidak dirinci)"
+      sumber: "Aptrindo, dikutip Kontan: tarif tol golongan truk Jakarta-Surabaya Rp 1.382.500. https://industri.kontan.co.id/news/aptrindo-apresiasi-bila-tarif-trans-jawa-di-bawah-rp-1000-per-km"
+      catatan: "Tahun tarif tidak tercantum jelas; kemungkinan tarif lama (tarif tol naik berkala)."
+    cikampek_kalikangkung_2025:
+      dari: gt_cikampek_utama
+      ke: gt_kalikangkung
+      tarif_rp: 639000
+      golongan: "II dan III (truk 2-3 gandar)"
+      sumber: "Tarif normal sebelum diskon 20% (Juni & Desember 2025), dilaporkan Detik/Bisnis/Kompas TV. https://finance.detik.com/berita-ekonomi-bisnis/d-7952037/rincian-tarif-diskon-20-tol-trans-jawa-tanggal-berlakunya"
+  titik_referensi:            # untuk menghitung jarak jalan rute referensi (src/geo_reference.py)
+    jakarta: "Jakarta Pusat, DKI Jakarta, Indonesia"
+    surabaya: "Kota Surabaya, Jawa Timur, Indonesia"
+    # Gerbang tol tidak ada di OpenStreetMap Nominatim dengan namanya (dicek 2026-10-26); dipakai perkiraan:
+    # pusat Cikampek dan pusat Kota Semarang (GT Kalikangkung berada di sisi barat Semarang). Selisih jarak ~puluhan km.
+    gt_cikampek_utama: "Cikampek, Karawang, Jawa Barat, Indonesia"
+    gt_kalikangkung: "Kota Semarang, Jawa Tengah, Indonesia"
+
+muatan_efektif_kg:            # ASUMSI analis: berat yang realistis dimuat ke CDD 5.000 kg / 16,7 m3
+  com_14: {kg: 3000, alasan: "cabai ringan & dikemas keranjang/karung berongga -> terbatas volume (~60% kapasitas berat)"}
+  com_16: {kg: 3000, alasan: "sama dengan cabai merah keriting"}
+  com_11: {kg: 4500, alasan: "bawang merah dalam karung, padat -> hampir penuh kapasitas berat (90%)"}
+  com_12: {kg: 4500, alasan: "bawang putih dalam karung, padat (90%)"}
+  com_10: {kg: 4000, alasan: "telur dalam peti/egg tray, rapuh, tumpukan dibatasi (80%)"}
+  com_7:  {kg: 3500, alasan: "daging ayam beku/segar dalam kotak di truk berpendingin; ruang berkurang oleh insulasi (70%)"}
+
+premi_berpendingin:           # ASUMSI: tambahan tarif truk berpendingin (reefer) dibanding truk biasa
+  com_7: 0.4
+  lainnya: 0.0
+  dasar: "Tidak ditemukan sumber publik persentase premi truk berpendingin; 40% adalah asumsi analis (unit pendingin, BBM tambahan, armada lebih jarang). Sangat tidak pasti -> lihat uji sensitivitas."
+
+penanganan:
+  bongkar_muat_rp_per_kg: 150  # ASUMSI: muat di asal + bongkar di tujuan (buruh angkut pasar), total
+  dasar_bongkar_muat: "Tidak ditemukan tarif publik per kg yang dapat dikutip; asumsi analis. Kecil dibanding komponen lain."
+  susut_pct:                   # ASUMSI: bagian barang yang rusak/menyusut selama perjalanan, sebagai % harga di sumber
+    com_14: 0.05
+    com_16: 0.05
+    com_11: 0.03
+    com_12: 0.01
+    com_10: 0.02
+    com_7: 0.01
+  dasar_susut: >-
+    Literatur pascapanen cabai: kerusakan bisa sampai 40% pada penanganan buruk (dikutip di Jurnal Keteknikan Pertanian
+    IPB, https://journal.ipb.ac.id/index.php/jtep/article/download/10843/8366), tetapi studi simulasi transportasi
+    menemukan susut tidak selalu nyata. Angka di sini mengasumsikan penanganan wajar untuk perjalanan <= 1 hari.
+    Tidak ditemukan angka susut distribusi bawang merah, telur, atau daging ayam yang dapat dikutip.
+
+sensitivitas:
+  pengali: [0.5, 1.0, 1.5, 2.0]
+  skenario_konservatif: 1.5    # brief: rekomendasi rute hanya valid jika tetap untung pada pengali 1,5
+
+# Cek batas atas: ongkos angkut (tanpa susut) tidak boleh melebihi seluruh margin perdagangan & pengangkutan (MPP)
+# yang dicatat BPS dari produsen sampai konsumen. MPP = (harga konsumen - harga produsen) / harga produsen, sudah
+# termasuk keuntungan pedagang, sehingga ongkos angkut seharusnya hanya SEBAGIAN dari MPP.
+batas_atas_mpp:
+  ambang_peringatan: 0.5       # beri peringatan jika ongkos angkut > 50% dari MPP rupiah (MPP% x harga sumber)
+  komoditas:
+    com_14: {mpp_pct: 43.09, tahun: 2019, status: terverifikasi, sumber: "BPS, Distribusi Perdagangan Komoditas Cabai Merah di Indonesia 2019 (abstrak): MPP total petani -> konsumen akhir 43,09%. https://www.bps.go.id/en/publication/2020/01/13/e551727c6b440d31490770b8/distribution-perdagangan-k"}
+    com_16: {mpp_pct: 43.09, tahun: 2019, status: proksi, sumber: "Tidak ada angka MPP cabai rawit; memakai MPP cabai merah sebagai proksi."}
+    com_11: {mpp_pct: 38.01, tahun: 2019, status: terverifikasi_sekunder, sumber: "MPP total bawang merah nasional 38,01% (survei pola distribusi BPS 2019), dikutip rilis BPS provinsi (hasil pencarian); publikasi BPS 2022 tidak menampilkan angka di halaman. https://www.bps.go.id/id/publication/2022/10/24/958ef61ffcb0e88357bb99d1"}
+    com_12: {mpp_pct: null, tahun: null, status: PERLU_VERIFIKASI, sumber: "BPS punya publikasi Distribusi Perdagangan Bawang Putih 2025, tetapi angka MPP tidak terbaca. Cek batas atas dilewati."}
+    com_10: {mpp_pct: 20.19, tahun: 2021, status: terverifikasi_sekunder, sumber: "BPS, Distribusi Perdagangan Komoditas Telur Ayam Ras Indonesia 2021: MPP total 20,19% (dikutip dari abstrak lewat hasil pencarian). https://www.bps.go.id/en/publication/2021/10/29/5ee6719906f5a741e1830cfc"}
+    com_7:  {mpp_pct: 24.72, tahun: 2019, status: terverifikasi_sekunder, sumber: "BPS, Distribusi Perdagangan Komoditas Daging Ayam Ras di Indonesia 2019: MPP total 24,72% (dikutip lewat hasil pencarian). https://www.bps.go.id/en/publication/2020/01/13/ac76542e43e556167c26f8d9"}

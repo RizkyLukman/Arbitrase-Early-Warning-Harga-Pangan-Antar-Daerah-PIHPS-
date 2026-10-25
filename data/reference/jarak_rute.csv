@@ -1,0 +1,25 @@
+kota_sumber_id,kota_tujuan_id,jarak_jalan_km,durasi_jam,sumber,tanggal_ambil
+29,34,261.8,3.29,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+29,27,108.4,1.39,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+29,35,327.2,4.33,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+29,42,620.9,7.83,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+37,34,286.3,3.6,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+37,27,202.7,2.51,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+37,35,154.2,1.99,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+37,42,463.3,5.68,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+44,34,688.1,9.16,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+44,27,605.5,8.1,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+44,35,257.2,3.77,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+44,42,119.2,1.42,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+45,34,948.2,11.77,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+45,27,865.5,10.71,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+45,35,513.7,6.35,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+45,42,205.6,2.65,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+46,34,1016.0,12.5,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+46,27,933.4,11.44,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+46,35,581.5,7.08,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+46,42,273.4,3.38,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+48,34,848.8,10.5,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+48,27,766.2,9.44,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+48,35,414.3,5.08,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
+48,42,102.1,1.35,"OSRM (router.project-osrm.org), data jalan OpenStreetMap",2026-10-26
