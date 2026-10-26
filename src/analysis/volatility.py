@@ -148,6 +148,10 @@ def write_summary(res: dict, figs: dict) -> None:
     per_tahun = "\n".join(
         f"| {LABEL_PENDEK[r['kualitas']]} | " + " | ".join(pct(r[c], 1) if pd.notna(r[c]) else "–" for c in tahun_cols) + " |"
         for _, r in pt.iterrows())
+    rendah = b.gejolak_median_modern < b.gejolak_median_tradisional
+    n_mod_rendah = int(rendah.sum())
+    kecuali = [LABEL_PENDEK[k].lower() for k in b.kualitas[~rendah & b.gejolak_median_modern.notna()]]
+    pengecualian = f" (kecuali {', '.join(kecuali)})" if kecuali else ""
     top3 = res["teratas"].groupby("kualitas").head(3)
     sering = top3.kota.value_counts()
     sering = sering[sering >= 3]
@@ -167,7 +171,8 @@ Juli 2023 – Oktober 2026. Ukuran utama: simpangan baku perubahan harga minggua
 **Harga {LABEL_PENDEK[a.kualitas].lower()} paling bergejolak, terutama di {a.kota_paling_bergejolak}.**
 Harganya naik-turun rata-rata {pct(a.rata_perubahan_abs_median, 0)} per minggu (median antar kota), dibanding
 {pct(pk.iloc[-1].rata_perubahan_abs_median, 0)} untuk {LABEL_PENDEK[pk.iloc[-1].kualitas].lower()}.
-Tindakan: pantau cabai setiap minggu dan siapkan stok penyangga; komoditas yang tenang cukup dipantau bulanan.
+Tindakan: pantau {', '.join(LABEL_PENDEK[k].lower() for k in pk.kualitas[:2])} setiap minggu dan siapkan stok penyangga;
+{', '.join(LABEL_PENDEK[k].lower() for k in pk.kualitas[-3:])} relatif tenang dan cukup dipantau bulanan.
 
 ## Peringkat komoditas
 | # | Komoditas | Gejolak mingguan (median kota) | Rentang antar kota | Rata-rata perubahan/minggu | 3 kota paling bergejolak |
@@ -186,8 +191,9 @@ Tindakan: pantau cabai setiap minggu dan siapkan stok penyangga; komoditas yang 
 |---|---|---|---|---|
 {banding}
 
-Catatan: pasar modern hanya diperbarui Selasa–Rabu dan banyak minggu tanpa perubahan sama sekali, sehingga gejolaknya
-tampak lebih rendah. Perbedaan ini sebagian besar mencerminkan cara pencatatan, bukan harga yang benar-benar lebih stabil.
+Catatan: gejolak pasar modern tampak lebih rendah untuk {n_mod_rendah} dari {len(b)} komoditas{pengecualian}. Pasar modern
+hanya diperbarui Selasa–Rabu (notebooks/02_cleaning.ipynb §7.2) dan banyak minggu tanpa perubahan sama sekali, sehingga
+perbedaan ini sebagian besar mencerminkan cara pencatatan, bukan harga yang benar-benar lebih stabil.
 
 ## File
 - Tabel: `reports/tables/q1_gejolak_per_kota.csv`, `q1_gejolak_per_komoditas.csv`, `q1_gejolak_per_tahun.csv`,

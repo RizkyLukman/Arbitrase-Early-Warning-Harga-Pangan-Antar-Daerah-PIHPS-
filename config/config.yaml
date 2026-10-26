@@ -137,6 +137,21 @@ analisis:   # Tahap 4 (src/analysis/*.py). Hasil tabel -> reports/tables/, grafi
     jendela_minggu: [-8, 4]
     ambang_naik: 0.05               # "naik signifikan" = >= 5% di atas harga normal (median antar kota) ...
     min_tahun_naik: 2               # ... pada >= 2 dari 3 tahun, dan bertahan sampai minggu -1
+  q5_margin:
+    produsen_jenis_pasar_id: 4
+    pedagang_besar_jenis_pasar_id: 3
+    tradisional_jenis_pasar_id: 1
+    modern_jenis_pasar_id: 2
+    min_bulan_lengkap: 12           # kota x komoditas dengan < 12 bulan ketiga tingkat lengkap tidak dilaporkan
+    # Pasangan kota-kabupaten & agregasi bulanan: lihat bagian rantai_pasok di bawah
+  q6_peringatan:
+    jenis_pasar_id: 1
+    horizon_minggu: 4               # lonjakan = harga naik >= X% dalam 4 minggu ke depan (brief)
+    persentil_lonjakan: 0.90        # X = persentil 90 kenaikan 4 minggu, dihitung dari DATA LATIH per komoditas
+    ambang_zscore_kenaikan: 2.0     # sinyal: kenaikan mingguan di kota penentu arah jauh di atas kebiasaan (zscore_return > 2)
+    jendela_benar_minggu: 4         # peringatan "benar" jika lonjakan dimulai 0..4 minggu setelah peringatan
+    tahun_uji: [2025, 2026]         # latih <= tahun sebelumnya, uji tahun itu (tanpa look-ahead)
+    # Penentu arah (Q3) & minggu mulai naik sebelum Idulfitri (Q4) DIHITUNG ULANG dari data latih untuk tiap tahun uji.
 
 rantai_pasok:   # Q5: tambahan harga produsen -> pedagang besar -> pasar tradisional (src/analysis/margin.py)
   # Analisis UTAMA (sesuai brief): hanya kota yang punya ketiga tingkat dengan NAMA SAMA (mis. Kota Tegal, Kab. Jember).

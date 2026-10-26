@@ -1,6 +1,6 @@
 # Q1 — Gejolak harga
 
-Dibuat otomatis oleh `python -m src.analysis.volatility` pada 2026-10-26 01:21.
+Dibuat otomatis oleh `python -m src.analysis.volatility` pada 2026-10-26 15:05.
 Data: pasar tradisional, harga mingguan (median hari nyata), 35 kota/kab di Pulau Jawa,
 Juli 2023 – Oktober 2026. Ukuran utama: simpangan baku perubahan harga mingguan (log-return).
 
@@ -8,7 +8,8 @@ Juli 2023 – Oktober 2026. Ukuran utama: simpangan baku perubahan harga minggua
 **Harga cabai rawit merah paling bergejolak, terutama di Kota Blitar, Kab. Sumenep, Kab. Cilacap.**
 Harganya naik-turun rata-rata 13% per minggu (median antar kota), dibanding
 2% untuk bawang putih.
-Tindakan: pantau cabai setiap minggu dan siapkan stok penyangga; komoditas yang tenang cukup dipantau bulanan.
+Tindakan: pantau cabai rawit merah, cabai merah keriting setiap minggu dan siapkan stok penyangga;
+daging ayam ras, telur ayam ras, bawang putih relatif tenang dan cukup dipantau bulanan.
 
 ## Peringkat komoditas
 | # | Komoditas | Gejolak mingguan (median kota) | Rentang antar kota | Rata-rata perubahan/minggu | 3 kota paling bergejolak |
@@ -44,8 +45,9 @@ Tindakan: pantau cabai setiap minggu dan siapkan stok penyangga; komoditas yang 
 | Daging ayam ras | 3,5% | 3,4% | 19% | 62% |
 | Telur ayam ras | 3,2% | 3,0% | 20% | 22% |
 
-Catatan: pasar modern hanya diperbarui Selasa–Rabu dan banyak minggu tanpa perubahan sama sekali, sehingga gejolaknya
-tampak lebih rendah. Perbedaan ini sebagian besar mencerminkan cara pencatatan, bukan harga yang benar-benar lebih stabil.
+Catatan: gejolak pasar modern tampak lebih rendah untuk 5 dari 6 komoditas (kecuali bawang putih). Pasar modern
+hanya diperbarui Selasa–Rabu (notebooks/02_cleaning.ipynb §7.2) dan banyak minggu tanpa perubahan sama sekali, sehingga
+perbedaan ini sebagian besar mencerminkan cara pencatatan, bukan harga yang benar-benar lebih stabil.
 
 ## File
 - Tabel: `reports/tables/q1_gejolak_per_kota.csv`, `q1_gejolak_per_komoditas.csv`, `q1_gejolak_per_tahun.csv`,

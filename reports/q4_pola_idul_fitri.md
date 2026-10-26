@@ -1,6 +1,6 @@
 # Q4 — Pola harga sekitar Idulfitri
 
-Dibuat otomatis oleh `python -m src.analysis.seasonality` pada 2026-10-26 01:34.
+Dibuat otomatis oleh `python -m src.analysis.seasonality` pada 2026-10-26 15:07.
 Pasar tradisional, harga mingguan, Idulfitri 2024 (10 Apr), 2025 (31 Mar), 2026 (21 Mar) menurut SKB.
 Harga normal = rata-rata minggu -12 s/d -9. "Mulai naik" = setiap minggu sejak itu sampai minggu −1
 harga ≥ 5% di atas harga normal (median antar kota) pada ≥ 2 dari 3 tahun.

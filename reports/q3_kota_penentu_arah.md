@@ -1,6 +1,6 @@
 # Q3 — Kota penentu arah
 
-Dibuat otomatis oleh `python -m src.analysis.leadlag` pada 2026-10-26 01:53.
+Dibuat otomatis oleh `python -m src.analysis.leadlag` pada 2026-10-26 15:07.
 Data: pasar tradisional, perubahan harga mingguan (log-return), Juli 2023 – Oktober 2026.
 Metode: momentum tiap kota dibuang (prewhitening AR(4)), lalu kejutan harga tiap kota dibandingkan
 dengan rata-rata semua kota lain pada jeda [1, 2, 3, 4] minggu; koreksi Benjamini–Hochberg (α = 0.05), korelasi
@@ -11,14 +11,14 @@ dengan rata-rata semua kota lain pada jeda [1, 2, 3, 4] minggu; koreksi Benjamin
 **Kenaikan harga bawang merah di Kota Surakarta (Solo) biasanya disusul kota lain sekitar 1 minggu kemudian** (hubungan kuat). Untuk cabai rawit, kota yang harganya biasanya naik lebih dulu: Kota Surakarta (Solo), Kota Surabaya, Kota Kediri; kota di Jawa Barat dan DKI Jakarta cenderung menyusul. Tindakan: pantau harga di kota penentu arah setiap minggu; kenaikan di sana adalah sinyal untuk mengamankan stok di kota tujuan sekitar 1 minggu sebelum harga di sana ikut naik.
 
 ## Ringkasan per komoditas
-| Komoditas | Kota | Momentum mingguan (autokorelasi) | Bergerak di minggu yang sama (korelasi median) | Pasangan "mendahului": semu → setelah momentum dibuang | Kota penentu arah | Kota pengikut | Jeda (minggu) |
-|---|---|---|---|---|---|---|---|
-| Cabai rawit merah | 35 | 0,29 | 0,78 | 607 → 247 | 3 | 9 | 1 |
-| Cabai merah keriting | 32 | 0,08 | 0,68 | 381 → 214 | 9 | 8 | 1 |
-| Bawang merah | 35 | 0,30 | 0,57 | 628 → 507 | 17 | 18 | 1 |
-| Bawang putih | 35 | 0,08 | 0,26 | 312 → 266 | 20 | 12 | 1 |
-| Daging ayam ras | 35 | 0,03 | 0,62 | 330 → 289 | 10 | 17 | 1 |
-| Telur ayam ras | 35 | 0,17 | 0,67 | 570 → 221 | 6 | 14 | 1 |
+| Komoditas | Kota | Seri stasioner (uji ADF) | Momentum mingguan (autokorelasi) | Bergerak di minggu yang sama (korelasi median) | Pasangan "mendahului": semu → setelah momentum dibuang | Kota penentu arah | Kota pengikut | Jeda (minggu) |
+|---|---|---|---|---|---|---|---|---|
+| Cabai rawit merah | 35 | 100% | 0,29 | 0,78 | 607 → 247 | 3 | 9 | 1 |
+| Cabai merah keriting | 32 | 100% | 0,08 | 0,68 | 381 → 214 | 9 | 8 | 1 |
+| Bawang merah | 35 | 100% | 0,30 | 0,57 | 628 → 507 | 17 | 18 | 1 |
+| Bawang putih | 35 | 97% | 0,08 | 0,26 | 312 → 266 | 20 | 12 | 1 |
+| Daging ayam ras | 35 | 100% | 0,03 | 0,62 | 330 → 289 | 10 | 17 | 1 |
+| Telur ayam ras | 35 | 100% | 0,17 | 0,67 | 570 → 221 | 6 | 14 | 1 |
 
 ## Kota penentu arah (mendahului rata-rata kota lain)
 | Komoditas | Kota | Provinsi | Jeda (minggu) | Korelasi | Didukung Granger |
@@ -172,8 +172,7 @@ Dari uji per pasangan kota (setelah momentum dibuang), maksimal 3 kota per kota 
 | Kota Surabaya | Telur ayam ras | Kota Probolinggo (Jawa Timur) | 1 | sedang |
 
 ## Cara membaca & batasan
-- Harga antar kota terutama **bergerak bersamaan di minggu yang sama**; pola "mendahului" hanya menambah sekitar 1 minggu
-  waktu antisipasi dan hubungannya lemah–sedang.
+- Untuk 5 dari 6 komoditas, harga antar kota terutama **bergerak bersamaan di minggu yang sama** (korelasi minggu yang sama lebih tinggi daripada korelasi 'mendahului'); pengecualian: bawang putih. Pola "mendahului" hanya menambah sekitar 1 minggu waktu antisipasi, dengan hubungan lemah–sedang.
 - Tanpa membuang momentum, ratusan pasangan kota tampak saling mendahului (kolom "semu"); angka itu tidak dipakai.
 - Granger causality hanya pendukung dan **bukan** bukti bahwa harga di satu kota menyebabkan kenaikan di kota lain.
 - Sampel PIHPS kecil (2 pasar per kota), harga berisik; kota "pengikut" bisa juga berarti pencatatannya terlambat.

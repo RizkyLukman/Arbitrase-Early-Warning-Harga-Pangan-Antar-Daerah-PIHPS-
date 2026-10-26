@@ -1,6 +1,6 @@
 # Q2 — Rute pindah stok
 
-Dibuat otomatis oleh `python -m src.analysis.spread` pada 2026-10-26 01:21.
+Dibuat otomatis oleh `python -m src.analysis.spread` pada 2026-10-26 15:05.
 Harga sumber = **pedagang besar** di kota sumber (harga beli distributor); harga tujuan = **pasar tradisional** di kota tujuan
 (analisis utama, sesuai brief); mingguan, Juli 2023 – Oktober 2026. Ongkos angkut = **perkiraan, bukan data**
 (`config/biaya_logistik.yaml`). Rute **layak** = pada ongkos ×1,5: untung pada ≥ 60% minggu

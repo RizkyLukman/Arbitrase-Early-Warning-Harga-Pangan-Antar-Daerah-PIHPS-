@@ -130,7 +130,9 @@ def _adf_share(R: pd.DataFrame, alpha: float) -> float:
     for c in R.columns:
         x = R[c].dropna()
         if len(x) >= 30:
-            ok.append(adfuller(x, autolag="AIC")[1] < alpha)
+            with warnings.catch_warnings():  # statsmodels >= 0.15: peringatan perubahan format hasil adfuller
+                warnings.simplefilter("ignore", FutureWarning)
+                ok.append(adfuller(x, autolag="AIC")[1] < alpha)
     return float(np.mean(ok)) if ok else np.nan
 
 
@@ -254,7 +256,8 @@ def write_summary(res: dict, figs: dict, cfg: dict) -> None:
     kom, pr, tj, pv = res["kom"], res["peran"], res["tujuan"], res["provinsi"]
     f2 = lambda v: "–" if pd.isna(v) else f"{v:.2f}".replace(".", ",")  # noqa: E731
     tk = "\n".join(
-        f"| {LABEL_PENDEK[x.kualitas]} | {x.kota} | {f2(x.autokorelasi_lag1_median)} | {f2(x.korelasi_lag0_median)} | "
+        f"| {LABEL_PENDEK[x.kualitas]} | {x.kota} | {x.porsi_seri_stasioner_adf:.0%} | {f2(x.autokorelasi_lag1_median)} | "
+        f"{f2(x.korelasi_lag0_median)} | "
         f"{x.pasangan_mendahului_semu} → {x.pasangan_mendahului_setelah_prewhitening} | {x.kota_penentu_arah} | {x.kota_pengikut} | "
         f"{'–' if x.jeda_dominan_minggu is None or pd.isna(x.jeda_dominan_minggu) else int(x.jeda_dominan_minggu)} |"
         for x in kom.itertuples())
@@ -272,6 +275,14 @@ def write_summary(res: dict, figs: dict, cfg: dict) -> None:
         if len(tj) else "| – | – | – | – | – |"
     pvt = "\n".join(f"| {prov} | " + " | ".join(f2(v) for v in row) + " |" for prov, row in
                     pv.loc[pv.mean(axis=1).sort_values(ascending=False).index].iterrows())
+    lead_med = pa.groupby("kualitas").korelasi.median()
+    bs = kom.set_index("kualitas").korelasi_lag0_median
+    bersama = [k for k in bs.index if k in lead_med.index and bs[k] > lead_med[k]]
+    tidak = [k for k in bs.index if k not in bersama]
+    bersamaan_txt = (f"Untuk {len(bersama)} dari {len(bs)} komoditas, harga antar kota terutama **bergerak bersamaan di minggu yang "
+                     f"sama** (korelasi minggu yang sama lebih tinggi daripada korelasi 'mendahului')"
+                     + (f"; pengecualian: {', '.join(LABEL_PENDEK[k].lower() for k in tidak)}" if tidak else "")
+                     + ". Pola \"mendahului\" hanya menambah sekitar 1 minggu waktu antisipasi, dengan hubungan lemah–sedang.")
     if len(pa):
         top = pa.sort_values("korelasi").iloc[-1]
         cab = pa[pa.kualitas == "Cabai Rawit Merah"].sort_values("korelasi", ascending=False)
@@ -299,8 +310,8 @@ dengan rata-rata semua kota lain pada jeda {q['lag_minggu']} minggu; koreksi Ben
 {kal}
 
 ## Ringkasan per komoditas
-| Komoditas | Kota | Momentum mingguan (autokorelasi) | Bergerak di minggu yang sama (korelasi median) | Pasangan "mendahului": semu → setelah momentum dibuang | Kota penentu arah | Kota pengikut | Jeda (minggu) |
-|---|---|---|---|---|---|---|---|
+| Komoditas | Kota | Seri stasioner (uji ADF) | Momentum mingguan (autokorelasi) | Bergerak di minggu yang sama (korelasi median) | Pasangan "mendahului": semu → setelah momentum dibuang | Kota penentu arah | Kota pengikut | Jeda (minggu) |
+|---|---|---|---|---|---|---|---|---|
 {tk}
 
 ## Kota penentu arah (mendahului rata-rata kota lain)
@@ -326,8 +337,7 @@ Dari uji per pasangan kota (setelah momentum dibuang), maksimal {q['top_n_per_ko
 {tt}
 
 ## Cara membaca & batasan
-- Harga antar kota terutama **bergerak bersamaan di minggu yang sama**; pola "mendahului" hanya menambah sekitar 1 minggu
-  waktu antisipasi dan hubungannya lemah–sedang.
+- {bersamaan_txt}
 - Tanpa membuang momentum, ratusan pasangan kota tampak saling mendahului (kolom "semu"); angka itu tidak dipakai.
 - Granger causality hanya pendukung dan **bukan** bukti bahwa harga di satu kota menyebabkan kenaikan di kota lain.
 - Sampel PIHPS kecil (2 pasar per kota), harga berisik; kota "pengikut" bisa juga berarti pencatatannya terlambat.
