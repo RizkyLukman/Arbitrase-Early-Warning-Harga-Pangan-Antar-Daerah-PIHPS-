@@ -169,7 +169,7 @@ def backtest(cfg: dict) -> dict:
                     hasil.append({"tahun_uji": T, "kualitas": kom, "kota": kota, "aturan": nama,
                                   **{k: v for k, v in r.items() if k != "lead_times"}, "lead_times": r["lead_times"]})
                 d_al = pd.DataFrame({"tahun_uji": T, "kualitas": kom, "kota": kota, "minggu_akhir": lab.index[uji],
-                                     "harga": h[uji].values, "onset": lab.onset[uji].values,
+                                     "harga": h[uji].values, "onset": lab.onset[uji].values, "masa": lab.masa[uji].values,
                                      "sinyal_A": aturan["A: kota penentu arah"][uji].values,
                                      "sinyal_B": aturan["B: masa sebelum Idulfitri"][uji].values,
                                      "pemicu_A": s.pemicu_A[uji].fillna("").values})
@@ -357,6 +357,7 @@ Peringatan minggu terakhir ({c.minggu_akhir.max():%d %b %Y}): {kalimat_terkini}.
 
 ## File
 - Tabel: `reports/tables/q6_skor_ringkas.csv`, `q6_skor_per_komoditas.csv`, `q6_skor_per_tahun.csv`, `q6_parameter_latih.csv`,
+  `q6_peringatan_uji.csv` (per kota × minggu di tahun uji: sinyal, awal & masa lonjakan),
   `q6_peringatan_terkini.csv` (8 minggu terakhir, kolom alasan berbahasa dashboard)
 - Grafik: {', '.join(f'`reports/figures/{p.name}`' for p in figs.values())}
 """
@@ -376,6 +377,7 @@ def main() -> None:
     save_table(per_kom, "q6_skor_per_komoditas")
     save_table(per_tahun, "q6_skor_per_tahun")
     save_table(bt["params"], "q6_parameter_latih")
+    save_table(bt["detail"], "q6_peringatan_uji")  # per kota x minggu di tahun uji: sinyal, awal & masa lonjakan (untuk timeline dashboard)
     save_table(cur, "q6_peringatan_terkini")
     figs = figures(ring, bt["detail"])
     write_summary(ring, per_kom, per_tahun, bt["params"], cur, figs, cfg)

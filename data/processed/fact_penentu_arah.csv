@@ -1,0 +1,208 @@
+﻿kota_key,komoditas_key,peran,jeda_minggu,korelasi,hubungan,peringkat_penentu_arah,tampil_di_dashboard,didukung_uji_tambahan
+38,16,pengikut,1,0.23866540104817674,sedang,,False,
+46,16,netral,,,,,False,
+166,16,netral,,,,,False,
+39,16,netral,,,,,False,
+103,16,pengikut,1,0.3549841535343477,kuat,,False,
+45,16,netral,,,,,False,
+158,16,netral,,,,,False,
+159,16,netral,,,,,False,
+40,16,pengikut,1,0.3713194962456609,kuat,,False,
+151,16,netral,,,,,False,
+144,16,netral,,,,,False,
+49,16,netral,,,,,False,
+106,16,pengikut,1,0.40306466288687476,kuat,,False,
+165,16,netral,,,,,False,
+27,16,pengikut,1,0.44422598970750776,kuat,,False,
+30,16,netral,,,,,False,
+135,16,netral,,,,,False,
+31,16,netral,,,,,False,
+25,16,netral,,,,,False,
+28,16,pengikut,1,0.3158606424989552,kuat,,False,
+32,16,pengikut,1,0.2830716222965057,sedang,,False,
+34,16,netral,,,,,False,
+44,16,penentu arah,1,0.2572068904555202,sedang,3,True,True
+47,16,netral,,,,,False,
+43,16,netral,,,,,False,
+48,16,netral,,,,,False,
+35,16,netral,,,,,False,
+24,16,netral,,,,,False,
+33,16,pengikut,1,0.4108704889883812,kuat,,False,
+42,16,penentu arah,1,0.2757130752008818,sedang,2,True,True
+36,16,penentu arah,1,0.2838975052823286,sedang,1,True,True
+26,16,netral,,,,,False,
+29,16,pengikut,1,0.29996882710301487,sedang,,False,
+37,16,netral,,,,,False,
+41,16,netral,,,,,False,
+38,14,pengikut,1,0.243932394483086,sedang,,False,
+166,14,netral,,,,,False,
+39,14,penentu arah,1,0.289372042189441,sedang,1,True,True
+103,14,netral,,,,,False,
+158,14,penentu arah,1,0.2676388640388782,sedang,4,False,True
+159,14,penentu arah,1,0.25476241400610705,sedang,7,False,True
+40,14,netral,,,,,False,
+151,14,penentu arah,1,0.26628572819945473,sedang,5,False,True
+144,14,netral,,,,,False,
+49,14,netral,,,,,False,
+106,14,pengikut,1,0.3704363097011278,kuat,,False,
+165,14,penentu arah,1,0.24070474736851857,sedang,9,False,True
+27,14,pengikut,1,0.35122883728858534,kuat,,False,
+30,14,netral,,,,,False,
+135,14,pengikut,1,0.24846172990746018,sedang,,False,
+31,14,netral,,,,,False,
+25,14,netral,,,,,False,
+28,14,netral,,,,,False,
+32,14,netral,,,,,False,
+34,14,pengikut,1,0.2621931076677786,sedang,,False,
+44,14,netral,,,,,False,
+47,14,netral,,,,,False,
+43,14,pengikut,1,0.386815224181501,kuat,,False,
+35,14,penentu arah,1,0.27941917098758356,sedang,2,True,True
+24,14,penentu arah,1,0.24229630724491968,sedang,8,False,False
+33,14,pengikut,1,0.3210735258288659,kuat,,False,
+42,14,netral,,,,,False,
+36,14,penentu arah,1,0.2677338435666941,sedang,3,True,True
+26,14,penentu arah,1,0.2549997976087762,sedang,6,False,True
+29,14,pengikut,1,0.4164559267262955,kuat,,False,
+37,14,netral,,,,,False,
+41,14,netral,,,,,False,
+38,11,pengikut,1,0.38843649196865115,kuat,,False,
+46,11,pengikut,1,0.5479053562849843,kuat,,False,
+166,11,pengikut,1,0.5007880539504155,kuat,,False,
+39,11,penentu arah,1,0.46994849813574807,kuat,3,True,True
+103,11,penentu arah,1,0.3700768132384355,kuat,11,False,False
+45,11,pengikut,1,0.4962460308765346,kuat,,False,
+158,11,penentu arah,1,0.3960019949132726,kuat,9,False,False
+159,11,pengikut,1,0.4109787884397507,kuat,,False,
+40,11,pengikut,1,0.4675604786602775,kuat,,False,
+151,11,pengikut,1,0.36717550548499855,kuat,,False,
+144,11,penentu arah,1,0.400204913139896,kuat,8,False,False
+49,11,penentu arah,1,0.31386992405605063,kuat,17,False,False
+106,11,pengikut,1,0.4164188698008629,kuat,,False,
+165,11,pengikut,1,0.3009602823048318,kuat,,False,
+27,11,pengikut,1,0.33849135197903946,kuat,,False,
+30,11,penentu arah,1,0.37137604676279257,kuat,10,False,False
+135,11,pengikut,1,0.36040786511520645,kuat,,False,
+31,11,penentu arah,1,0.40807829143731,kuat,7,False,True
+25,11,penentu arah,1,0.4294411792491344,kuat,5,False,True
+28,11,penentu arah,1,0.32516329831098356,kuat,16,False,True
+32,11,pengikut,1,0.31538202382736413,kuat,,False,
+34,11,pengikut,1,0.29562214623515287,sedang,,False,
+44,11,penentu arah,1,0.4211396942193709,kuat,6,False,False
+47,11,pengikut,1,0.4577126540648293,kuat,,False,
+43,11,pengikut,1,0.4056234512553456,kuat,,False,
+48,11,pengikut,1,0.36606301320645307,kuat,,False,
+35,11,penentu arah,1,0.3473991876658665,kuat,14,False,False
+24,11,penentu arah,1,0.4518448947394347,kuat,4,False,True
+33,11,penentu arah,1,0.3376422118228595,kuat,15,False,False
+42,11,penentu arah,1,0.36181456455127736,kuat,13,False,False
+36,11,penentu arah,1,0.5083212346576081,kuat,1,True,True
+26,11,penentu arah,1,0.47499824142539643,kuat,2,True,True
+29,11,pengikut,1,0.3239743311675685,kuat,,False,
+37,11,penentu arah,1,0.3677376669860207,kuat,12,False,False
+41,11,pengikut,1,0.32423229176684554,kuat,,False,
+38,12,pengikut,3,0.30399221159002615,kuat,,False,
+46,12,pengikut,1,0.2190892689142036,sedang,,False,
+166,12,penentu arah,1,0.22650276128702151,sedang,16,False,False
+39,12,penentu arah,2,0.27052944921908184,sedang,11,False,True
+103,12,penentu arah,1,0.22176971839607956,sedang,19,False,False
+45,12,penentu arah,1,0.40494862896621675,kuat,3,True,True
+158,12,penentu arah,1,0.3166134906769445,kuat,9,False,True
+159,12,pengikut,1,0.24336566523703873,sedang,,False,
+40,12,penentu arah,2,0.39893542118106035,kuat,4,False,True
+151,12,pengikut,2,0.259010514597831,sedang,,False,
+144,12,penentu arah,1,0.22299583467371312,sedang,18,False,False
+49,12,penentu arah,1,0.29741355601813946,sedang,10,False,True
+106,12,pengikut,1,0.49972902296054533,kuat,,False,
+165,12,penentu arah,1,0.3594903354300279,kuat,7,False,True
+27,12,netral,,,,,False,
+30,12,netral,,,,,False,
+135,12,penentu arah,2,0.23307450756933062,sedang,15,False,True
+31,12,penentu arah,1,0.2603365086923279,sedang,13,False,False
+25,12,pengikut,1,0.3955195505841821,kuat,,False,
+28,12,pengikut,1,0.2629104629796118,sedang,,False,
+32,12,penentu arah,3,0.22345613059601696,sedang,17,False,False
+34,12,pengikut,1,0.22102723855412318,sedang,,False,
+44,12,penentu arah,1,0.31947449978488285,kuat,8,False,True
+47,12,pengikut,1,0.3495706979692477,kuat,,False,
+43,12,netral,,,,,False,
+48,12,penentu arah,1,0.371462677121511,kuat,5,False,True
+35,12,penentu arah,1,0.2561044002408125,sedang,14,False,False
+24,12,penentu arah,3,0.218465168429948,sedang,20,False,True
+33,12,penentu arah,1,0.2676302932707271,sedang,12,False,True
+42,12,penentu arah,1,0.3610629405022353,kuat,6,False,True
+36,12,penentu arah,1,0.44182403723142927,kuat,2,True,True
+26,12,pengikut,1,0.401648785685068,kuat,,False,
+29,12,pengikut,1,0.21225833787383075,sedang,,False,
+37,12,penentu arah,1,0.4514739518758638,kuat,1,True,True
+41,12,pengikut,3,0.3603068836955217,kuat,,False,
+38,7,netral,,,,,False,
+46,7,netral,,,,,False,
+166,7,pengikut,1,0.23416837530051846,sedang,,False,
+39,7,netral,,,,,False,
+103,7,penentu arah,1,0.313991603193107,kuat,4,False,True
+45,7,penentu arah,1,0.28170667180443437,sedang,7,False,False
+158,7,netral,,,,,False,
+159,7,pengikut,1,0.323592333917323,kuat,,False,
+40,7,pengikut,1,0.42245884464820715,kuat,,False,
+151,7,pengikut,1,0.22457809517129965,sedang,,False,
+144,7,pengikut,1,0.2145495868843486,sedang,,False,
+49,7,pengikut,1,0.3981598775620375,kuat,,False,
+106,7,penentu arah,1,0.31771572747145344,kuat,3,True,True
+165,7,pengikut,1,0.24883168156508445,sedang,,False,
+27,7,pengikut,1,0.24745135780379468,sedang,,False,
+30,7,pengikut,1,0.24855856225330739,sedang,,False,
+135,7,pengikut,1,0.2562691101916367,sedang,,False,
+31,7,pengikut,1,0.35224932042490037,kuat,,False,
+25,7,netral,,,,,False,
+28,7,penentu arah,1,0.2948767936541594,sedang,5,False,True
+32,7,pengikut,1,0.3176720575668225,kuat,,False,
+34,7,pengikut,1,0.2841188387349108,sedang,,False,
+44,7,penentu arah,1,0.34196277658402097,kuat,1,True,True
+47,7,pengikut,1,0.3376244021900688,kuat,,False,
+43,7,penentu arah,1,0.27145577640379764,sedang,8,False,True
+48,7,penentu arah,1,0.32346310293148556,kuat,2,True,True
+35,7,penentu arah,1,0.2532241389365511,sedang,9,False,False
+24,7,netral,,,,,False,
+33,7,pengikut,1,0.23950072802320244,sedang,,False,
+42,7,netral,,,,,False,
+36,7,penentu arah,1,0.2519900404273673,sedang,10,False,True
+26,7,pengikut,1,0.24654169627529643,sedang,,False,
+29,7,penentu arah,1,0.28272102595717696,sedang,6,False,False
+37,7,netral,,,,,False,
+41,7,pengikut,1,0.23130357481765956,sedang,,False,
+38,10,netral,,,,,False,
+46,10,pengikut,1,0.2782493850604377,sedang,,False,
+166,10,netral,,,,,False,
+39,10,netral,,,,,False,
+103,10,netral,,,,,False,
+45,10,netral,,,,,False,
+158,10,netral,,,,,False,
+159,10,pengikut,1,0.27914861866309243,sedang,,False,
+40,10,pengikut,1,0.46353482755472414,kuat,,False,
+151,10,pengikut,1,0.2651638414456824,sedang,,False,
+144,10,netral,,,,,False,
+49,10,pengikut,1,0.31765715218068813,kuat,,False,
+106,10,penentu arah,1,0.2662163357713513,sedang,5,False,False
+165,10,pengikut,1,0.27429000379574076,sedang,,False,
+27,10,netral,,,,,False,
+30,10,pengikut,1,0.31199312385315453,kuat,,False,
+135,10,pengikut,1,0.2856124205651331,sedang,,False,
+31,10,pengikut,1,0.25581854263946563,sedang,,False,
+25,10,pengikut,1,0.2720937722598619,sedang,,False,
+28,10,penentu arah,1,0.28944952440788013,sedang,2,True,True
+32,10,netral,,,,,False,
+34,10,pengikut,1,0.2311881898504432,sedang,,False,
+44,10,netral,,,,,False,
+47,10,pengikut,1,0.2702833918317085,sedang,,False,
+43,10,penentu arah,1,0.27551434344501624,sedang,4,False,True
+48,10,penentu arah,1,0.2782079887369106,sedang,3,True,True
+35,10,penentu arah,1,0.3099147375661705,kuat,1,True,True
+24,10,pengikut,1,0.27627949395774853,sedang,,False,
+33,10,netral,,,,,False,
+42,10,netral,,,,,False,
+36,10,netral,,,,,False,
+26,10,pengikut,1,0.2494585012617019,sedang,,False,
+29,10,netral,,,,,False,
+37,10,penentu arah,1,0.2410630003862025,sedang,6,False,False
+41,10,netral,,,,,False,

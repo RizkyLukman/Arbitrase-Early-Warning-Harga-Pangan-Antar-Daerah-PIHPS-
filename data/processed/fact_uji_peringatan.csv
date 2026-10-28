@@ -1,0 +1,6 @@
+﻿aturan,urutan,benar_dari_10,tertangkap_dari_10,lebih_awal_minggu,porsi_minggu_peringatan,jumlah_peringatan,jumlah_lonjakan,tahun_uji
+Peringatan dini (aturan yang diuji),1,1.2,2.4,5.8,0.12629399585921325,2379,667,"2025, 2026"
+Hanya dari kota penentu arah,2,1.4,2.3,5.8,0.09837022880501141,1853,667,"2025, 2026"
+Hanya dari masa sebelum Idulfitri,3,0.3,0.1,5.7,0.029728725380899292,560,667,"2025, 2026"
+"Pembanding: tebakan ""sama seperti tahun lalu""",4,2.2,4.2,5.8,0.1823538780060519,3435,667,"2025, 2026"
+Pembanding: selalu beri peringatan,5,1.6,10.0,7.2,1.0,18837,667,"2025, 2026"

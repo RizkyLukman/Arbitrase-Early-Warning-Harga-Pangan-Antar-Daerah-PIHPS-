@@ -126,6 +126,7 @@ analisis:   # Tahap 4 (src/analysis/*.py). Hasil tabel -> reports/tables/, grafi
     # dan lebih kuat daripada arah sebaliknya (pasar mendahului kota itu). Kebalikannya = kota "pengikut".
     # (Versi per pasangan kota menghasilkan 12-22 "penentu arah" per komoditas -> tidak berguna untuk keputusan.)
     top_n_per_kota_tujuan: 3        # kota yang perlu dipantau untuk setiap kota tujuan (dari uji per pasangan)
+    top_n_penentu_arah_dashboard: 3 # label "kota penentu arah" di dashboard (dim_kota) hanya untuk N teratas per komoditas
     # Prewhitening: buang momentum tiap kota (regresi log-return pada lag-nya sendiri 1..p) sebelum korelasi silang.
     # Tanpa ini, momentum + pergerakan bersamaan membuat 26-53% pasangan kota tampak "saling mendahului" (semu).
     prewhitening_ar_lag: 4
@@ -171,6 +172,22 @@ rantai_pasok:   # Q5: tambahan harga produsen -> pedagang besar -> pasar tradisi
   # Tidak dipakai (dicek 2026-10-26): Kota Madiun (produsen Kab. Madiun tanpa data), Kab. Banyuwangi (tanpa data produsen),
   # Kota Serang (tanpa data pedagang besar), Kota Kediri untuk telur & ayam (Kab. Kediri tanpa data produsen telur/ayam).
   agregasi: "bulanan"                # harga produsen jarang diperbarui (produsen > pedagang besar di 31% kota-hari) -> bulanan
+
+insights:   # Tahap 5 (src/insights.py): kalimat "Tiga hal yang perlu diketahui" & daftar tindakan per komoditas, dihitung dari
+            # hasil analisis Q1-Q6 untuk minggu terakhir. Setiap kalimat menyimpan angka asalnya (brief §6.4).
+  jenis_pasar_id: 1                # harga acuan minggu ini = pasar tradisional di kota tujuan (median antar kota tujuan)
+  ambang_naik_4_minggu: 0.15       # harga naik >= 15% vs 4 minggu lalu -> "harga sedang naik cepat"
+  ambang_turun_4_minggu: -0.15     # harga turun >= 15% vs 4 minggu lalu -> "harga sedang turun"
+  ambang_selisih_nasional: 0.10    # |selisih vs nasional| >= 10% -> disebut sebagai pembanding
+  minggu_sebelum_jendela: 2        # "beli lebih awal" juga bila jendela kenaikan Idulfitri dimulai <= 2 minggu lagi
+  top_n_gejolak: 2                 # komoditas paling bergejolak (Q1) -> "pantau setiap minggu"
+  min_hemat_produsen: 0.20         # Q5: beli di produsen >= 20% lebih murah daripada harga pasar -> "jajaki beli langsung"
+  jumlah_hal: 3                    # jumlah kalimat "hal yang perlu diketahui"
+
+export:     # Tahap 5 (src/export_powerbi.py): star schema -> data/processed/ (parquet + csv)
+  format: [parquet, csv]
+  peringatan_ukuran_mb: 10         # file > 10 MB diberi peringatan di laporan (allowlist Git: < 50 MB)
+  fact_harga_hanya_berharga: true  # buang baris harian yang harga asli & harga bersihnya sama-sama kosong
 
 paths:
   raw: "data/raw"

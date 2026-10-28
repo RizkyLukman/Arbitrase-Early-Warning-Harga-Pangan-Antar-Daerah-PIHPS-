@@ -1,6 +1,6 @@
 # Q6 — Peringatan dini & uji pada data lama
 
-Dibuat otomatis oleh `python -m src.analysis.early_warning` pada 2026-10-26 15:08.
+Dibuat otomatis oleh `python -m src.analysis.early_warning` pada 2026-10-29 02:11.
 Pasar tradisional, mingguan. Lonjakan = harga naik ≥ X% dalam 4 minggu (X = persentil 90%
 dari data latih per komoditas). Peringatan benar = lonjakan dimulai 0–4 minggu setelah peringatan.
 Diuji pada data tahun 2025, 2026; setiap tahun uji hanya memakai pengetahuan dari data sebelumnya.
@@ -66,5 +66,6 @@ Peringatan minggu terakhir (23 Oct 2026): tidak ada peringatan aktif.
 
 ## File
 - Tabel: `reports/tables/q6_skor_ringkas.csv`, `q6_skor_per_komoditas.csv`, `q6_skor_per_tahun.csv`, `q6_parameter_latih.csv`,
+  `q6_peringatan_uji.csv` (per kota × minggu di tahun uji: sinyal, awal & masa lonjakan),
   `q6_peringatan_terkini.csv` (8 minggu terakhir, kolom alasan berbahasa dashboard)
 - Grafik: `reports/figures/q6_skor_peringatan.png`, `reports/figures/q6_timeline_contoh.png`
