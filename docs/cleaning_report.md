@@ -1,6 +1,6 @@
 # Laporan cleaning (Tahap 2)
 
-Dibuat otomatis oleh `python -m src.clean` pada 2026-10-26 00:19. Jangan diedit manual.
+Dibuat otomatis oleh `python -m src.clean` pada 2026-10-29 01:54. Jangan diedit manual.
 Aturan & alasannya: `notebooks/01_eda.ipynb`, `docs/data_profile.md`. Ambang: `config/config.yaml` bagian `cleaning`.
 
 ## Ringkasan
@@ -12,15 +12,15 @@ Aturan & alasannya: `notebooks/01_eda.ipynb`, `docs/data_profile.md`. Ambang: `c
   pasar tradisional tidak berubah) → `is_libur_isi`, dikosongkan di `harga_bersih`. Daftar: `data/interim/libur_terdeteksi.csv`.
 - **Salah input** (aturan B/C): **27 titik** → `is_outlier_flag`, dikosongkan di `harga_bersih`.
 - **Lonjakan tajam** (aturan A, penanda saja): 113 titik → `is_lonjakan_tajam`, nilai tetap dipakai.
-- **Celah ≤ 5 hari kerja diisi** (forward-fill): 39,538 titik → `is_imputed`.
-- **Kosong akhir** di `harga_bersih`: 2.48% (pasar tradisional 1.85%).
+- **Celah ≤ 5 hari kerja diisi** (forward-fill): 39,544 titik → `is_imputed`.
+- **Kosong akhir** di `harga_bersih`: 2.47% (pasar tradisional 1.85%).
 - **Data usang** (harga tetap ≥ 60 hari kerja): 0.87% titik → `is_usang`.
 
 ## Per jenis pasar
 | jenis_pasar | kota | baris | kosong_asli | libur | salah_input | lonjakan | diisi | kosong_akhir | usang |
 |---|---|---|---|---|---|---|---|---|---|
 | Pasar Modern | 23 | 117640 | 4.66% | 8.32% | 0 | 9 | 10462 | 3.77% | 1.92% |
-| Pasar Tradisional | 35 | 179920 | 1.29% | 8.32% | 4 | 101 | 12635 | 1.85% | 0.16% |
+| Pasar Tradisional | 35 | 179920 | 1.29% | 8.32% | 4 | 101 | 12641 | 1.85% | 0.16% |
 | Pedagang Besar | 23 | 117640 | 0.29% | 8.32% | 0 | 3 | 8142 | 1.59% | 0.92% |
 | Produsen | 48 | 120235 | 1.71% | 8.32% | 23 | 0 | 8299 | 3.01% | 0.84% |
 

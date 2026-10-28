@@ -138,7 +138,10 @@ def fill_short_gaps(df: pd.DataFrame, value_col: str, max_gap: int) -> tuple[pd.
     x = s[value_col]
     keys = _by(s, SERI)
     isna = x.isna()
-    run_id = (isna != isna.groupby(keys, observed=True).shift(fill_value=False)).cumsum()
+    # Rangkaian baru dimulai saat status kosong berubah ATAU di baris pertama setiap seri, supaya celah di ujung seri
+    # tidak tersambung dengan baris seri berikutnya.
+    awal_seri = isna.groupby(keys, observed=True).cumcount().eq(0)
+    run_id = ((isna != isna.groupby(keys, observed=True).shift(fill_value=False)) | awal_seri).cumsum()
     run_len = isna.groupby(run_id).transform("size")
     prev = x.groupby(keys, observed=True).ffill()
     imputed = isna & (run_len <= max_gap) & prev.notna()

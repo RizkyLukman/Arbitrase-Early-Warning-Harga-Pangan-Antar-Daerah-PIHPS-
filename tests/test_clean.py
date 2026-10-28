@@ -147,6 +147,17 @@ def test_fill_short_gaps_does_not_fill_leading_gap_or_cross_series():
     assert not imputed.any()
 
 
+def test_fill_short_gaps_fills_trailing_gap_when_next_series_starts_with_value():
+    # Regresi: celah pendek di UJUNG AKHIR seri tidak boleh "tersambung" dengan baris seri berikutnya. Dulu nomor
+    # rangkaian kosong bocor ke seri berikut yang diawali harga terisi, sehingga panjang celah terhitung > max_gap
+    # dan tidak diisi. (Kasus nyata: pasar tradisional Kota Sukabumi, 2026-10-23.)
+    a = seri([10] * 9 + [np.nan], kota_id=1)
+    b = seri([20] * 10, kota_id=2)
+    filled, imputed = fill_short_gaps(pd.concat([a, b], ignore_index=True), "harga_kerja", max_gap=5)
+    assert filled.iloc[9] == 10 and imputed.iloc[9]
+    assert imputed.sum() == 1
+
+
 def test_stale_run_length_counts_consecutive_unchanged_days():
     df = seri([10, 10, 10, 11, 11, np.nan, 11])
     assert stale_run_length(df, "harga_kerja").tolist() == [0, 1, 2, 0, 1, 0, 0]
