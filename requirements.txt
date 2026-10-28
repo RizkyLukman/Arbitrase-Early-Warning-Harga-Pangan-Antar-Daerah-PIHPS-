@@ -8,3 +8,7 @@ matplotlib>=3.8
 plotly>=5.20
 pytest>=8.0
 jupyter>=1.0
+openpyxl>=3.1
+pillow>=10.0                            # pangkas screenshot (src/screenshot_excel.py), gambar di workbook
+pyshp>=2.3                              # baca batas provinsi Natural Earth (src/peta_jawa.py)
+pywin32>=306; sys_platform == "win32"   # hanya untuk src/recalc_excel.py & src/screenshot_excel.py (lewat Excel)

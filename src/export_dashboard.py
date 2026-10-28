@@ -1,10 +1,10 @@
-"""Tahap 5 — Export star schema untuk Power BI ke data/processed/ (parquet + csv).
+"""Tahap 5 — Export star schema (tabel siap dashboard) ke data/processed/ (parquet + csv).
 
 Input : data/interim/ (Tahap 2–3), data/reference/, reports/tables/q*.csv (Tahap 4), src/insights.py (kalimat dashboard),
         config/config.yaml (bagian `export`, `wilayah`, `analisis`), config/biaya_logistik.yaml.
-Output: data/processed/*.parquet & *.csv, docs/export_powerbi_report.md (ringkasan otomatis).
+Output: data/processed/*.parquet & *.csv, docs/export_dashboard_report.md (ringkasan otomatis).
 
-Kunci (integer, untuk relasi di Power BI):
+Kunci (integer, untuk relasi antar tabel di dashboard):
     tanggal_key   = YYYYMMDD; minggu_key = tanggal_key hari Jumat minggu itu (relasi ke dim_tanggal)
     kota_key      = kota_id PIHPS;  komoditas_key = angka di belakang "com_";  jenis_pasar_key = price_type_id
     rute_key      = nomor urut rute (kota sumber -> kota tujuan x komoditas), lihat dim_rute
@@ -199,6 +199,7 @@ def build(cfg: dict, lcfg: dict) -> dict[str, pd.DataFrame]:
     kom["idulfitri_puncak_kenaikan"] = kom.kualitas.map(q4.puncak_kenaikan_rata)
     kom["hemat_beli_produsen_pct"] = kom.kualitas.map(q5.hemat_beli_produsen_pct)
     kom["hemat_beli_pedagang_besar_pct"] = kom.kualitas.map(q5.hemat_beli_pedagang_besar_pct)
+    kom["hemat_produsen_vs_pedagang_besar_pct"] = kom.kualitas.map(q5.hemat_beli_produsen_vs_pedagang_besar_pct)
     kom["modern_vs_tradisional_pct"] = kom.kualitas.map(q5.selisih_modern_vs_tradisional_pct)
     T["dim_komoditas"] = kom.sort_values("urutan").reset_index(drop=True)
 
@@ -228,6 +229,8 @@ def build(cfg: dict, lcfg: dict) -> dict[str, pd.DataFrame]:
         "minggu_untung_berturut_terakhir": r.minggu_untung_berturut_terakhir,
         "untung_dari_10_minggu_terakhir": r.untung_dari_jendela,
         "median_untung_jual_ke_pedagang_besar": r.median_untung_jual_ke_pedagang_besar,
+        "tahan_ongkos_maks_jual_ke_pedagang_besar": r.tahan_ongkos_maks_jual_ke_pedagang_besar.fillna(False).astype(bool),
+        "porsi_untung_jual_pb_ongkos_maks": r.porsi_untung_jual_pb_ongkos_maks,
         "n_minggu": r.n_minggu, "pengali_ongkos_acuan": kons,
     })
     dr["status"] = np.select([dr.layak & dr.layak_jika_jual_ke_pedagang_besar, dr.layak],
@@ -306,6 +309,7 @@ def build(cfg: dict, lcfg: dict) -> dict[str, pd.DataFrame]:
         "harga_pasar": m.tradisional, "tambahan_di_pedagang_besar_pct": m.tambahan_pedagang_besar_pct,
         "tambahan_di_pasar_pct": m.tambahan_eceran_pct, "tambahan_total_pct": m.tambahan_total_pct,
         "hemat_beli_produsen_pct": m.hemat_beli_produsen_pct, "hemat_beli_pedagang_besar_pct": m.hemat_beli_pedagang_besar_pct,
+        "hemat_produsen_vs_pedagang_besar_pct": m.hemat_beli_produsen_vs_pedagang_besar_pct,
         "porsi_bulan_produsen_lebih_mahal": m.porsi_bulan_produsen_lebih_mahal})
 
     u = _tabel("q6_skor_ringkas")
@@ -375,7 +379,7 @@ def build(cfg: dict, lcfg: dict) -> dict[str, pd.DataFrame]:
         {"kunci": "sumber", "nilai": "PIHPS Nasional, Bank Indonesia (bi.go.id/hargapangan)", "keterangan": "pasar tradisional, modern, pedagang besar, produsen; Pulau Jawa"},
         {"kunci": "ongkos_angkut", "nilai": "perkiraan, bukan data", "keterangan": "asumsi analis (config/biaya_logistik.yaml); diuji 0,5x-2x"},
         {"kunci": "pengali_ongkos_acuan", "nilai": f"{kons:g}", "keterangan": "rute disebut layak hanya jika tetap untung pada pengali ini"},
-        {"kunci": "tanggal_export", "nilai": f"{datetime.now():%Y-%m-%d}", "keterangan": "python -m src.export_powerbi"},
+        {"kunci": "tanggal_export", "nilai": f"{datetime.now():%Y-%m-%d}", "keterangan": "python -m src.export_dashboard"},
     ])
     return T
 
@@ -427,17 +431,17 @@ def write_report(uk: pd.DataFrame, masalah: list[str], T: dict[str, pd.DataFrame
     for x in uk.itertuples():
         lines.append(f"| `{x.tabel}` | {x.baris:,} | {x.kolom} | {getattr(x, 'parquet_mb', float('nan')):.2f} | "
                      f"{getattr(x, 'csv_mb', float('nan')):.2f} | {isi.get(x.tabel, '')} |")
-    text = f"""# Export Power BI (Tahap 5)
+    text = f"""# Export tabel dashboard (Tahap 5)
 
-Dibuat otomatis oleh `python -m src.export_powerbi` pada {datetime.now():%Y-%m-%d %H:%M}. Jangan diedit manual.
-Folder: `data/processed/` ({', '.join(ecfg['format'])}). Kunci & relasi: lihat docstring `src/export_powerbi.py`.
+Dibuat otomatis oleh `python -m src.export_dashboard` pada {datetime.now():%Y-%m-%d %H:%M}. Jangan diedit manual.
+Folder: `data/processed/` ({', '.join(ecfg['format'])}). Kunci & relasi: lihat docstring `src/export_dashboard.py`.
 
 ## Ringkasan
 - Data per **{info['data_terakhir']}** (diambil {info['tanggal_pengambilan']}); minggu terakhir **{info['minggu_terakhir']}**.
 - {len(T)} tabel, total {uk.baris.sum():,} baris. Ukuran terbesar: {uk.filter(like='_mb').max().max():.1f} MB.
 - Pemeriksaan integritas kunci: **{'OK' if not masalah else 'ADA MASALAH'}**{'' if not masalah else ' — ' + '; '.join(masalah)}.
 - Ongkos angkut di `fact_spread`/`dim_rute` = **perkiraan, bukan data**; komponen disimpan terpisah (ongkos tetap + susut)
-  supaya untung per kg bisa dihitung ulang di Power BI dengan what-if parameter.
+  supaya untung per kg bisa dihitung ulang di dashboard (Excel: sel input pengali & tambahan ongkos).
 - Peringatan dini (`fact_alert`) diekspor sebagai **informasi**, bukan pemicu pembelian (Q6: benar 1,2 dari 10).
 
 ## Tabel
@@ -446,7 +450,7 @@ Folder: `data/processed/` ({', '.join(ecfg['format'])}). Kunci & relasi: lihat d
 ## Relasi (fakta → dimensi)
 {chr(10).join(f'- `{f}`: ' + ', '.join(f'`{k}` → `{d}`' for k, d in m.items()) for f, m in FAKTA_KUNCI.items())}
 
-`minggu_key` berelasi ke `dim_tanggal.tanggal_key` (hari Jumat minggu itu); di Power BI buat relasi kedua yang tidak aktif
+`minggu_key` berelasi ke `dim_tanggal.tanggal_key` (hari Jumat minggu itu); di alat BI lain buat relasi kedua yang tidak aktif
 atau tabel `dim_minggu` = `dim_tanggal` yang difilter `tanggal_key = minggu_key`.
 
 ## File yang melebihi {ecfg['peringatan_ukuran_mb']} MB
@@ -468,7 +472,7 @@ def main() -> None:
         log.error("Integritas: %s", m)
     out_dir = ROOT / cfg["paths"]["processed"]
     uk = write(T, out_dir, cfg["export"]["format"])
-    write_report(uk, masalah, T, cfg, ROOT / "docs" / "export_powerbi_report.md")
+    write_report(uk, masalah, T, cfg, ROOT / "docs" / "export_dashboard_report.md")
     log.info("Selesai: %d tabel, %s baris, integritas %s", len(T), f"{uk.baris.sum():,}", "OK" if not masalah else "GAGAL")
     print(uk.to_string(index=False))
     if masalah:

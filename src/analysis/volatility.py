@@ -63,6 +63,9 @@ def run(cfg: dict) -> dict:
                .sort_values(["kualitas", "gejolak_mingguan"], ascending=[True, False]))
     per_kom["kota_paling_bergejolak"] = per_kom.kualitas.map(
         teratas.groupby("kualitas").kota.apply(lambda s: ", ".join(s.head(3))))
+    # tiga kota dengan rata-rata perubahan mingguan terbesar (ukuran yang dipakai kalimat temuan & dashboard)
+    per_kom["kota_perubahan_terbesar"] = per_kom.kualitas.map(
+        per_seri.sort_values("rata_perubahan_abs", ascending=False).groupby("kualitas").kota.apply(lambda s: ", ".join(s.head(3))))
 
     # Gejolak per tahun: apakah urutan komoditas stabil?
     trad_tahun = trad.assign(tahun=trad.minggu_akhir.dt.year)
@@ -139,7 +142,7 @@ def write_summary(res: dict, figs: dict) -> None:
     for r in pk.itertuples():
         baris.append(f"| {r.peringkat} | {LABEL_PENDEK[r.kualitas]} | {pct(r.gejolak_median, 1)} | "
                      f"{pct(r.gejolak_min, 1)}–{pct(r.gejolak_maks, 1)} | {pct(r.rata_perubahan_abs_median, 1)} | "
-                     f"{r.kota_paling_bergejolak} |")
+                     f"{r.kota_paling_bergejolak} | {r.kota_perubahan_terbesar} |")
     banding = "\n".join(
         f"| {LABEL_PENDEK[r.kualitas]} | {pct(r.gejolak_median_tradisional, 1)} | {pct(r.gejolak_median_modern, 1)} | "
         f"{pct(r.porsi_minggu_tanpa_perubahan_tradisional)} | {pct(r.porsi_minggu_tanpa_perubahan_modern)} |"
@@ -168,15 +171,15 @@ Data: pasar tradisional, harga mingguan (median hari nyata), {int(pk.kota.max())
 Juli 2023 – Oktober 2026. Ukuran utama: simpangan baku perubahan harga mingguan (log-return).
 
 ## Temuan (bahasa dashboard)
-**Harga {LABEL_PENDEK[a.kualitas].lower()} paling bergejolak, terutama di {a.kota_paling_bergejolak}.**
+**Harga {LABEL_PENDEK[a.kualitas].lower()} paling bergejolak, terutama di {a.kota_perubahan_terbesar}.**
 Harganya naik-turun rata-rata {pct(a.rata_perubahan_abs_median, 0)} per minggu (median antar kota), dibanding
 {pct(pk.iloc[-1].rata_perubahan_abs_median, 0)} untuk {LABEL_PENDEK[pk.iloc[-1].kualitas].lower()}.
 Tindakan: pantau {', '.join(LABEL_PENDEK[k].lower() for k in pk.kualitas[:2])} setiap minggu dan siapkan stok penyangga;
 {', '.join(LABEL_PENDEK[k].lower() for k in pk.kualitas[-3:])} relatif tenang dan cukup dipantau bulanan.
 
 ## Peringkat komoditas
-| # | Komoditas | Gejolak mingguan (median kota) | Rentang antar kota | Rata-rata perubahan/minggu | 3 kota paling bergejolak |
-|---|---|---|---|---|---|
+| # | Komoditas | Gejolak mingguan (median kota) | Rentang antar kota | Rata-rata perubahan/minggu | 3 kota paling bergejolak (simpangan baku) | 3 kota dengan rata-rata perubahan terbesar |
+|---|---|---|---|---|---|---|
 {chr(10).join(baris)}
 {catatan_kota}
 ## Konsistensi antar tahun (median gejolak mingguan antar kota)

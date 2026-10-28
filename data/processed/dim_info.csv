@@ -6,4 +6,4 @@ tanggal_pengambilan,2026-10-25,data PIHPS bisa direvisi oleh Bank Indonesia
 sumber,"PIHPS Nasional, Bank Indonesia (bi.go.id/hargapangan)","pasar tradisional, modern, pedagang besar, produsen; Pulau Jawa"
 ongkos_angkut,"perkiraan, bukan data","asumsi analis (config/biaya_logistik.yaml); diuji 0,5x-2x"
 pengali_ongkos_acuan,1.5,rute disebut layak hanya jika tetap untung pada pengali ini
-tanggal_export,2026-10-29,python -m src.export_powerbi
+tanggal_export,2026-10-29,python -m src.export_dashboard

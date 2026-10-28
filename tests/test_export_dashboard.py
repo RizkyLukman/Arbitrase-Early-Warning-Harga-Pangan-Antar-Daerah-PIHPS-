@@ -1,4 +1,4 @@
-"""Tes src/export_powerbi.py: kunci, dim_tanggal, pemeriksaan integritas, dan (jika ada) hasil export di data/processed/."""
+"""Tes src/export_dashboard.py: kunci, dim_tanggal, pemeriksaan integritas, dan (jika ada) hasil export di data/processed/."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from src.export_powerbi import FAKTA_KUNCI, build_dim_tanggal, check_integrity, komoditas_key, tanggal_key
+from src.export_dashboard import FAKTA_KUNCI, build_dim_tanggal, check_integrity, komoditas_key, tanggal_key
 
 ROOT = Path(__file__).resolve().parents[1]
 PROCESSED = ROOT / "data" / "processed"
@@ -52,7 +52,7 @@ def test_check_integrity_reports_orphan_and_duplicate_keys():
 @pytest.fixture(scope="module")
 def tabel():
     if not (PROCESSED / "fact_harga.parquet").exists():
-        pytest.skip("data/processed/ belum dibuat (python -m src.export_powerbi)")
+        pytest.skip("data/processed/ belum dibuat (python -m src.export_dashboard)")
     return {p.stem: pd.read_parquet(p) for p in PROCESSED.glob("*.parquet")}
 
 

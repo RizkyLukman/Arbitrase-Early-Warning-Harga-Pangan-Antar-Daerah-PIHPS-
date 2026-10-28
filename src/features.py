@@ -182,7 +182,7 @@ def build(cfg: dict) -> dict[str, pd.DataFrame]:
              "minggu_ke_idul_fitri", "tahun_idul_fitri", "ada_libur_hari_besar", "is_seri_dikecualikan", "alasan_dikecualikan"]
     w = w[urut].sort_values(SERI + ["minggu"]).reset_index(drop=True)
     for t in (w, nw, kal):
-        t["minggu"] = t.minggu.astype(str)  # parquet/Power BI tidak mengenal Period
+        t["minggu"] = t.minggu.astype(str)  # parquet & alat dashboard tidak mengenal Period
     return {"mingguan": w, "nasional": nw, "kalender": kal}
 
 

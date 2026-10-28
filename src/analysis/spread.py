@@ -147,6 +147,16 @@ def run(cfg: dict, lcfg: dict) -> dict:
                                   "porsi_minggu_untung": "porsi_untung_jual_ke_pedagang_besar",
                                   "selisih_kotor_median_rp_per_kg": "selisih_kotor_ke_pedagang_besar"})
     r = r.merge(alt_k, on=RUTE, how="left")
+    # Uji paling berat: ongkos pengali tertinggi DAN dijual ke pedagang besar di kota tujuan
+    p_maks = max(pengali)
+    alt_m = alt[alt.pengali == p_maks][RUTE + ["median_untung_rp_per_kg", "porsi_minggu_untung"]].copy()
+    alt_m["layak_jual_pb_ongkos_maks"] = [is_layak({"porsi_minggu_untung": a, "median_untung_rp_per_kg": b}, q)
+                                          for a, b in zip(alt_m.porsi_minggu_untung, alt_m.median_untung_rp_per_kg)]
+    alt_m = alt_m.rename(columns={"median_untung_rp_per_kg": "median_untung_jual_pb_ongkos_maks",
+                                  "porsi_minggu_untung": "porsi_untung_jual_pb_ongkos_maks"})
+    r = r.merge(alt_m, on=RUTE, how="left")
+    r["tahan_ongkos_maks_jual_ke_pedagang_besar"] = (r.layak_konservatif & r.layak_jika_jual_ke_pedagang_besar.fillna(False).astype(bool)
+                                                     & r.layak_jual_pb_ongkos_maks.fillna(False).astype(bool))
     per_kom = (r[r.pengali == kons].groupby("kualitas")
                .agg(rute=("layak_konservatif", "size"), rute_layak=("layak_konservatif", "sum"),
                     rute_layak_jual_ke_pedagang_besar=("layak_jika_jual_ke_pedagang_besar", "sum"),
@@ -156,7 +166,7 @@ def run(cfg: dict, lcfg: dict) -> dict:
         "rute_untung_median_positif": int((d.median_untung_rp_per_kg > 0).sum()),
         "rute_untung_60pct_minggu": int((d.porsi_minggu_untung >= q["layak_min_porsi_minggu_untung"]).sum())}),
         include_groups=False).reset_index())
-    return {"spread": sp, "ringkas": r, "per_kom": per_kom, "sens": sens, "kons": kons}
+    return {"spread": sp, "ringkas": r, "per_kom": per_kom, "sens": sens, "kons": kons, "p_maks": p_maks}
 
 
 def figures(res: dict) -> dict:
@@ -216,25 +226,41 @@ def _x(p: float) -> str:
     return f"×{p:g}".replace(".", ",")
 
 
+def _dari10(porsi: float) -> str:
+    return f"{porsi * 10:.1f}".replace(".", ",") + " dari 10"
+
+
 def _bertahan(porsi: float, rata: float) -> str:
     return "hampir selalu" if porsi >= 0.95 else f"{rata:.0f} minggu".replace(".", ",")
 
 
 def write_summary(res: dict, figs: dict, cfg: dict) -> None:
-    r, kons, pk, sens = res["ringkas"], res["kons"], res["per_kom"], res["sens"]
+    r, kons, pk, sens, p_maks = res["ringkas"], res["kons"], res["per_kom"], res["sens"], res["p_maks"]
     q = cfg["analisis"]["q2_rute"]
     k = r[r.pengali == kons].sort_values("median_untung_rp_per_kg", ascending=False)
     lay = k[k.layak_konservatif]
     t = lay.iloc[0] if len(lay) else k.iloc[0]
     n_alt = int(k.layak_jika_jual_ke_pedagang_besar.sum())
     keduanya = k[k.layak_konservatif & k.layak_jika_jual_ke_pedagang_besar]
+    tahan = keduanya[keduanya.tahan_ongkos_maks_jual_ke_pedagang_besar]
+    goyah = keduanya[~keduanya.tahan_ongkos_maks_jual_ke_pedagang_besar]
+    nm = lambda x: f"{LABEL_PENDEK[x.kualitas].lower()} {x.kota_sumber} ke {x.kota_tujuan}"  # noqa: E731
+    goyah_t = "; ".join(f"{nm(x)} ({_dari10(x.porsi_untung_jual_pb_ongkos_maks)} minggu)" for x in goyah.itertuples())
+    km_ = r[r.pengali == kons].set_index(RUTE).median_untung_rp_per_kg
+    mx_ = r[r.pengali == p_maks].set_index(RUTE).median_untung_rp_per_kg
+    berbalik = km_[(km_ > 0) & (mx_.reindex(km_.index) <= 0)]
+    tipis = km_[(km_ > 0) & (km_ < 1000 * -(-berbalik.max() // 1000))] if len(berbalik) else km_.iloc[:0]
+    balik_t = (f"{len(berbalik)} rute berubah rugi bila ongkos {_x(p_maks)}; semuanya bermargin di bawah "
+               f"{rp(1000 * -(-berbalik.max() // 1000))}/kg pada ongkos {_x(kons)}."
+               if len(berbalik) and len(tipis) == len(berbalik) else f"{len(berbalik)} rute berubah rugi bila ongkos {_x(p_maks)}.")
     km = lambda v: f"{v:,.0f}".replace(",", ".")  # noqa: E731
     tabel = "\n".join(
         f"| {LABEL_PENDEK[x.kualitas]} | {x.kota_sumber} → {x.kota_tujuan} | {km(x.jarak_jalan_km)} | "
         f"{rp(x.selisih_kotor_median_rp_per_kg)} | {rp(x.biaya_logistik_median_rp_per_kg)} | {rp(x.median_untung_rp_per_kg)} | "
-        f"{x.porsi_minggu_untung * 10:.0f} dari 10 | {_bertahan(x.porsi_minggu_untung, x.persistensi_rata_minggu)} | "
+        f"{_dari10(x.porsi_minggu_untung)} | {_bertahan(x.porsi_minggu_untung, x.persistensi_rata_minggu)} | "
         f"{x.untung_dari_jendela}/{x.jendela_berdata} | {'✅ layak' if x.layak_konservatif else '—'} | "
-        f"{rp(x.median_untung_jual_ke_pedagang_besar)} ({'✅' if x.layak_jika_jual_ke_pedagang_besar else '—'}) |"
+        f"{rp(x.median_untung_jual_ke_pedagang_besar)} ({'✅' if x.layak_jika_jual_ke_pedagang_besar else '—'}) | "
+        f"{'✅' if x.tahan_ongkos_maks_jual_ke_pedagang_besar else '—'} |"
         for x in k.itertuples())
     s_tbl = "\n".join(f"| {_x(x.pengali)} | {x.rute_untung_median_positif} | {x.rute_untung_60pct_minggu} |"
                       for x in sens.itertuples())
@@ -252,11 +278,13 @@ Harga sumber = **pedagang besar** di kota sumber (harga beli distributor); harga
 **{len(lay)} rute masih untung setelah ongkos angkut; yang terbaik {LABEL_PENDEK[t.kualitas].lower()} {t.kota_sumber} → {t.kota_tujuan}.**
 (Dari {len(k)} rute yang diuji, dengan ongkos angkut {_x(kons)} perkiraan.) Di rute terbaik, harga di {t.kota_tujuan} rata-rata
 {rp(t.selisih_kotor_median_rp_per_kg)}/kg lebih mahal daripada harga pedagang besar di {t.kota_sumber}; setelah ongkos angkut
-masih tersisa sekitar {rp(t.median_untung_rp_per_kg)}/kg. Minggu untung: {t.porsi_minggu_untung * 10:.0f} dari 10.
+masih tersisa sekitar {rp(t.median_untung_rp_per_kg)}/kg. Minggu untung: {_dari10(t.porsi_minggu_untung)}.
 Tindakan: prioritaskan rute yang layak; untuk rute lain, pindahkan stok hanya saat selisih minggu itu jauh di atas ongkos.
 
 **Uji ketahanan:** jika stok dijual ke pedagang besar di kota tujuan (bukan dengan harga eceran), rute yang layak tinggal
 **{n_alt} dari {len(k)}**. {len(keduanya)} rute layak di kedua cara hitung; inilah rekomendasi yang paling aman.
+Uji paling berat (ongkos {_x(p_maks)} **dan** dijual ke pedagang besar): **{len(tahan)} dari {len(keduanya)}** rute itu tetap layak.
+Yang tidak lagi untung minimal {q['layak_min_porsi_minggu_untung'] * 10:.0f} dari 10 minggu: {goyah_t or '–'}.
 
 ## Per komoditas (ongkos {_x(kons)})
 | Komoditas | Rute layak (jual harga eceran) | Rute layak (jual ke pedagang besar) | Untung median terbaik/kg |
@@ -268,9 +296,11 @@ Tindakan: prioritaskan rute yang layak; untuk rute lain, pindahkan stok hanya sa
 |---|---|---|
 {s_tbl}
 
+{balik_t}
+
 ## Semua rute (ongkos {_x(kons)}, diurutkan dari untung terbesar)
-| Komoditas | Rute | Jarak (km) | Selisih harga | Ongkos {_x(kons)} | Untung/kg | Minggu untung | Bertahan | 10 minggu terakhir | Status | Untung/kg jika jual ke pedagang besar |
-|---|---|---|---|---|---|---|---|---|---|---|
+| Komoditas | Rute | Jarak (km) | Selisih harga | Ongkos {_x(kons)} | Untung/kg | Minggu untung | Bertahan | 10 minggu terakhir | Status | Untung/kg jika jual ke pedagang besar | Tahan ongkos {_x(p_maks)} + jual ke pedagang besar |
+|---|---|---|---|---|---|---|---|---|---|---|---|
 {tabel}
 
 Semua angka adalah median mingguan. "Bertahan" = rata-rata panjang rangkaian minggu untung berturut-turut (minggu tanpa

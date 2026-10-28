@@ -11,6 +11,8 @@ Ukuran per kota x komoditas x bulan:
     tambahan_total_pct          = tradisional / produsen - 1
     hemat_beli_produsen_vs_eceran_pct = 1 - produsen / tradisional   -> "x% lebih murah daripada harga pasar"
     hemat_beli_pedagang_besar_vs_eceran_pct = 1 - pedagang_besar / tradisional
+    hemat_beli_produsen_vs_pedagang_besar_pct = 1 - 1 / (1 + tambahan_pedagang_besar_pct)
+        (pembanding sumber beli distributor saat ini; dihitung dari nilai tengah tambahan di pedagang besar per kota/komoditas)
 
 Output: reports/tables/q5_*.csv, reports/figures/q5_*.png, reports/q5_margin.md
 """
@@ -92,6 +94,7 @@ def run(cfg: dict) -> dict:
                      porsi_bulan_produsen_lebih_mahal=("produsen_lebih_mahal", "mean"))
                 .reset_index())
     per_kota = per_kota[per_kota.bulan >= q["min_bulan_lengkap"]]
+    per_kota["hemat_beli_produsen_vs_pedagang_besar_pct"] = 1 - 1 / (1 + per_kota.tambahan_pedagang_besar_pct)
     # Per komoditas (cakupan utama + tambahan digabung, kota sebagai unit)
     per_kom = (per_kota.groupby("kualitas")
                .agg(kota=("kota", "size"), produsen=("produsen", "median"), pedagang_besar=("pedagang_besar", "median"),
@@ -103,6 +106,7 @@ def run(cfg: dict) -> dict:
                     hemat_beli_pedagang_besar_pct=("hemat_beli_pedagang_besar_pct", "median"),
                     porsi_bulan_produsen_lebih_mahal=("porsi_bulan_produsen_lebih_mahal", "mean"))
                .reindex(KOMODITAS_URUT).dropna(how="all").reset_index())
+    per_kom["hemat_beli_produsen_vs_pedagang_besar_pct"] = 1 - 1 / (1 + per_kom.tambahan_pedagang_besar_pct)
     # Pasar modern vs tradisional (brief Q5: "pasar tradisional/modern"), kota dengan kedua harga
     mv = lebar.dropna(subset=["modern", "tradisional"]).assign(r=lambda d: d.modern / d.tradisional - 1)
     mk = mv.groupby(["kualitas", "kota"]).r.median().groupby(level=0).agg(["median", "size"])
@@ -127,18 +131,18 @@ def figures(res: dict) -> dict:
     ax.barh(y, (pk.tradisional - pk.pedagang_besar) / 1000, left=pk.pedagang_besar / 1000, color=ORANGE, height=0.6,
             label="+ tambahan di pasar (eceran)")
     for i, x in enumerate(pk.itertuples()):
-        ax.text(x.tradisional / 1000, i, f"  {x.hemat_beli_produsen_pct:.0%} lebih murah di produsen", va="center",
-                fontsize=8, color=INK2)
+        ax.text(x.tradisional / 1000, i, f"  produsen {x.hemat_beli_produsen_vs_pedagang_besar_pct:.0%} di bawah pedagang besar, "
+                f"{x.hemat_beli_produsen_pct:.0%} di bawah pasar", va="center", fontsize=8, color=INK2)
     ax.set_yticks(y, [LABEL_PENDEK[k] for k in pk.kualitas])
     ax.invert_yaxis()
-    ax.set_xlim(0, pk.tradisional.max() / 1000 * 1.45)
+    ax.set_xlim(0, pk.tradisional.max() / 1000 * 1.75)
     ax.set_xlabel("Rp ribu/kg (median antar kota & bulan)")
     ax.legend(frameon=False, fontsize=8, loc="lower right")
-    top = pk.sort_values("hemat_beli_produsen_pct").iloc[-1]
-    low = pk.sort_values("hemat_beli_produsen_pct").iloc[0]
-    ax.set_title(f"Membeli langsung di tingkat produsen bisa {top.hemat_beli_produsen_pct:.0%} lebih murah daripada harga\n"
-                 f"pasar untuk {LABEL_PENDEK[top.kualitas].lower()}; {LABEL_PENDEK[low.kualitas].lower()} hanya "
-                 f"{low.hemat_beli_produsen_pct:.0%} lebih murah")
+    top = pk.sort_values("hemat_beli_produsen_vs_pedagang_besar_pct").iloc[-1]
+    low = pk.sort_values("hemat_beli_produsen_vs_pedagang_besar_pct").iloc[0]
+    ax.set_title(f"Beli langsung di produsen sekitar {top.hemat_beli_produsen_vs_pedagang_besar_pct:.0%} lebih murah daripada pedagang besar\n"
+                 f"untuk {LABEL_PENDEK[top.kualitas].lower()}; untuk {LABEL_PENDEK[low.kualitas].lower()} hanya "
+                 f"{low.hemat_beli_produsen_vs_pedagang_besar_pct:.0%}")
     ax.grid(axis="y", visible=False)
     out = {"tingkat": save_fig(fig, "q5_tambahan_harga_per_tingkat")}
 
@@ -174,14 +178,17 @@ def write_summary(res: dict, figs: dict) -> None:
     tbl = "\n".join(
         f"| {LABEL_PENDEK[x.kualitas]} | {int(x.kota)} | {rp(x.produsen)} | {rp(x.pedagang_besar)} | {rp(x.tradisional)} | "
         f"{pp(x.tambahan_pedagang_besar_pct)} | {pp(x.tambahan_eceran_pct)} | {pp(x.hemat_beli_produsen_pct)} | "
-        f"{pp(x.hemat_beli_pedagang_besar_pct)} | {pp(x.porsi_bulan_produsen_lebih_mahal)} |" for x in pk.itertuples())
+        f"{pp(x.hemat_beli_pedagang_besar_pct)} | {pp(x.hemat_beli_produsen_vs_pedagang_besar_pct)} | {pp(x.porsi_bulan_produsen_lebih_mahal)} |"
+        for x in pk.itertuples())
     kota_tbl = "\n".join(
         f"| {LABEL_PENDEK[x.kualitas]} | {x.kota} | {x.produsen_dari} | {'utama' if x.cakupan.startswith('utama') else 'tambahan*'} | "
         f"{x.bulan} | {pp(x.tambahan_pedagang_besar_pct)} | {pp(x.tambahan_eceran_pct)} | {pp(x.hemat_beli_produsen_pct)} | "
-        f"{pp(x.porsi_bulan_produsen_lebih_mahal)} |"
+        f"{pp(x.hemat_beli_produsen_vs_pedagang_besar_pct)} | {pp(x.porsi_bulan_produsen_lebih_mahal)} |"
         for x in pc.sort_values(["kualitas", "hemat_beli_produsen_pct"], ascending=[True, False]).itertuples())
     top = pk.sort_values("hemat_beli_produsen_pct").iloc[-1]
     low = pk.sort_values("hemat_beli_produsen_pct").iloc[0]
+    top_pb = pk.sort_values("hemat_beli_produsen_vs_pedagang_besar_pct").iloc[-1]
+    low_pb = pk.sort_values("hemat_beli_produsen_vs_pedagang_besar_pct").iloc[0]
     urut_pb = pk.sort_values("tambahan_pedagang_besar_pct", ascending=False)
     besar_k = urut_pb[urut_pb.tambahan_pedagang_besar_pct >= 0.15]
     kecil_k = urut_pb[urut_pb.tambahan_pedagang_besar_pct < 0.10]
@@ -206,9 +213,12 @@ Median bulanan, Juli 2023 – Oktober 2026. Cakupan utama: kota dengan ketiga ti
 pasangan kota ↔ kabupaten sentra (`config.rantai_pasok`, PERLU_VERIFIKASI).
 
 ## Temuan (bahasa dashboard)
-**Membeli langsung di tingkat produsen bisa {top.hemat_beli_produsen_pct:.0%} lebih murah daripada harga pasar untuk
-{LABEL_PENDEK[top.kualitas].lower()}** (median antar kota; harga produsen {rp(top.produsen)}/kg vs pasar {rp(top.tradisional)}/kg).
-Untuk {LABEL_PENDEK[low.kualitas].lower()} selisihnya hanya {low.hemat_beli_produsen_pct:.0%}.
+**Dibanding pedagang besar (sumber beli distributor saat ini), membeli langsung di produsen sekitar
+{top_pb.hemat_beli_produsen_vs_pedagang_besar_pct:.0%} lebih murah untuk {LABEL_PENDEK[top_pb.kualitas].lower()}**; untuk
+{LABEL_PENDEK[low_pb.kualitas].lower()} hanya {low_pb.hemat_beli_produsen_vs_pedagang_besar_pct:.0%}.
+Dibanding harga pasar eceran, selisihnya lebih besar: {top.hemat_beli_produsen_pct:.0%} untuk {LABEL_PENDEK[top.kualitas].lower()}
+(median antar kota; harga produsen {rp(top.produsen)}/kg vs pasar {rp(top.tradisional)}/kg), {low.hemat_beli_produsen_pct:.0%} untuk
+{LABEL_PENDEK[low.kualitas].lower()}. Angka pembanding pedagang besar inilah yang relevan untuk keputusan pengadaan.
 Dibanding membeli di pedagang besar, membeli di produsen paling menghemat untuk {besar} (tambahan harga di pedagang besar
 {tbesar}); untuk {kecil} tambahan di pedagang besar hanya {tkecil}.
 Tindakan: jajaki pembelian langsung dari petani/pengepul di sentra untuk {besar}; untuk {kecil} pedagang besar sudah dekat
@@ -217,13 +227,13 @@ Catatan: harga produsen jarang diperbarui, sehingga pada sebagian bulan tercatat
 (kolom terakhir). Angka ini perkiraan kasar.
 
 ## Per komoditas (median antar kota)
-| Komoditas | Kota | Produsen | Pedagang besar | Pasar | Tambahan di pedagang besar | Tambahan di pasar | Lebih murah jika beli di produsen | Lebih murah jika beli di pedagang besar | Bulan produsen > pedagang besar |
-|---|---|---|---|---|---|---|---|---|---|
+| Komoditas | Kota | Produsen | Pedagang besar | Pasar | Tambahan di pedagang besar | Tambahan di pasar | Lebih murah jika beli di produsen (vs pasar) | Lebih murah jika beli di pedagang besar (vs pasar) | Produsen vs pedagang besar | Bulan produsen > pedagang besar |
+|---|---|---|---|---|---|---|---|---|---|---|
 {tbl}
 
 ## Per kota
-| Komoditas | Kota | Harga produsen dari | Cakupan | Bulan | Tambahan di pedagang besar | Tambahan di pasar | Lebih murah di produsen | Bulan produsen > pedagang besar |
-|---|---|---|---|---|---|---|---|---|
+| Komoditas | Kota | Harga produsen dari | Cakupan | Bulan | Tambahan di pedagang besar | Tambahan di pasar | Lebih murah di produsen (vs pasar) | Produsen vs pedagang besar | Bulan produsen > pedagang besar |
+|---|---|---|---|---|---|---|---|---|---|
 {kota_tbl}
 
 \\* tambahan = harga produsen diambil dari kabupaten sentra di sekitar kota (PERLU_VERIFIKASI).
@@ -237,7 +247,8 @@ Catatan: harga produsen jarang diperbarui, sehingga pada sebagian bulan tercatat
 
 ## Batasan
 - Harga produsen di PIHPS jarang diperbarui (±96% hari tidak berubah); dipakai median bulanan, tetapi tetap bisa usang.
-- Cakupan kota terbatas (6–11 kota per komoditas); bawang putih tidak punya data produsen di Jawa.
+- Cakupan kota terbatas ({int(pk.kota.min())}–{int(pk.kota.max())} kota per komoditas, sebagian lewat pasangan kabupaten yang belum
+  diverifikasi); bawang putih tidak punya data produsen di Jawa.
 - Harga produsen = harga di tingkat petani/peternak, belum termasuk biaya mengumpulkan & mengangkut dari banyak petani.
 
 ## File

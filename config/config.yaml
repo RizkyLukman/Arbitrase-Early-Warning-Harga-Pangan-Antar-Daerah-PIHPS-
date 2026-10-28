@@ -184,7 +184,7 @@ insights:   # Tahap 5 (src/insights.py): kalimat "Tiga hal yang perlu diketahui"
   min_hemat_produsen: 0.20         # Q5: beli di produsen >= 20% lebih murah daripada harga pasar -> "jajaki beli langsung"
   jumlah_hal: 3                    # jumlah kalimat "hal yang perlu diketahui"
 
-export:     # Tahap 5 (src/export_powerbi.py): star schema -> data/processed/ (parquet + csv)
+export:     # Tahap 5 (src/export_dashboard.py): star schema -> data/processed/ (parquet + csv)
   format: [parquet, csv]
   peringatan_ukuran_mb: 10         # file > 10 MB diberi peringatan di laporan (allowlist Git: < 50 MB)
   fact_harga_hanya_berharga: true  # buang baris harian yang harga asli & harga bersihnya sama-sama kosong

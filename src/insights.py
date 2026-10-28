@@ -6,7 +6,7 @@ Bahasa mengikuti aturan §6.2–§6.3: apa yang terjadi → apa artinya → apa 
 
 Input : data/interim/harga_mingguan.parquet, data/interim/spread_mingguan.parquet, reports/tables/q*.csv,
         config/config.yaml (bagian `insights`, `wilayah`, `analisis`), config/biaya_logistik.yaml (skenario konservatif)
-Output: dipakai src/export_powerbi.py -> data/processed/fact_tindakan & fact_hal. Bisa dijalankan sendiri untuk melihat hasilnya:
+Output: dipakai src/export_dashboard.py -> data/processed/fact_tindakan & fact_hal. Bisa dijalankan sendiri untuk melihat hasilnya:
         python -m src.insights
 """
 from __future__ import annotations
@@ -67,8 +67,8 @@ def susun_tindakan(k: dict, icfg: dict) -> list[dict]:
         bert = f", sudah {r['berturut']} minggu berturut-turut" if r.get("berturut", 0) >= 2 else ""
         catatan = "; untung hanya jika dijual dengan harga eceran" if r.get("aman") is False else ""
         tambah(2, f"Pindahkan stok {r['kota_sumber']} → {r['kota_tujuan']}",
-               f"{nama}: untung {rp(r['untung_rp'])}/kg setelah ongkos angkut ×1,5 (perkiraan){bert}{catatan}",
-               r["untung_rp"], "Rp/kg", "ongkos angkut ×1,5 (perkiraan)", "fact_spread", pindah_stok=True,
+               f"{nama}: untung {rp(r['untung_rp'])}/kg setelah dikurangi ongkos kirim ×1,5 (perkiraan kami){bert}{catatan}",
+               r["untung_rp"], "Rp/kg", "ongkos kirim ×1,5 (perkiraan kami)", "fact_spread", pindah_stok=True,
                rute_key=r.get("rute_key"))
 
     # 3) Harga di kota tujuan bergerak cepat vs 4 minggu lalu
@@ -106,7 +106,7 @@ def susun_tindakan(k: dict, icfg: dict) -> list[dict]:
     pr = k.get("peringkat_gejolak")
     if _ada(pr) and pr <= icfg["top_n_gejolak"]:
         tambah(6, "Pantau setiap minggu",
-               f"{nama}: komoditas paling bergejolak ke-{int(pr)}, harganya berubah rata-rata "
+               f"{nama}: komoditas paling tidak stabil ke-{int(pr)}, harganya berubah rata-rata "
                f"{pct(k['rata_perubahan_abs'])} per minggu; siapkan stok penyangga", k["rata_perubahan_abs"],
                "rata-rata perubahan per minggu", "komoditas lain", "q1_gejolak_per_komoditas")
 
@@ -163,7 +163,7 @@ def _kalimat_hal(k: dict, rows: list[dict], icfg: dict) -> list[dict]:
             bert = f", sudah {rt['berturut']} minggu berturut-turut" if rt.get("berturut", 0) >= 2 else ""
             out.append({"jenis": "rute", "prioritas": 2, "skor": rt["untung_rp"] / harga if _ada(harga) and harga else 0, "kalimat":
                         f"{nama[0].upper() + nama[1:]} di {rt['kota_sumber']} masih {rp(rt['untung_rp'])}/kg lebih murah daripada di "
-                        f"{rt['kota_tujuan']} setelah ongkos angkut ×1,5 (perkiraan){bert}. Tindakan: pertimbangkan memindahkan "
+                        f"{rt['kota_tujuan']} setelah dikurangi ongkos kirim ×1,5 (perkiraan kami){bert}. Tindakan: pertimbangkan memindahkan "
                         f"stok selama selisih ini bertahan.", "nilai": r["nilai"], "satuan": r["satuan"],
                         "pembanding": r["pembanding"], "sumber": r["sumber"]})
         elif r["prioritas"] == 3:
@@ -197,7 +197,7 @@ def _kalimat_hal(k: dict, rows: list[dict], icfg: dict) -> list[dict]:
             tenang = k.get("komoditas_paling_tenang")
             vs = f", dibanding {pct(tenang['rata_perubahan_abs'])} untuk {tenang['nama']}" if tenang else ""
             out.append({"jenis": "gejolak", "prioritas": 4, "skor": k["rata_perubahan_abs"], "kalimat":
-                        f"{nama[0].upper() + nama[1:]} tetap komoditas paling bergejolak ke-{int(k['peringkat_gejolak'])}: harganya "
+                        f"{nama[0].upper() + nama[1:]} tetap komoditas paling tidak stabil ke-{int(k['peringkat_gejolak'])}: harganya "
                         f"berubah rata-rata {pct(k['rata_perubahan_abs'])} per minggu{vs}. Tindakan: pantau setiap minggu dan "
                         f"siapkan stok penyangga.", "nilai": r["nilai"], "satuan": r["satuan"], "pembanding": r["pembanding"],
                         "sumber": r["sumber"]})

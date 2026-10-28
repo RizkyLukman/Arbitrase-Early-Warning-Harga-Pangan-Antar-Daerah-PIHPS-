@@ -1,25 +1,25 @@
 # Q1 — Gejolak harga
 
-Dibuat otomatis oleh `python -m src.analysis.volatility` pada 2026-10-26 15:05.
+Dibuat otomatis oleh `python -m src.analysis.volatility` pada 2026-10-29 06:16.
 Data: pasar tradisional, harga mingguan (median hari nyata), 35 kota/kab di Pulau Jawa,
 Juli 2023 – Oktober 2026. Ukuran utama: simpangan baku perubahan harga mingguan (log-return).
 
 ## Temuan (bahasa dashboard)
-**Harga cabai rawit merah paling bergejolak, terutama di Kota Blitar, Kab. Sumenep, Kab. Cilacap.**
+**Harga cabai rawit merah paling bergejolak, terutama di Kota Blitar, Kab. Cilacap, Kab. Sumenep.**
 Harganya naik-turun rata-rata 13% per minggu (median antar kota), dibanding
 2% untuk bawang putih.
 Tindakan: pantau cabai rawit merah, cabai merah keriting setiap minggu dan siapkan stok penyangga;
 daging ayam ras, telur ayam ras, bawang putih relatif tenang dan cukup dipantau bulanan.
 
 ## Peringkat komoditas
-| # | Komoditas | Gejolak mingguan (median kota) | Rentang antar kota | Rata-rata perubahan/minggu | 3 kota paling bergejolak |
-|---|---|---|---|---|---|
-| 1 | Cabai rawit merah | 16,4% | 11,8%–22,4% | 12,9% | Kota Blitar, Kab. Sumenep, Kab. Cilacap |
-| 2 | Cabai merah keriting | 14,2% | 10,2%–18,3% | 10,3% | Kota Blitar, Kota Surakarta (Solo), Kab. Cilacap |
-| 3 | Bawang merah | 7,8% | 5,6%–9,5% | 5,3% | Kota Blitar, Kota Surakarta (Solo), Kota Cilegon |
-| 4 | Daging ayam ras | 3,5% | 2,2%–5,6% | 2,6% | Kab. Jember, Kab. Cilacap, Kab. Banyuwangi |
-| 5 | Telur ayam ras | 3,2% | 2,4%–4,1% | 2,1% | Kota Blitar, Kota Probolinggo, Kota Cilegon |
-| 6 | Bawang putih | 3,1% | 1,5%–4,6% | 1,7% | Kab. Banyuwangi, Kota Blitar, Kota Probolinggo |
+| # | Komoditas | Gejolak mingguan (median kota) | Rentang antar kota | Rata-rata perubahan/minggu | 3 kota paling bergejolak (simpangan baku) | 3 kota dengan rata-rata perubahan terbesar |
+|---|---|---|---|---|---|---|
+| 1 | Cabai rawit merah | 16,4% | 11,8%–22,4% | 12,9% | Kota Blitar, Kab. Sumenep, Kab. Cilacap | Kota Blitar, Kab. Cilacap, Kab. Sumenep |
+| 2 | Cabai merah keriting | 14,2% | 10,2%–18,3% | 10,3% | Kota Blitar, Kota Surakarta (Solo), Kab. Cilacap | Kota Surakarta (Solo), Kota Blitar, Kab. Cilacap |
+| 3 | Bawang merah | 7,8% | 5,6%–9,5% | 5,3% | Kota Blitar, Kota Surakarta (Solo), Kota Cilegon | Kota Blitar, Kota Surakarta (Solo), Kota Cilegon |
+| 4 | Daging ayam ras | 3,5% | 2,2%–5,6% | 2,6% | Kab. Jember, Kab. Cilacap, Kab. Banyuwangi | Kab. Jember, Kab. Banyuwangi, Kota Cirebon |
+| 5 | Telur ayam ras | 3,2% | 2,4%–4,1% | 2,1% | Kota Blitar, Kota Probolinggo, Kota Cilegon | Kota Blitar, Kab. Boyolali, Kota Cilegon |
+| 6 | Bawang putih | 3,1% | 1,5%–4,6% | 1,7% | Kab. Banyuwangi, Kota Blitar, Kota Probolinggo | Kota Blitar, Kab. Sragen, Kab. Banyuwangi |
 
 **Catatan:** Kota Blitar (5 dari 6 komoditas), Kab. Cilacap (3 dari 6 komoditas) berulang kali masuk 3 kota paling bergejolak. Bisa mencerminkan kondisi pasar setempat, tetapi juga sampel PIHPS yang kecil (2 pasar × 2 pedagang per kota) sehingga harga lebih berisik. Perlakukan sebagai sinyal untuk dicek, bukan kesimpulan pasti.
 

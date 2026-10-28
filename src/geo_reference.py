@@ -1,4 +1,4 @@
-"""Referensi geografis: koordinat kota (untuk peta Power BI) & jarak jalan antar kota (untuk ongkos angkut).
+"""Referensi geografis: koordinat kota (untuk peta dashboard) & jarak jalan antar kota (untuk ongkos angkut).
 
 Sumber:
     Koordinat : OpenStreetMap Nominatim (https://nominatim.openstreetmap.org), titik pusat wilayah administratif.
