@@ -1,55 +1,88 @@
 # Arbitrase & Early-Warning Harga Pangan Antar Daerah (PIHPS)
 
-Proyek Data Analyst end-to-end: data harga pangan resmi Bank Indonesia (PIHPS) diambil dengan Python, dibersihkan,
-dianalisis, lalu diubah menjadi **dashboard keputusan di Excel** dan **memo rekomendasi** untuk Manajer Pengadaan sebuah
-distributor pangan regional (fiktif) di Pulau Jawa.
+## Pertanyaan bisnis
 
-> **Pertanyaan bisnis:** kapan dan dari kota mana perusahaan sebaiknya membeli atau memindahkan stok komoditas yang
-> harganya mudah bergejolak, supaya biaya pengadaan turun dan lonjakan harga menjelang hari besar bisa diantisipasi?
+> **Kapan dan dari kota mana perusahaan sebaiknya membeli atau memindahkan stok komoditas yang harganya mudah bergejolak,
+> supaya biaya pengadaan turun dan lonjakan harga menjelang hari besar bisa diantisipasi?**
 
-![Ringkasan dashboard](excel/screenshots/01_ringkasan.png)
+**Pengambil keputusan:** Manajer Pengadaan sebuah distributor pangan regional (fiktif) di Pulau Jawa, yang membeli komoditas
+segar dan bisa memindahkan stok antar kota.
 
-## Hasil utama
+**Masalahnya:** harga cabai, bawang, dan komoditas segar lain berbeda jauh antar kota dan melonjak menjelang hari besar.
+Pengadaan saat ini reaktif: membeli setelah harga naik.
 
-Data: 6 komoditas, 62 kota dan kabupaten di Pulau Jawa, 4 jenis pasar, Juli 2023 sampai 23 Oktober 2026 (diambil
-25 Oktober 2026).
+Pertanyaan itu dipecah menjadi enam pertanyaan yang masing-masing dijawab dengan angka:
+
+| # | Pertanyaan | Keputusan yang didukung |
+|---|---|---|
+| 1 | Komoditas mana yang paling bergejolak, dan di kota mana? | Komoditas mana yang perlu dipantau ketat dan diberi stok penyangga |
+| 2 | Rute antar kota mana yang tetap untung setelah ongkos kirim, seberapa sering, dan berapa lama? | Rute pemindahan stok yang layak |
+| 3 | Kota mana yang harganya biasanya naik lebih dulu? | Kota yang dijadikan sinyal awal |
+| 4 | Berapa minggu sebelum Idulfitri harga mulai naik, dan seberapa besar? | Waktu membeli stok sebelum musim lonjakan |
+| 5 | Berapa tambahan harga dari produsen ke pedagang besar ke pasar? | Membeli di tingkat mana |
+| 6 | Apakah peringatan dini sederhana bisa menangkap lonjakan lebih awal? | Apakah peringatan layak dipakai operasional |
+
+## Jawaban singkat
+
+Data: harga resmi PIHPS Bank Indonesia, 6 komoditas, 62 kota dan kabupaten di Pulau Jawa, 4 jenis pasar, Juli 2023 sampai
+23 Oktober 2026 (diambil 25 Oktober 2026).
 
 | Pertanyaan | Temuan | Keputusan |
 |---|---|---|
-| Komoditas mana yang paling bergejolak? | Cabai rawit berubah rata-rata 13% per minggu dan cabai keriting 10%, dibanding 2% sampai 3% untuk ayam, telur, dan bawang putih. | Pantau cabai setiap minggu dan siapkan stok penyangga; lainnya cukup bulanan. |
-| Rute pindah stok mana yang layak? | 23 dari 32 rute masih untung setelah ongkos kirim 1,5 kali perkiraan. 9 rute tetap untung walau dijual ke pedagang besar (cabai rawit dari Kediri dan Jember, bawang merah dari Tegal dan Probolinggo); 6 di antaranya tetap aman walau ongkos kirim dua kali perkiraan. | Jalankan 9 rute aman, mulai dari 6 rute yang paling tahan ongkos; hemat Rp 1.400 sampai 6.900/kg dibanding membeli dari pedagang besar di kota tujuan. |
-| Kota mana yang harganya naik lebih dulu? | Untuk cabai rawit: Solo, Surabaya, Kediri; kota lain menyusul sekitar 1 minggu kemudian, hubungannya sedang. | Jadikan informasi tambahan, bukan pemicu beli. |
-| Kapan harga naik menjelang Idulfitri? | Bawang merah mulai naik 4 minggu sebelum Lebaran (3 dari 3 tahun), +26% seminggu sebelum Lebaran. Ayam mulai 6 minggu sebelum (2 dari 3 tahun). | Amankan stok bawang merah paling lambat 4 minggu sebelum Idulfitri. |
-| Beli di tingkat mana? | Dibanding pedagang besar, harga produsen lebih murah 22% untuk cabai keriting, 14% cabai rawit, 13% ayam, dan hanya 9% bawang merah serta 3% telur (dibanding harga pasar eceran: 41%, 32%, 21%). | Jajaki beli langsung dari produsen untuk cabai dan ayam; bawang merah dan telur tetap lewat pedagang besar. |
-| Apakah peringatan dini sederhana bisa dipakai? | Diuji pada 2025 dan 2026 tanpa melihat masa depan: benar 1,2 dari 10, lebih buruk daripada tebakan "sama seperti tahun lalu" (2,2 dari 10). | Belum layak operasional. Kalender Lebaran dipakai untuk jadwal beli, bukan sebagai pemicu peringatan. Dilaporkan apa adanya. |
+| 1. Komoditas mana yang paling bergejolak? | Cabai rawit berubah rata-rata 13% per minggu dan cabai keriting 10%, dibanding 2% sampai 3% untuk ayam, telur, dan bawang putih. | Pantau cabai setiap minggu dan siapkan stok penyangga; lainnya cukup bulanan. |
+| 2. Rute pindah stok mana yang layak? | 23 dari 32 rute masih untung setelah ongkos kirim 1,5 kali perkiraan. 9 rute tetap untung walau dijual ke pedagang besar (cabai rawit dari Kediri dan Jember, bawang merah dari Tegal dan Probolinggo); 6 di antaranya tetap aman walau ongkos kirim dua kali perkiraan. | Jalankan 9 rute aman, mulai dari 6 rute yang paling tahan ongkos; hemat Rp 1.400 sampai 6.900/kg dibanding membeli dari pedagang besar di kota tujuan. |
+| 3. Kota mana yang harganya naik lebih dulu? | Untuk cabai rawit: Solo, Surabaya, Kediri; kota lain menyusul sekitar 1 minggu kemudian, hubungannya sedang. | Jadikan informasi tambahan, bukan pemicu beli. |
+| 4. Kapan harga naik menjelang Idulfitri? | Bawang merah mulai naik 4 minggu sebelum Lebaran (3 dari 3 tahun), +26% seminggu sebelum Lebaran. Ayam mulai 6 minggu sebelum (2 dari 3 tahun). | Amankan stok bawang merah paling lambat 4 minggu sebelum Idulfitri. |
+| 5. Beli di tingkat mana? | Dibanding pedagang besar, harga produsen lebih murah 22% untuk cabai keriting, 14% cabai rawit, 13% ayam, dan hanya 9% bawang merah serta 3% telur (dibanding harga pasar eceran: 41%, 32%, 21%). | Jajaki beli langsung dari produsen untuk cabai dan ayam; bawang merah dan telur tetap lewat pedagang besar. |
+| 6. Apakah peringatan dini sederhana bisa dipakai? | Diuji pada 2025 dan 2026 tanpa melihat masa depan: benar 1,2 dari 10, lebih buruk daripada tebakan "sama seperti tahun lalu" (2,2 dari 10). | Belum layak operasional. Kalender Lebaran dipakai untuk jadwal beli, bukan sebagai pemicu peringatan. Dilaporkan apa adanya. |
 
 Memo lengkap untuk pengambil keputusan: [`reports/rekomendasi.md`](reports/rekomendasi.md).
 
 ## Dashboard Excel
 
-[`excel/Dashboard_pangan.xlsx`](excel/Dashboard_pangan.xlsx) dibangun otomatis oleh
-`src/build_excel_desain.py` dari tabel `data/processed/`: menu kiri dengan tautan antar halaman, kartu angka, peta gejolak
-Pulau Jawa, dan band **Fakta dan keputusan** di akhir setiap halaman. Judul setiap halaman adalah kesimpulan, bukan nama metrik.
+[`excel/Dashboard_pangan.xlsx`](excel/Dashboard_pangan.xlsx) menjawab "minggu ini beli atau pindahkan apa, dari mana, ke mana".
+Setiap halaman dibuka dengan judul berupa kesimpulan dan ditutup dengan band **Fakta dan keputusan**.
 
-- **Interaktif tanpa makro:** dropdown komoditas (Gejolak harga), tombol pengali ongkos kirim 0,5 sampai 2 kali, dan sel
-  input tambahan ongkos Rp/kg (Pindah stok). Kartu, tabel rute terurut, judul, peta, dan grafik ikut berubah. Rumus memakai
-  fungsi Excel klasik (SUMIFS, INDEX/MATCH, LARGE, SUMPRODUCT) supaya terbuka di Excel 2016 ke atas.
-- **Bisa diaudit:** 20 angka kunci diberi nama sel (`kpi_*`). `src/audit_dashboard.py` menghitung ulang nilai acuan dari
-  data dan membandingkannya dengan workbook: 20 dari 20 cocok, 0 rumus error, 0 istilah teknis di layar. Audit data terpisah
-  menghitung ulang angka yang tampil langsung dari data mentah olahan: 98 dari 98 cocok
+**Ringkasan: tindakan minggu ini**
+
+![Ringkasan](excel/screenshots/01_ringkasan.png)
+
+| Peta gejolak harga (pertanyaan 1) | Peluang pindah stok (pertanyaan 2) |
+|---|---|
+| ![Peta gejolak harga](excel/screenshots/02_gejolak_harga.png) | ![Peluang pindah stok](excel/screenshots/03_pindah_stok.png) |
+| **Peringatan dini (pertanyaan 3 dan 6)** | **Pola musiman (pertanyaan 4)** |
+| ![Peringatan dini](excel/screenshots/04_peringatan_dini.png) | ![Pola musiman](excel/screenshots/05_pola_musiman.png) |
+| **Rantai pasok dan margin (pertanyaan 5)** | |
+| ![Rantai pasok dan margin](excel/screenshots/06_rantai_pasok.png) | |
+
+- **Interaktif tanpa makro:** daftar pilihan komoditas (Peta gejolak harga), tombol pengali ongkos kirim 0,5 sampai 2 kali, dan
+  sel input tambahan ongkos Rp/kg (Peluang pindah stok). Kartu, tabel rute terurut, judul, peta, dan grafik ikut berubah. Rumus
+  memakai fungsi Excel klasik (SUMIFS, INDEX/MATCH, LARGE, SUMPRODUCT) supaya terbuka di Excel 2016 ke atas.
+- **Bisa diaudit:** 20 angka kunci diberi nama sel (`kpi_*`). `src/audit_dashboard.py` menghitung ulang nilai acuan dari data
+  dan membandingkannya dengan workbook: 20 dari 20 cocok, 0 rumus error, 0 istilah teknis di layar. Audit data terpisah
+  menghitung ulang angka yang tampil langsung dari data olahan: 98 dari 98 cocok
   ([laporan audit data](docs/audit_data_dashboard_desain.md)).
 - **Peta:** batas provinsi Natural Earth (domain publik) digambar sebagai latar, lalu grafik gelembung transparan ditumpuk
   dengan skala bujur dan lintang yang sama (`src/peta_jawa.py`).
 - Cara membangun, memakai, dan mengaudit: [`excel/panduan.md`](excel/panduan.md). Padanan istilah teknis dan bahasa
   dashboard: [`excel/glosarium.md`](excel/glosarium.md).
 
-| Peta gejolak harga | Peluang pindah stok |
+## Analisis di balik dashboard
+
+Ini proyek Data Analyst end-to-end: data diambil dari situs PIHPS dengan Python, dibersihkan, dianalisis, lalu diringkas menjadi
+dashboard dan memo. Setiap pertanyaan punya skrip di `src/analysis/`, notebook penjelas di `notebooks/`, dan laporan di
+`reports/`. Grafik di bawah dibuat otomatis oleh skrip analisis.
+
+| 1. Gejolak harga per komoditas | 2. Rute yang masih untung setelah ongkos kirim |
 |---|---|
-| ![Gejolak harga](excel/screenshots/02_gejolak_harga.png) | ![Pindah stok](excel/screenshots/03_pindah_stok.png) |
-| **Peringatan dini** | **Pola musiman** |
-| ![Peringatan dini](excel/screenshots/04_peringatan_dini.png) | ![Pola musiman](excel/screenshots/05_pola_musiman.png) |
-| **Rantai pasok dan margin** | |
-| ![Rantai pasok](excel/screenshots/06_rantai_pasok.png) | |
+| ![Gejolak per komoditas](reports/figures/q1_gejolak_per_komoditas.png) | ![Rute untung](reports/figures/q2_rute_untung_konservatif.png) |
+| [`reports/q1_gejolak.md`](reports/q1_gejolak.md) | [`reports/q2_rute.md`](reports/q2_rute.md) |
+| **3. Kota yang harganya naik lebih dulu** | **4. Pola harga sekitar Idulfitri** |
+| ![Kota penentu arah](reports/figures/q3_kota_penentu_arah.png) | ![Pola Idulfitri](reports/figures/q4_pola_idul_fitri.png) |
+| [`reports/q3_kota_penentu_arah.md`](reports/q3_kota_penentu_arah.md) | [`reports/q4_pola_idul_fitri.md`](reports/q4_pola_idul_fitri.md) |
+| **5. Tambahan harga di tiap tingkat rantai pasok** | **6. Hasil uji peringatan dini** |
+| ![Tambahan harga per tingkat](reports/figures/q5_tambahan_harga_per_tingkat.png) | ![Skor peringatan](reports/figures/q6_skor_peringatan.png) |
+| [`reports/q5_margin.md`](reports/q5_margin.md) | [`reports/q6_peringatan_dini.md`](reports/q6_peringatan_dini.md) |
 
 ## Alur kerja
 
